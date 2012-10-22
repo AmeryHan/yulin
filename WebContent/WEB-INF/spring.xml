@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="userdb" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/yulinsh</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value>root</value>
+		</property>
+	</bean>
+
+	<bean id="template"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="userdb" />
+		</property>
+	</bean>
+	<!--  -->
+	<bean id="userdao" class="com.yulinsh.DAO.UserDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="service" class="com.yulinsh.service.UserService">
+		<property name="dao">
+			<ref bean="userdao" />
+		</property>
+	</bean>
+
+	<bean name="/user" class="com.yulinsh.Action.UserAction">
+		<property name="service">
+			<ref bean="service" />
+		</property>
+	</bean>
+
+	<bean name="/Userlist" class="com.yulinsh.Action.UserListAction">
+		<property name="userserviver"><!-- 这里的name对应的是Action里面 service 的对象名称，如果不对应就会出错-->
+			<ref bean="service" />
+		</property>
+	</bean>
+	<!-- 个人申请 -->
+	<bean id="Personaldao" class="com.yulinsh.DAO.PersonalDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="personalservice"
+		class="com.yulinsh.service.PersonalService">
+		<property name="dao">
+			<ref bean="Personaldao" />
+		</property>
+	</bean>
+
+	<bean name="/PersonalAdd"
+		class="com.yulinsh.Action.Personal.PersonalAdd">
+		<property name="service">
+			<ref bean="personalservice" />
+		</property>
+	</bean>
+	<bean name="/PersonalUpd"
+		class="com.yulinsh.Action.Personal.PersonalUpd">
+		<property name="service">
+			<ref bean="personalservice" />
+		</property>
+	</bean>
+	<bean name="/PersonalDel"
+		class="com.yulinsh.Action.Personal.PersonalDel">
+		<property name="service">
+			<ref bean="personalservice" />
+		</property>
+	</bean> 
+	<bean name="/PersonalSelect"
+		class="com.yulinsh.Action.Personal.PersonalSelect">
+		<property name="service">
+			<ref bean="personalservice" />
+		</property>
+	</bean>
+	<bean name="/PersonalOne"
+		class="com.yulinsh.Action.Personal.PersonalOne">
+		<property name="service">
+			<ref bean="personalservice" />
+		</property>
+	</bean>
+	<!--  单位申请 -->
+	<bean id="unitDAO" class="com.yulinsh.DAO.UnitDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="unitService" class="com.yulinsh.service.UnitService">
+		<property name="dao">
+			<ref bean="unitDAO" />
+		</property>
+	</bean>
+	<bean name="/UnitAdd" class="com.yulinsh.Action.Unit.UnitAdd">
+		<property name="service">
+			<ref bean="unitService" />
+		</property>
+	</bean>
+	<bean name="/UnitSelect" class="com.yulinsh.Action.Unit.UnitSelect">
+		<property name="service">
+			<ref bean="unitService" />
+		</property>
+	</bean>
+		<bean name="/UnitSelectOne" class="com.yulinsh.Action.Unit.UnitSelectOne">
+		<property name="service">
+			<ref bean="unitService" />
+		</property>
+	</bean>
+	
+		<bean name="/UnitDel" class="com.yulinsh.Action.Unit.UnitDel">
+		<property name="service">
+			<ref bean="unitService" />
+		</property>
+	</bean>
+	
+	<bean name="/UnitUpd" class="com.yulinsh.Action.Unit.UnitUpd">
+		<property name="service">
+			<ref bean="unitService" />
+		</property>
+	</bean>
+	<!-- 办事处进驻 -->
+	<bean id="officeDAO" class="com.yulinsh.DAO.OfficeDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="officeService" class="com.yulinsh.service.OfficeService">
+		<property name="dao">
+			<ref bean="officeDAO" />
+		</property>
+	</bean>
+	<bean name="/OfficeAdd" class="com.yulinsh.Action.Office.OfficeAdd">
+		<property name="service">
+			<ref bean="officeService" />
+		</property>
+	</bean>
+	<bean name="/OfficeSelect"
+		class="com.yulinsh.Action.Office.OfficeSelect">
+		<property name="service">
+			<ref bean="officeService" />
+		</property>
+	</bean>
+	<bean name="/OfficeUpd" class="com.yulinsh.Action.Office.OfficeUpd">
+		<property name="service">
+			<ref bean="officeService" />
+		</property>
+	</bean>
+	<bean name="/OfficeDel" class="com.yulinsh.Action.Office.OfficeDel">
+		<property name="service">
+			<ref bean="officeService" />
+		</property>
+	</bean>
+	<!-- 新闻动态 -->
+
+	<bean id="newsDAO" class="com.yulinsh.DAO.NewsDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+		</bean>
+		<bean id="newsService" class="com.yulinsh.service.NewsService">
+		<property name="dao">
+			<ref bean="newsDAO" />
+		</property>
+	</bean>
+		<bean name="/NewsAdd" class="com.yulinsh.Action.News.NewsAdd">
+		<property name="service">
+			<ref bean="newsService" />
+		</property>
+	</bean>
+	<bean name="/NewDel" class="com.yulinsh.Action.News.NewDel">
+		<property name="service">
+			<ref bean="newsService" />
+		</property>
+	</bean>
+			<bean name="/NewSelOne" class="com.yulinsh.Action.News.NewSelOne">
+		<property name="service">
+			<ref bean="newsService" />
+		</property>
+	</bean>
+		<bean name="/NewSelect" class="com.yulinsh.Action.News.NewSelect">
+		<property name="service">
+			<ref bean="newsService" />
+		</property>
+	</bean>
+	<!-- 政策动向 -->
+		<bean id="policyDAO" class="com.yulinsh.DAO.PolicyDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+		</bean>
+		<bean id="policyService" class="com.yulinsh.service.PolicyService">
+		<property name="dao">
+			<ref bean="policyDAO" />
+		</property>
+	</bean>
+		<bean name="/PolicyAdd" class="com.yulinsh.Action.Policy.PolicyAdd">
+		<property name="service">
+			<ref bean="policyService" />
+		</property>
+	</bean>
+ 
+	<bean name="/PolicyDel" class="com.yulinsh.Action.Policy.PolicyDel">
+		<property name="service">
+			<ref bean="policyService" />
+		</property>
+	</bean>
+	 
+			<bean name="/PolicySelOne" class="com.yulinsh.Action.Policy.PolicySelDne">
+		<property name="service">
+			<ref bean="policyService" />
+		</property>
+	</bean>
+	
+		<bean name="/PolicySelect" class="com.yulinsh.Action.Policy.PolicySelect">
+		<property name="service">
+			<ref bean="policyService" />
+		</property>
+		
+	</bean>
+	
+	<!-- 公告 -->
+	 <bean id="anDAO" class="com.yulinsh.DAO.AnDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="anService" class="com.yulinsh.service.AnService">
+		<property name="dao">
+			<ref bean="anDAO" />
+		</property>
+	</bean>
+	<bean name="/AnAdd" class="com.yulinsh.Action.An.AnAdd">
+		<property name="service">
+			<ref bean="anService" />
+		</property>
+	</bean>
+	<bean name="/AnDel" class="com.yulinsh.Action.An.AnDel">
+		<property name="service">
+			<ref bean="anService" />
+		</property>
+	</bean>
+	<bean name="/AnSelect" class="com.yulinsh.Action.An.AnSelect">
+		<property name="service">
+			<ref bean="anService" />
+		</property>
+	</bean>
+		<bean name="/AnSelect2" class="com.yulinsh.Action.An.AnSelect2">
+		<property name="service">
+			<ref bean="anService" />
+		</property>
+	</bean>
+		<bean name="/AnSelOne" class="com.yulinsh.Action.An.AnSelOne">
+		<property name="service">
+			<ref bean="anService" />
+		</property>
+	</bean>
+	
+		<!-- 家乡 -->
+	 <bean id="hometownDAO" class="com.yulinsh.DAO.HometownDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="hometownService" class="com.yulinsh.service.HometownService">
+		<property name="dao">
+			<ref bean="hometownDAO" />
+		</property>
+	</bean>
+	<bean name="/HometownAdd" class="com.yulinsh.Action.Hometown.HometownAdd">
+		<property name="service">
+			<ref bean="hometownService" />
+		</property>
+	</bean>
+	<bean name="/HometownDel" class="com.yulinsh.Action.Hometown.HometownDel">
+		<property name="service">
+			<ref bean="hometownService" />
+		</property>
+	</bean>
+		<bean name="/HometownSelectOne" class="com.yulinsh.Action.Hometown.HometownSelectOne">
+		<property name="service">
+			<ref bean="hometownService" />
+		</property>
+	</bean>
+	<bean name="/HometownSelect" class="com.yulinsh.Action.Hometown.HometownList">
+		<property name="service">
+			<ref bean="hometownService" />
+		</property>
+	</bean>
+	 	<!-- 老乡留言-->
+	 <bean id="laoxDAO" class="com.yulinsh.DAO.LaoxDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="laoxService" class="com.yulinsh.service.LaoxService">
+		<property name="dao">
+			<ref bean="laoxDAO" />
+		</property>
+	</bean>
+	<bean name="/LaoxAdd" class="com.yulinsh.Action.Laox.LaoxAdd">
+		<property name="service">
+			<ref bean="laoxService" />
+		</property>
+	</bean>
+	<bean name="/LaoxDel" class="com.yulinsh.Action.Laox.LaoxDel">
+		<property name="service">
+			<ref bean="laoxService" />
+		</property>
+	</bean>
+	<bean name="/LaoxSelect" class="com.yulinsh.Action.Laox.LaoxList">
+		<property name="service">
+			<ref bean="laoxService" />
+		</property>
+	</bean>
+ 	 	<!-- 会员随笔-->
+	 <bean id="memberDAO" class="com.yulinsh.DAO.MemberDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="memberService" class="com.yulinsh.service.MemberService">
+		<property name="dao">
+			<ref bean="memberDAO" />
+		</property>
+	</bean>
+	<bean name="/MemberAdd" class="com.yulinsh.Action.Member.MemberAdd">
+		<property name="service">
+			<ref bean="memberService" />
+		</property>
+	</bean>
+	<bean name="/MemberDel" class="com.yulinsh.Action.Member.MemberDel">
+		<property name="service">
+			<ref bean="memberService" />
+		</property>
+	</bean>
+		<bean name="/MemberOne" class="com.yulinsh.Action.Member.MemberOne">
+		<property name="service">
+			<ref bean="memberService" />
+		</property>
+	</bean>
+	<bean name="/MemberSelect" class="com.yulinsh.Action.Member.MemberList">
+		<property name="service">
+			<ref bean="memberService" />
+		</property>
+	</bean>
+		<bean name="/main" class="com.yulinsh.Action.Member.main">
+		<property name="service">
+			<ref bean="memberService" />
+		</property>
+		
+	
+		
+	</bean>
+		
+		<!-- 图片上传 -->
+			 <bean id="photoDAO" class="com.yulinsh.DAO.PhotoDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="photoService" class="com.yulinsh.service.PhotoService">
+		<property name="dao">
+			<ref bean="photoDAO" />
+		</property>
+	</bean>
+	<bean name="/photosc" class="com.yulinsh.photo.PhotoSC">
+		<property name="service">
+			<ref bean="photoService" />
+		</property>
+	</bean>
+ 	<bean name="/PhotoSelect" class="com.yulinsh.photo.PhotoSelect">
+		<property name="service">
+			<ref bean="photoService" />
+		</property>
+	</bean>
+	 	<bean name="/PhotoOne" class="com.yulinsh.photo.PhotoOne">
+		<property name="service">
+			<ref bean="photoService" />
+		</property>
+	</bean>
+	 	<bean name="/PhotoDel" class="com.yulinsh.photo.PhotoDel">
+		<property name="service">
+			<ref bean="photoService" />
+		</property>
+	</bean>
+	
+	<!-- 组织机构-->
+
+	<bean id="structureDAO" class="com.yulinsh.DAO.StructureDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+		</bean>
+		<bean id="structureService" class="com.yulinsh.service.StructureService">
+		<property name="dao">
+			<ref bean="structureDAO" />
+		</property>
+	</bean>
+		<bean name="/StructureAdd" class="com.yulinsh.Action.Structure.StructureAdd">
+		<property name="service">
+			<ref bean="structureService" />
+		</property>
+	</bean>
+	<bean name="/StructureDel" class="com.yulinsh.Action.Structure.StructureDel">
+		<property name="service">
+			<ref bean="structureService" />
+		</property>
+	</bean>
+	
+			<bean name="/StructureShow" class="com.yulinsh.Action.Structure.StructureShow">
+		<property name="service">
+			<ref bean="structureService" />
+		</property>
+	</bean>
+		<bean name="/StructureList" class="com.yulinsh.Action.Structure.StructureList">
+		<property name="service">
+			<ref bean="structureService" />
+		</property>
+	</bean>
+			<bean name="/StructureXS" class="com.yulinsh.Action.Structure.StructureXS">
+		<property name="service">
+			<ref bean="structureService" />
+		</property>
+	</bean>
+</beans>

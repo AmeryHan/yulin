@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<!-- 这里处理页面的数据存储 -->
+		<form-bean name="userFrom"
+			type="com.yulinsh.actionFrom.UserActionFrom">
+		</form-bean>
+		<form-bean name="personalFrom"
+			type="com.yulinsh.actionFrom.PersonalFrom">
+		</form-bean>
+		<form-bean name="unitFrom" type="com.yulinsh.actionFrom.UnitFrom"></form-bean>
+		<form-bean name="officeFrom"
+			type="com.yulinsh.actionFrom.OfficeFrom">
+		</form-bean>
+		<form-bean name="newsFrom" type="com.yulinsh.actionFrom.NewsFrom"></form-bean>
+		<form-bean name="anFrom" type="com.yulinsh.actionFrom.AnFrom"></form-bean>
+		<form-bean name="policyFrom"  type="com.yulinsh.actionFrom.PolicyFrom"></form-bean>
+		<form-bean name="hometownFrom"  type="com.yulinsh.actionFrom.HometownFrom"> </form-bean>
+		<form-bean name="laoxFrom"  type="com.yulinsh.actionFrom.LaoxFrom"> </form-bean>
+	<form-bean name="memberFrom"  type="com.yulinsh.actionFrom.MemberFrom"> </form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+ 
+		<action path="/user" name="userFrom"
+			type="com.yulinsh.Action.UserAction" scope="session">
+			<forward name="login" path="/Userlist.do" />
+		</action>
+		<action path="/Userlist" type="com.yulinsh.Action.UserListAction"
+			scope="session">
+			<forward name="list" path="/main/LoginOut.jsp" />
+		</action>
+		 
+		<!-- 个人申请 -->
+		<action path="/PersonalAdd" name="personalFrom"
+			type="com.yulinsh.Action.Personal.PersonalAdd" scope="session">
+			<forward name="add" path="/AnSelect.do" />
+			<forward name="upd" path="/gerensq1.jsp" />
+		</action>
+		<action path="/PersonalUpd" name="personalFrom"
+			type="com.yulinsh.Action.Personal.PersonalUpd" scope="session">
+			<forward name="upd" path="/PersonalSelect.do?plid=2" />
+		</action>
+		<action path="/PersonalDel"
+			type="com.yulinsh.Action.Personal.PersonalDel" scope="session">
+			<forward name="del" path="/PersonalSelect.do?plid=2" />
+		</action>
+		<action path="/PersonalSelect"
+			type="com.yulinsh.Action.Personal.PersonalSelect" scope="session">
+			<forward name="select" path="/System/grsqsp.jsp" />
+				<forward name="select2" path="/hyry.jsp" />
+		</action>
+			<action path="/PersonalOne"
+			type="com.yulinsh.Action.Personal.PersonalOne" scope="session">
+			<forward name="selectone" path="/hyrymx.jsp" />
+			 
+		</action>
+	 
+		<!-- 单位申请 -->
+		<action path="/UnitAdd" name="unitFrom"
+			type="com.yulinsh.Action.Unit.UnitAdd" scope="session">
+			<forward name="add" path="/AnSelect.do" />
+		</action>
+		<action path="/UnitUpd" type="com.yulinsh.Action.Unit.UnitUpd"
+			scope="session">
+			<forward name="upd" path="/UnitSelect.do?utid=2" />
+ 
+		</action>
+		
+			<action path="/UnitDel" type="com.yulinsh.Action.Unit.UnitDel"
+			scope="session">
+			<forward name="del" path="/UnitSelect.do?utid=2" />
+ 
+		</action>
+		
+		<action path="/UnitSelect" type="com.yulinsh.Action.Unit.UnitSelect"
+			scope="session">
+			<forward name="list" path="/System/dwsp.jsp" />
+				<forward name="list2" path="/huiyuandw.jsp" />
+		</action>
+			<action path="/UnitSelectOne" type="com.yulinsh.Action.Unit.UnitSelectOne"
+			scope="session">
+			<forward name="listone" path="/System/hydwmx.jsp" />
+				<forward name="listone2" path="/hydwmx.jsp" />
+		</action>
+		
+		<!-- 办事进驻 -->
+		<action path="/OfficeAdd" name="officeFrom"
+			type="com.yulinsh.Action.Office.OfficeAdd" scope="session">
+			<forward name="add" path="/NewSelect.do" />
+		</action>
+		<action path="/OfficeUpd" name="officeFrom"
+			type="com.yulinsh.Action.Office.OfficeUpd" scope="session">
+			<forward name="upd" path="/Office/OfficeAdd.jsp" />
+		</action>
+		<action path="/OfficeDel" name="officeFrom"
+			type="com.yulinsh.Action.Office.OfficeDel" scope="session">
+			<forward name="del" path="/Office/OfficeAdd.jsp" />
+		</action>
+		<action path="/OfficeSelect"
+			type="com.yulinsh.Action.Office.OfficeSelect" scope="session">
+			<forward name="list" path="/main/LoginOut.jsp" />
+		</action>
+		<!-- 新闻动态 -->
+		<action path="/NewsAdd" name="newsFrom"
+			type="com.yulinsh.Action.News.NewsAdd" scope="session">
+			<forward name="add" path="/NewSelect.do?newid=2" />
+		</action>
+		<action path="/NewDel" name="newsFrom"
+			type="com.yulinsh.Action.News.NewDel" scope="session">
+			<forward name="del" path="/NewSelect.do?newid=2" />
+		</action>
+		<action path="/NewSelOne" type="com.yulinsh.Action.News.NewSelOne"
+			scope="session">
+			<forward name="selone" path="/shdtmx.jsp" />
+		</action>
+		<action path="/NewSelect" type="com.yulinsh.Action.News.NewSelect"
+			scope="session">
+			<forward name="list" path="/System/shdtlb.jsp" />
+			<forward name="list1" path="/shanghuidt.jsp" />
+		</action>
+		<!-- 政策动向 -->
+		<action path="/PolicyAdd" name="policyFrom"
+			type="com.yulinsh.Action.Policy.PolicyAdd" scope="session">
+			<forward name="add" path="/PolicySelect.do?pyid=2" />
+		</action>
+		 
+		<action path="/PolicyDel" name="policyFrom"
+			type="com.yulinsh.Action.Policy.PolicyDel" scope="session">
+			<forward name="del" path="/PolicySelect.do?pyid=2" />
+		</action>
+		 
+		<action path="/PolicySelOne"
+			type="ccom.yulinsh.Action.Policy.PolicySelDne" scope="session">
+			<forward name="list" path="/glqxmx.jsp" />
+		</action>
+		
+		<action path="/PolicySelect"
+			type="com.yulinsh.Action.Policy.PolicySelect" scope="session">
+			<forward name="list" path="/System/glqxlb.jsp" />
+			<forward name="list2" path="/guanliqx.jsp" />
+		</action>
+		
+		<!-- 公告 -->
+		<action path="/AnAdd" name="anFrom"
+			type="com.yulinsh.Action.An.AnAdd" scope="session">
+			<forward name="add" path="/AnSelect2.do?anid=2" />
+		</action>
+		<action path="/AnDel" name="anFrom"
+			type="com.yulinsh.Action.An.AnDel" scope="session">
+			<forward name="del" path="/AnSelect2.do?anid=2" />
+		</action>
+		<action path="/AnSelect" type="com.yulinsh.Action.An.AnSelect"
+			scope="session">
+			<forward name="list" path="/index.jsp" />
+		</action>
+         <action path="/AnSelect2" type="com.yulinsh.Action.An.AnSelect2"
+			scope="session">
+			<forward name="list" path="/gglb.jsp" />
+					<forward name="list2" path="/System/sysgglb.jsp" />
+		</action>
+		<action path="/AnSelOne" type="com.yulinsh.Action.An.AnSelOne"
+			scope="session">
+			<forward name="selone" path="/ggaoXS.jsp" />
+		</action>
+<!-- 家乡-->
+		<action path="/HometownAdd" name="hometownFrom"
+			type="com.yulinsh.Action.Hometown.HometownAdd" scope="session">
+			<forward name="add" path="/HometownSelect.do?htid=2" />
+		</action>
+		<action path="/HometownDel" name="hometownFrom"
+			type="com.yulinsh.Action.Hometown.HometownDel" scope="session">
+			<forward name="del" path="/HometownSelect.do?htid=2" />
+		</action>
+		<action path="/HometownSelect" type="com.yulinsh.Action.Hometown.HometownList"
+			scope="session">
+			<forward name="list" path="/System/jxlb.jsp" />
+			<forward name="list2" path="/wuhuaxinyu.jsp" />
+		</action>
+			<action path="/HometownSelectOne" type="com.yulinsh.Action.Hometown.HometownSelectOne"
+			scope="session">
+			<forward name="list" path="/jxmx.jsp" />
+		 
+		</action>
+
+ <!-- 老乡留言-->
+		<action path="/LaoxAdd" name="laoxFrom"
+			type="com.yulinsh.Action.Laox.LaoxAdd" scope="session">
+			<forward name="add" path="/LaoxSelect.do?lxid=1" />
+		</action>
+		<action path="/LaoxDel"  
+			type="com.yulinsh.Action.Laox.LaoxDel" scope="session">
+			<forward name="del" path="/LaoxSelect.do?lxid=2" />
+		</action>
+		<action path="/LaoxSelect" type="com.yulinsh.Action.Laox.LaoxList"
+			scope="session">
+			<forward name="list" path="/System/lxlylb.jsp" />
+			<forward name="list2" path="/falvweiq.jsp" />
+		</action>
+		 <!-- 会员随笔-->
+		<action path="/MemberAdd" name="memberFrom"
+			type="com.yulinsh.Action.Member.MemberAdd" scope="session">
+			<forward name="add" path="/MemberSelect.do?mbid=1" />
+		</action>
+		<action path="/MemberDel"  
+			type="com.yulinsh.Action.Member.MemberDel" scope="session">
+			<forward name="del" path="/MemberSelect.do?mbid=2" />
+		</action>
+		<action path="/MemberOne" type="com.yulinsh.Action.Member.MemberOne"
+			scope="session">
+			<forward name="list" path="/hysbmx.jsp" />
+		 
+		</action>
+		<action path="/MemberSelect" type="com.yulinsh.Action.Member.MemberList"
+			scope="session">
+			<forward name="list" path="/System/hysblb.jsp" />
+			<forward name="list2" path="/shicdt.jsp" />
+		</action>
+		<action path="/main" type="com.yulinsh.Action.Member.main"
+			scope="session">
+			<forward name="denglu" path="/System/SystemIndex.jsp" />
+			<forward name="denglu2" path="/System/error.jsp" />
+		</action>
+		
+		<!-- 上传图片 -->
+			<action path="/photosc" type="com.yulinsh.photo.PhotoSC"
+			scope="session">
+			<forward name="denglu" path="/System/SystemIndex.jsp" />
+			<forward name="denglu2" path="/PhotoSelect.do?mbid=2" />
+		</action>
+				<action path="/PhotoSelect" type="com.yulinsh.photo.PhotoSelect"
+			scope="session">
+			<forward name="select" path="/photoShow.jsp" />
+			<forward name="select2" path="/System/photo2.jsp" />
+		</action>
+		<action path="/PhotoOne" type="com.yulinsh.photo.PhotoOne"
+			scope="session">
+			<forward name="select" path="/photoOne.jsp" />
+			<forward name="select2" path="/System/photo.jsp" />
+		</action>
+			<action path="/PhotoDel" type="com.yulinsh.photo.PhotoDel"
+			scope="session">
+		 <forward name="del2" path="/PhotoSelect.do?mbid=2" />
+			<forward name="del" path="/PhotoSelect.do?mbid=2" />
+		</action>
+			<!-- 组织机构 -->
+		<action path="/StructureAdd"  
+			type="com.yulinsh.Action.Structure.StructureAdd" scope="session">
+		 
+		 	<forward name="add" path="/StructureList.do" />
+			<forward name="upd" path="/System/ZuZhiAdd.jsp" />
+		</action>
+		<action path="/StructureDel"  
+			type="com.yulinsh.Action.Structure.StructureDel" scope="session">
+			<forward name="del" path="/StructureList.do" />
+		</action>
+		<action path="/StructureShow" type="com.yulinsh.Action.Structure.StructureShow"
+			scope="session">
+			<forward name="selone" path="/zuzhirymx.jsp" />
+		</action>
+	 
+		<action path="/StructureList" type="com.yulinsh.Action.Structure.StructureList"
+			scope="session">
+			<forward name="list" path="/System/zuzhilist.jsp" />
+		</action>
+			<action path="/StructureXS" type="com.yulinsh.Action.Structure.StructureXS"
+			scope="session">
+			<forward name="list" path="/zzjg.jsp" />
+		</action>
+			 
+	</action-mappings>
+	<controller processorClass="com.yulinsh.Action.setcharrequest"></controller>
+	<message-resources
+		parameter="com.yourcompany.struts.ApplicationResources" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/spring.xml" />
+	</plug-in>
+</struts-config>
+

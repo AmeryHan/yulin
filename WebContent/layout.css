@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* CSS Document 
+Site:首页样式
+Author:蔡芳 
+Setup Date:2011/12/13
+*/
+/*start reset*/
+html, body, span,iframe, p, a, h1, h2, h3, h4, h5, h6, table, td, tr, th, tbody, tfoot, form, input, select, textarea, font, img, ul, li{
+	margin:0;
+	padding:0;
+	}
+a img, img,iframe{
+	border: none;
+	}
+a span,form label{
+	cursor:pointer;
+	}
+li{
+	list-style:none;
+	}
+table{
+	border-collapse:separate;/*表格边框为合并*/
+	}
+caption, th, td,{
+	text-align:left;
+	font-weight:normal;
+	}
+select, input, button{
+	vertical-align:middle;
+	font-family: inherit;
+	font-size:100%;
+	}
+/*start base*/
+/*body*/
+body{
+	font:"宋体;";
+	font-size:13px;
+	color:#595959;
+	background-color: #D5ECF2;
+	}
+	/****技术支持***/
+.support{
+	background:url(images/zc.jpg) no-repeat;
+	width:918px;
+	height:700px;
+	margin:0px auto 0 auto;
+	}
+/*link*/
+a{ 
+	font-size:12px;
+	color:#595959;
+	text-decoration:none;
+}
+a:hover{
+	color:#093;
+	}
+/*header*/
+#header{
+	height:180px;
+	width:100%;
+	margin:0 auto 0 auto;
+	text-align:center;
+	background:url(images/header.gif) no-repeat center;
+	}
+/*nav*/
+#nav{
+	background:#663;
+	width:918px;
+	height:40px;
+	margin:0 auto 0 auto;
+	text-align:center;
+	}
+	#nav ul li{
+		line-height:40px;
+		font-weight:bold;
+		display:inline;
+		margin:0 18px;
+		}
+	#nav ul li a{
+		font-size:14px;
+		color:#fff;}
+	#nav ul li a:hover{
+		font-size:14px;
+		color:#000;
+		}
+/*mainWrapper*/
+#mainContent{
+	width:918px;
+	height:100%;
+	margin:0 auto 0 auto;
+	}
+	#tips{
+	height:25px;
+	line-height:25px;
+	}
+	.fontColor{
+		color:#c20000;
+		}
+/**mainLeft*/
+#mainLeft{
+	width:260px;
+	float:left;
+	height:100%;
+	}
+	/*menuLeft*/
+	#menuLeft ul li a{
+		line-height:25px;
+		font-size:14px;
+		margin-left:40px;
+		font-weight: lighter;
+		color:#666;
+		}
+	#menuLeft ul li a:hover{
+		color:#c20000;
+		text-decoration:underline;
+		}
+	/**registerbtn**/
+	/*#registerWrapper{
+		width:260px;
+		margin-top:220px;
+		}*/
+#registerbtn{
+	width:200px;
+	height:170px;
+	}
+.personbtn{
+	background:url(images/zhucebtn.png) 0 0px no-repeat;
+	width:140px;
+	height:35px;
+	margin:15px auto 0 20px;
+	border:none;
+	cursor:pointer;
+	}
+.companybtn{
+	background:url(images/zhucebtn.png) 0 -44px no-repeat;
+	width:140px;
+	height:35px;
+	margin:15px auto 0 20px;
+	border:none;
+	cursor:pointer;
+	}
+.linkbtn{
+	background:url(images/zhucebtn.png) 0 -88px no-repeat;
+	width:140px;
+	height:35px;
+	margin:15px auto 0 20px;
+	border:none;
+	cursor:pointer;
+	}
+/*mainRight*/
+#mainRight{
+	width:650px;
+	height:100%;
+	float:right;
+	}
+	#mainRContent{
+		text-indent:2em;}
+.content p{
+height:380px;
+	text-indent:2em;
+	padding:10px;
+	}
+.clear{
+	clear:both;}
+/*footer*/
+#footer{
+	width:100%;
+	height:50px;
+/*	margin:0 auto 0 auto;*/
+	text-align:center;
+	margin-top:10px;
+	}
+#footer ul li{
+	display:inline;
+	margin:0 10px 0 10px;
+	}
+#footer ul li a{
+	font-weight:lighter;
+	color:#595959;
+
+	}
+/*圆角样式*/
+/**{margin:0;padding:0;font-size:12px;}
+.wrapper{width:80%;margin:0 auto;}
+/*通用样式--容器宽度值*/
+.sharp{width:100%;margin:5px auto 0;float:left;}
+.sharp .content div{padding:10px;}
+.content{height: auto;}
+h3{height:29px;line-height:29px;font-size:14px;text-indent:10px; border-bottom: 1px solid #b6b6b6;}
+a:link,a:visited{color:#999;font-weight:bold; text-decoration:none;}
+a:hover{text-decoration:none; border-bottom:1px orange solid;color:orange;}
+
+/*上圆角框通用设置样式，如果要运用多个不同颜色，以下6句不用重新变化--------------------------------*/
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block;}
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+.content {border-right:1px solid;border-left:1px solid;overflow:hidden;}
+/*颜色方案一,蓝色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{border-color:#b6b6b6;}
+.color1 .b1,.color1 .b8{background:#b6b6b6;}
+/*背景色*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{background:#ffffff;}
+/*注册页面*/
+#registerWrapper{
+	width:918px;
+	margin:0 auto 0 auto;
+	}
+#registerWrapper td{
+	padding-left:20px;
+	height:30px;
+	}
+.inputStyle{
+	border:1px solid #ccc;
+	width:200px;
+	height:25px;
+	}
+.regBtn{
+	background:url(images/reg_but.png) 0 0 no-repeat;
+	width:98px;
+	height:28px;
+	cursor:pointer;
+	border:none;
+	}
+.canselBtn{
+	background:url(images/reg_but.png) 0 -36px no-repeat;
+	width:98px;
+	height:28px;
+	cursor:pointer;
+	border:none;
+	}
+/*商会动态列表样式*/
+#ListWrapper{
+ 
+ /**
+	margin:10px;
+	**/
+	height:380px;
+	}
+#ListWrapper ul li a{
+	line-height:25px;
+	font-size:12px;
+	font-weight:lighter;
+	color:#595959;
+	}
+#ListWrapper ul li a:hover,#ListWrapper ul li a:visited{
+	text-decoration:underline;
+	}
+#Date{
+	text-align:right;
+	color:#999;
+	display:inline;
+	margin-left:100px;
+	}
+/***老乡留言***/
+.author{
+	color:#C30;}
+.time{
+	color:#CCC;}

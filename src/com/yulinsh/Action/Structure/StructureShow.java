@@ -1,0 +1,46 @@
+package com.yulinsh.Action.Structure;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+import com.yulinsh.service.NewsService;
+import com.yulinsh.service.StructureService;
+
+/***
+ * չʾ
+ * @author Administrator
+ *
+ */
+public class StructureShow  extends Action {
+	StructureService service;
+
+	public ActionForward execute(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response) {
+		
+		List arr = new ArrayList();
+		String id=request.getParameter("id");
+		System.err.println(" select "+id);
+		arr = service.getListZuZhiOne(id);
+		request.setAttribute("arr", arr);
+
+		return mapping.findForward("selone");
+	}
+
+	public StructureService getService() {
+		return service;
+	}
+
+	public void setService(StructureService service) {
+		this.service = service;
+	}
+
+	 
+}

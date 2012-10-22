@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/user.do" location="50,50" dimension="196,84" />
+  <StrutsActivity path="/Userlist.do" location="350,50" dimension="220,84" />
+  <StrutsActivity path="/PersonalAdd.do" location="630,-105" dimension="256,84" />
+  <StrutsActivity path="/PersonalUpd.do" location="1250,50" dimension="256,84" />
+  <StrutsActivity path="/PersonalDel.do" location="50,250" dimension="256,84" />
+  <StrutsActivity path="/PersonalSelect.do" location="650,250" dimension="274,84" />
+  <StrutsActivity path="/PersonalOne.do" location="950,1750" dimension="256,84" />
+  <StrutsActivity path="/UnitAdd.do" location="1250,250" dimension="208,84" />
+  <StrutsActivity path="/UnitUpd.do" location="50,450" dimension="208,84" />
+  <StrutsActivity path="/UnitDel.do" location="2750,1650" dimension="208,84" />
+  <StrutsActivity path="/UnitSelect.do" location="350,450" dimension="226,84" />
+  <StrutsActivity path="/UnitSelectOne.do" location="2450,950" dimension="244,84" />
+  <StrutsActivity path="/OfficeAdd.do" location="650,450" dimension="232,84" />
+  <StrutsActivity path="/OfficeUpd.do" location="950,450" dimension="232,84" />
+  <StrutsActivity path="/OfficeDel.do" location="1250,450" dimension="232,84" />
+  <StrutsActivity path="/OfficeSelect.do" location="50,650" dimension="250,84" />
+  <StrutsActivity path="/NewsAdd.do" location="350,650" dimension="208,84" />
+  <StrutsActivity path="/NewDel.do" location="650,650" dimension="202,84" />
+  <StrutsActivity path="/NewSelOne.do" location="950,650" dimension="220,84" />
+  <StrutsActivity path="/NewSelect.do" location="1250,650" dimension="220,84" />
+  <StrutsActivity path="/PolicyAdd.do" location="50,850" dimension="232,84" />
+  <StrutsActivity path="/PolicyDel.do" location="2150,950" dimension="232,84" />
+  <StrutsActivity path="/PolicySelOne.do" location="1850,1550" dimension="250,84" />
+  <StrutsActivity path="/PolicySelect.do" location="1550,950" dimension="250,84" />
+  <StrutsActivity path="/AnAdd.do" location="350,850" dimension="184,84" />
+  <StrutsActivity path="/AnDel.do" location="650,850" dimension="184,84" />
+  <StrutsActivity path="/AnSelect.do" location="950,850" dimension="202,84" />
+  <StrutsActivity path="/AnSelect2.do" location="1550,350" dimension="208,84" />
+  <StrutsActivity path="/AnSelOne.do" location="1250,850" dimension="202,84" />
+  <StrutsActivity path="/HometownAdd.do" location="1550,650" dimension="184,84" />
+  <StrutsActivity path="/HometownDel.do" location="350,1350" dimension="256,84" />
+  <StrutsActivity path="/HometownSelect.do" location="950,1350" dimension="274,84" />
+  <StrutsActivity path="/HometownSelectOne.do" location="2150,1350" dimension="292,84" />
+  <StrutsActivity path="/LaoxAdd.do" location="1550,1350" dimension="232,84" />
+  <StrutsActivity path="/LaoxDel.do" location="50,1450" dimension="208,84" />
+  <StrutsActivity path="/LaoxSelect.do" location="350,1550" dimension="226,84" />
+  <StrutsActivity path="/MemberAdd.do" location="1850,850" dimension="232,84" />
+  <StrutsActivity path="/MemberDel.do" location="1850,1050" dimension="232,84" />
+  <StrutsActivity path="/MemberOne.do" location="650,1550" dimension="232,84" />
+  <StrutsActivity path="/MemberSelect.do" location="1850,1250" dimension="238,84" />
+  <StrutsActivity path="/main.do" location="650,1550" dimension="202,84" />
+  <StrutsActivity path="/photosc.do" location="350,1750" dimension="220,84" />
+  <StrutsActivity path="/PhotoSelect.do" location="1550,1750" dimension="196,84" />
+  <StrutsActivity path="/PhotoOne.do" location="2450,1750" dimension="178,84" />
+  <StrutsActivity path="/PhotoDel.do" location="1850,1750" dimension="178,84" />
+  <StrutsActivity path="/StructureAdd.do" location="350,1950" dimension="268,84" />
+  <StrutsActivity path="/StructureDel.do" location="950,1950" dimension="268,84" />
+  <StrutsActivity path="/StructureShow.do" location="1550,1950" dimension="274,84" />
+  <StrutsActivity path="/StructureList.do" location="2150,1950" dimension="274,84" />
+  <StrutsActivity path="/StructureXS.do" location="2750,1150" dimension="262,84" />
+  <StrutsActivity path="/main/LoginOut.jsp" location="50,1050" dimension="148,48" />
+  <StrutsActivity path="/gerensq1.jsp" location="650,1750" dimension="118,48" />
+  <StrutsActivity path="/hyry.jsp" location="1550,550" dimension="94,48" />
+  <StrutsActivity path="/System/grsqsp.jsp" location="950,1050" dimension="148,48" />
+  <StrutsActivity path="/hyrymx.jsp" location="2450,850" dimension="106,48" />
+  <StrutsActivity path="/System/dwsp.jsp" location="1250,1050" dimension="136,48" />
+  <StrutsActivity path="/huiyuandw.jsp" location="2150,1550" dimension="124,48" />
+  <StrutsActivity path="/System/hydwmx.jsp" location="2450,1250" dimension="148,48" />
+  <StrutsActivity path="/hydwmx.jsp" location="2450,1550" dimension="106,48" />
+  <StrutsActivity path="/Office/OfficeAdd.jsp" location="50,1150" dimension="166,48" />
+  <StrutsActivity path="/shdtmx.jsp" location="1550,1550" dimension="106,48" />
+  <StrutsActivity path="/System/shdtlb.jsp" location="650,1250" dimension="148,48" />
+  <StrutsActivity path="/shanghuidt.jsp" location="950,1150" dimension="130,48" />
+  <StrutsActivity path="/glqxmx.jsp" location="950,1650" dimension="106,48" />
+  <StrutsActivity path="/System/glqxlb.jsp" location="1250,1250" dimension="148,48" />
+  <StrutsActivity path="/guanliqx.jsp" location="50,1650" dimension="118,48" />
+  <StrutsActivity path="/index.jsp" location="50,1250" dimension="100,48" />
+  <StrutsActivity path="/gglb.jsp" location="2150,1150" dimension="94,48" />
+  <StrutsActivity path="/System/sysgglb.jsp" location="2750,1550" dimension="154,48" />
+  <StrutsActivity path="/ggaoXS.jsp" location="350,1250" dimension="106,48" />
+  <StrutsActivity path="/System/jxlb.jsp" location="1550,850" dimension="136,48" />
+  <StrutsActivity path="/wuhuaxinyu.jsp" location="50,1750" dimension="130,48" />
+  <StrutsActivity path="/jxmx.jsp" location="2150,1650" dimension="94,48" />
+  <StrutsActivity path="/System/lxlylb.jsp" location="1850,650" dimension="148,48" />
+  <StrutsActivity path="/falvweiq.jsp" location="1850,750" dimension="118,48" />
+  <StrutsActivity path="/hysbmx.jsp" location="2150,650" dimension="106,48" />
+  <StrutsActivity path="/System/hysblb.jsp" location="1850,1450" dimension="148,48" />
+  <StrutsActivity path="/shicdt.jsp" location="2150,850" dimension="106,48" />
+  <StrutsActivity path="/System/error.jsp" location="1250,1550" dimension="142,48" />
+  <StrutsActivity path="/System/SystemIndex.jsp" location="950,1550" dimension="178,48" />
+  <StrutsActivity path="/System/photo2.jsp" location="2450,1650" dimension="148,48" />
+  <StrutsActivity path="/photoShow.jsp" location="2150,1850" dimension="124,48" />
+  <StrutsActivity path="/System/photo.jsp" location="50,1850" dimension="142,48" />
+  <StrutsActivity path="/photoOne.jsp" location="50,1950" dimension="118,48" />
+  <StrutsActivity path="/System/ZuZhiAdd.jsp" location="2750,1050" dimension="160,48" />
+  <StrutsActivity path="/zuzhirymx.jsp" location="2750,1450" dimension="124,48" />
+  <StrutsActivity path="/System/zuzhilist.jsp" location="2750,850" dimension="166,48" />
+  <StrutsActivity path="/zzjg.jsp" location="2750,1350" dimension="94,48" />
+  <StrutsActivity path="个人申请删除页面" location="650,1050" dimension="136,48" />
+  <StrutsActivity path="/an/anAdd.jsp" location="1250,1150" dimension="118,48" />
+  <StrutsActivity path="#" location="2150,1750" dimension="46,48" />
+  <StrutsActivity path="/gerensq.jsp" location="1850,550" dimension="112,48" />
+  <StrutsActivity path="/Personal/PersonalAdd.jsp" location="350,1050" dimension="190,48" />
+  <StrutsActivity path="/News/newsAdd.jsp" location="350,1150" dimension="142,48" />
+  <StrutsActivity path="/shdtXS.jsp" location="650,1150" dimension="106,48" />
+  <StrutsActivity path="/zcdongXS.jsp" location="1550,1150" dimension="118,48" />
+  <StrutsActivity path="System/glqxlb.jsp" location="950,1250" dimension="142,48" />
+  <StrutsActivity path="/glqxlb.jsp" location="1550,1250" dimension="106,48" />
+  <StrutsActivity path="/glqxlb.jsp.jsp" location="50,1350" dimension="130,48" />
+  <StrutsActivity path="shicdt.jsp" location="1250,1650" dimension="100,48" />
+  <StrutsActivity path="hysbmx.jsp" location="2150,750" dimension="100,48" />
+  <StrutsActivity path="/ggmx.jsp" location="1550,1650" dimension="94,48" />
+  <StrutsActivity path="/g.jsp" location="2150,1250" dimension="76,48" />
+  <StrutsActivity path="hydwmx.jsp" location="2450,1150" dimension="100,48" />
+  <StrutsActivity path="photoShow.jsp" location="650,1850" dimension="118,48" />
+  <StrutsActivity path="" location="50,2050" dimension="40,48" />
+  <StrutsActivity path="/ZuZhiAdd.jsp" location="2750,950" dimension="118,48" />
+  <StrutsTransition id="/PolicySelOne.do,list,/glqxmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1622" />
+      <AbsolutePoint location="1003,1622" />
+      <AbsolutePoint location="1003,1650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/OfficeAdd.do,add,/NewSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="766,534" />
+      <AbsolutePoint location="766,579" />
+      <AbsolutePoint location="1360,579" />
+      <AbsolutePoint location="1360,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UnitSelectOne.do,listone,/System/hydwmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2572,1034" />
+      <AbsolutePoint location="2572,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Userlist.do,list,/main/LoginOut.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,122" />
+      <AbsolutePoint location="321,122" />
+      <AbsolutePoint location="321,1074" />
+      <AbsolutePoint location="198,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MemberSelect.do,list,/System/hysblb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1939,1334" />
+      <AbsolutePoint location="1939,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/main.do,denglu2,/System/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="802,1634" />
+      <AbsolutePoint location="802,1939" />
+      <AbsolutePoint location="1467,1939" />
+      <AbsolutePoint location="1467,1574" />
+      <AbsolutePoint location="1392,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LaoxSelect.do,list,/System/lxlylb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="576,1592" />
+      <AbsolutePoint location="645,1592" />
+      <AbsolutePoint location="645,24" />
+      <AbsolutePoint location="1977,24" />
+      <AbsolutePoint location="1977,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UnitAdd.do,add,/AnSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,292" />
+      <AbsolutePoint location="1197,292" />
+      <AbsolutePoint location="1197,892" />
+      <AbsolutePoint location="1152,892" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PolicyDel.do,del,/PolicySelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2150,992" />
+      <AbsolutePoint location="1800,992" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AnAdd.do,add,/AnSelect2.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="442,934" />
+      <AbsolutePoint location="442,965" />
+      <AbsolutePoint location="-535,965" />
+      <AbsolutePoint location="-535,-270" />
+      <AbsolutePoint location="1654,-270" />
+      <AbsolutePoint location="1654,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MemberOne.do,list,/hysbmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="867,1634" />
+      <AbsolutePoint location="867,2369" />
+      <AbsolutePoint location="3075,2369" />
+      <AbsolutePoint location="3075,674" />
+      <AbsolutePoint location="2256,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PersonalSelect.do,select2,/hyry.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="787,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AnDel.do,del,/AnSelect2.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="742,850" />
+      <AbsolutePoint location="742,749" />
+      <AbsolutePoint location="1749,749" />
+      <AbsolutePoint location="1749,434" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PersonalOne.do,selectone,/hyrymx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1206,1822" />
+      <AbsolutePoint location="1295,1822" />
+      <AbsolutePoint location="1295,2639" />
+      <AbsolutePoint location="3165,2639" />
+      <AbsolutePoint location="3165,874" />
+      <AbsolutePoint location="2556,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/StructureAdd.do,upd,/System/ZuZhiAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="454,2034" />
+      <AbsolutePoint location="454,2173" />
+      <AbsolutePoint location="3255,2173" />
+      <AbsolutePoint location="3255,1074" />
+      <AbsolutePoint location="2910,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LaoxSelect.do,list2,/falvweiq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,1562" />
+      <AbsolutePoint location="-385,1562" />
+      <AbsolutePoint location="-385,-195" />
+      <AbsolutePoint location="2043,-195" />
+      <AbsolutePoint location="2043,774" />
+      <AbsolutePoint location="1968,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PhotoOne.do,select2,/System/photo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2539,1834" />
+      <AbsolutePoint location="2539,2459" />
+      <AbsolutePoint location="184,2459" />
+      <AbsolutePoint location="184,1898" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/HometownSelect.do,list,/System/jxlb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1177,1434" />
+      <AbsolutePoint location="1177,1735" />
+      <AbsolutePoint location="-157,1735" />
+      <AbsolutePoint location="-157,785" />
+      <AbsolutePoint location="1618,785" />
+      <AbsolutePoint location="1618,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/StructureXS.do,list,/zzjg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2829,1234" />
+      <AbsolutePoint location="2829,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/main.do,denglu,/System/SystemIndex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="751,1634" />
+      <AbsolutePoint location="751,1713" />
+      <AbsolutePoint location="1081,1713" />
+      <AbsolutePoint location="1081,1598" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/OfficeUpd.do,upd,/Office/OfficeAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,492" />
+      <AbsolutePoint location="939,492" />
+      <AbsolutePoint location="939,1113" />
+      <AbsolutePoint location="133,1113" />
+      <AbsolutePoint location="133,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PhotoSelect.do,select,/photoShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1648,1834" />
+      <AbsolutePoint location="1648,1874" />
+      <AbsolutePoint location="2150,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PolicySelect.do,list,/System/glqxlb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1683,1034" />
+      <AbsolutePoint location="1683,1213" />
+      <AbsolutePoint location="1324,1213" />
+      <AbsolutePoint location="1324,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/NewsAdd.do,add,/NewSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="454,650" />
+      <AbsolutePoint location="454,609" />
+      <AbsolutePoint location="1330,609" />
+      <AbsolutePoint location="1330,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/HometownSelect.do,list2,/wuhuaxinyu.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1392" />
+      <AbsolutePoint location="665,1392" />
+      <AbsolutePoint location="665,1513" />
+      <AbsolutePoint location="273,1513" />
+      <AbsolutePoint location="273,1792" />
+      <AbsolutePoint location="180,1792" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PersonalAdd.do,add,/AnSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="886,-63" />
+      <AbsolutePoint location="1239,-63" />
+      <AbsolutePoint location="1239,862" />
+      <AbsolutePoint location="1152,862" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MemberDel.do,del,/MemberSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1966,1134" />
+      <AbsolutePoint location="1966,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/NewSelect.do,list1,/shanghuidt.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1396,650" />
+      <AbsolutePoint location="1396,549" />
+      <AbsolutePoint location="867,549" />
+      <AbsolutePoint location="867,1174" />
+      <AbsolutePoint location="950,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,login,/Userlist.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="246,92" />
+      <AbsolutePoint location="350,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/HometownSelectOne.do,list,/jxmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2296,1434" />
+      <AbsolutePoint location="2296,1674" />
+      <AbsolutePoint location="2244,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/NewSelect.do,list,/System/shdtlb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1467,734" />
+      <AbsolutePoint location="1467,1465" />
+      <AbsolutePoint location="724,1465" />
+      <AbsolutePoint location="724,1298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PersonalDel.do,del,/PersonalSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="306,292" />
+      <AbsolutePoint location="650,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PhotoOne.do,select,/photoOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2509,1834" />
+      <AbsolutePoint location="2509,2549" />
+      <AbsolutePoint location="109,2549" />
+      <AbsolutePoint location="109,1998" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UnitUpd.do,upd,/UnitSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="258,492" />
+      <AbsolutePoint location="350,492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/StructureDel.do,del,/StructureList.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1084,2034" />
+      <AbsolutePoint location="1084,2819" />
+      <AbsolutePoint location="2326,2819" />
+      <AbsolutePoint location="2326,2034" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AnSelect.do,list,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1113,934" />
+      <AbsolutePoint location="1113,1313" />
+      <AbsolutePoint location="100,1313" />
+      <AbsolutePoint location="100,1298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/NewSelOne.do,selone,/shdtmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1167,734" />
+      <AbsolutePoint location="1167,1113" />
+      <AbsolutePoint location="1497,1113" />
+      <AbsolutePoint location="1497,1574" />
+      <AbsolutePoint location="1550,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/StructureShow.do,selone,/zuzhirymx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1687,1992" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/NewDel.do,del,/NewSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="712,734" />
+      <AbsolutePoint location="712,749" />
+      <AbsolutePoint location="-310,749" />
+      <AbsolutePoint location="-310,-120" />
+      <AbsolutePoint location="1527,-120" />
+      <AbsolutePoint location="1527,692" />
+      <AbsolutePoint location="1470,692" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MemberSelect.do,list2,/shicdt.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2088,1313" />
+      <AbsolutePoint location="2397,1313" />
+      <AbsolutePoint location="2397,874" />
+      <AbsolutePoint location="2256,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LaoxDel.do,del,/LaoxSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="154,1534" />
+      <AbsolutePoint location="154,1592" />
+      <AbsolutePoint location="350,1592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/StructureList.do,list,/System/zuzhilist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2287,1992" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PhotoDel.do,del,/PhotoSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1792" />
+      <AbsolutePoint location="1746,1792" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AnSelOne.do,selone,/ggaoXS.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1426,934" />
+      <AbsolutePoint location="1426,2039" />
+      <AbsolutePoint location="321,2039" />
+      <AbsolutePoint location="321,1274" />
+      <AbsolutePoint location="350,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LaoxAdd.do,add,/LaoxSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1666,1434" />
+      <AbsolutePoint location="1666,1490" />
+      <AbsolutePoint location="463,1490" />
+      <AbsolutePoint location="463,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MemberAdd.do,add,/MemberSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2082,913" />
+      <AbsolutePoint location="2727,913" />
+      <AbsolutePoint location="2727,1213" />
+      <AbsolutePoint location="1996,1213" />
+      <AbsolutePoint location="1996,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/OfficeDel.do,del,/Office/OfficeAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1366,450" />
+      <AbsolutePoint location="1366,379" />
+      <AbsolutePoint location="5,379" />
+      <AbsolutePoint location="5,1174" />
+      <AbsolutePoint location="50,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UnitDel.do,del,/UnitSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2958,1692" />
+      <AbsolutePoint location="3435,1692" />
+      <AbsolutePoint location="3435,212" />
+      <AbsolutePoint location="433,212" />
+      <AbsolutePoint location="433,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/photosc.do,denglu2,/PhotoSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,1792" />
+      <AbsolutePoint location="1648,1792" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UnitSelect.do,list2,/huiyuandw.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="463,450" />
+      <AbsolutePoint location="463,409" />
+      <AbsolutePoint location="2115,409" />
+      <AbsolutePoint location="2115,1574" />
+      <AbsolutePoint location="2150,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AnSelect2.do,list,/gglb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2197,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AnSelect2.do,list2,/System/sysgglb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1758,379" />
+      <AbsolutePoint location="3345,379" />
+      <AbsolutePoint location="3345,1574" />
+      <AbsolutePoint location="2904,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PhotoDel.do,del2,/PhotoSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1762" />
+      <AbsolutePoint location="1746,1762" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/OfficeSelect.do,list,/main/LoginOut.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,692" />
+      <AbsolutePoint location="-85,692" />
+      <AbsolutePoint location="-85,1113" />
+      <AbsolutePoint location="103,1113" />
+      <AbsolutePoint location="103,1098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PersonalAdd.do,upd,/gerensq1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,-63" />
+      <AbsolutePoint location="-220,-63" />
+      <AbsolutePoint location="-220,2263" />
+      <AbsolutePoint location="832,2263" />
+      <AbsolutePoint location="832,1822" />
+      <AbsolutePoint location="709,1822" />
+      <AbsolutePoint location="709,1798" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/HometownDel.do,del,/HometownSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="606,1362" />
+      <AbsolutePoint location="950,1362" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/photosc.do,denglu,/System/SystemIndex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,1750" />
+      <AbsolutePoint location="460,1646" />
+      <AbsolutePoint location="1039,1646" />
+      <AbsolutePoint location="1039,1598" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/StructureAdd.do,add,/StructureList.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="484,2034" />
+      <AbsolutePoint location="484,2729" />
+      <AbsolutePoint location="2257,2729" />
+      <AbsolutePoint location="2257,2034" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UnitSelect.do,list,/System/dwsp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="573,534" />
+      <AbsolutePoint location="573,1009" />
+      <AbsolutePoint location="1318,1009" />
+      <AbsolutePoint location="1318,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PersonalSelect.do,select,/System/grsqsp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="897,334" />
+      <AbsolutePoint location="897,1074" />
+      <AbsolutePoint location="950,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PolicySelect.do,list2,/guanliqx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1723,1034" />
+      <AbsolutePoint location="1723,1241" />
+      <AbsolutePoint location="903,1241" />
+      <AbsolutePoint location="903,1674" />
+      <AbsolutePoint location="168,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PersonalUpd.do,upd,/PersonalSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,122" />
+      <AbsolutePoint location="921,122" />
+      <AbsolutePoint location="921,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/UnitSelectOne.do,listone2,/hydwmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2613,1034" />
+      <AbsolutePoint location="2613,1574" />
+      <AbsolutePoint location="2556,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PhotoSelect.do,select2,/System/photo2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1618,1834" />
+      <AbsolutePoint location="1618,1939" />
+      <AbsolutePoint location="2356,1939" />
+      <AbsolutePoint location="2356,1674" />
+      <AbsolutePoint location="2450,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PolicyAdd.do,add,/PolicySelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,850" />
+      <AbsolutePoint location="166,809" />
+      <AbsolutePoint location="1701,809" />
+      <AbsolutePoint location="1701,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/HometownAdd.do,add,/HometownSelect.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1734,683" />
+      <AbsolutePoint location="1815,683" />
+      <AbsolutePoint location="1815,1709" />
+      <AbsolutePoint location="1143,1709" />
+      <AbsolutePoint location="1143,1434" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

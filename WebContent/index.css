@@ -1,0 +1,327 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS Document 
+Site:首页样式
+Author:蔡芳 
+Setup Date:2011/12/13
+*/
+/*start reset*/
+html, body, span,iframe, p, a, h1, h2, h3, h4, h5, h6, table, td, tr, th, tbody, tfoot, form, input, select, textarea, font, img, ul, li{
+	margin:0;
+	padding:0;
+	}
+a img, img,iframe{
+	border: none;
+	}
+a span,form label{
+	cursor:pointer;
+	}
+li{
+	list-style:none;
+	}
+table{
+	border-collapse:separate;/*表格边框为合并*/
+	}
+caption, th, td,{
+	text-align:left;
+	font-weight:normal;
+	}
+select, input, button{
+	vertical-align:middle;
+	font-family: inherit;
+	font-size:100%;
+	}
+/*start base*/
+/*body*/
+body{
+	font:"宋体;";
+	font-size:13px;
+	color:#595959;
+	background-color: #D5ECF2;
+	}
+/*link*/
+a{ 
+	font-size:12px;
+	color:#595959;
+	text-decoration:none;
+}
+a:hover{
+	color: #36C;
+	}
+	/**td宽度***/
+	#tt{width:130px}
+	#t1{width:270px}
+	#t2{width:150px}
+	#r1{height:20px}
+	#r2{height:10px}
+	
+/*header*/
+#header{
+	height:180px;
+	width:100%;
+	margin:0 auto 0 auto;
+	text-align:center;
+	background:url(images/header.gif) no-repeat center;
+	}
+/*nav*/
+#nav{
+	background:#663;
+	width:918px;
+	margin:0 auto 0 auto;
+	height:40px;
+	bottom:0;
+	text-align:center;
+/*	margin-top:260px;
+*/	}
+	#nav ul li{
+		line-height:40px;
+		font-weight:bold;
+		display:inline;
+		margin:0 18px;
+		}
+	#nav ul li a{
+		font-size:14px;
+		color:#fff;}
+	#nav ul li a:hover{
+		font-size:14px;
+		color:#000;
+		}
+/*container*/
+#container{
+	width:918px;
+	margin:0 auto 0 auto;
+	}
+#tips{
+	height:25px;
+	line-height:25px;
+	}
+	.fontColor{
+		color:#c20000;
+		}
+
+/*圆角样式*/
+/**{margin:0;padding:0;font-size:12px;}
+.wrapper{width:80%;margin:0 auto;}
+/*通用样式--容器宽度值*/
+.sharp{width:100%;margin:5px auto 0;float:left;}
+.sharp .content div{padding:10px;}
+.content{height: auto;}
+h3{height:29px;line-height:29px;font-size:14px;text-indent:10px; border-bottom: 1px solid #b6b6b6;}
+a:link,a:visited{color:#595959; text-decoration:none;}
+a:hover{text-decoration:none;color:orange;}
+
+/*上圆角框通用设置样式，如果要运用多个不同颜色，以下6句不用重新变化--------------------------------*/
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block;}
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+.content {border-right:1px solid;border-left:1px solid;overflow:hidden;}
+/*颜色方案一,蓝色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{border-color:#b6b6b6;}
+.color1 .b1,.color1 .b8{background:#b6b6b6;}
+/*背景色*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{background:#ffffff;}
+/*****notice*****/
+#lineWrapper{
+	width:918px;
+	margin-bottom:10px;
+	}
+#noticeWrapper{
+	width:250px;
+	height:173px;
+	float:left;
+	}
+	.more a{
+		position:absolute;
+		right:20px;
+		top:-20px;
+		color:#BB6117;
+		}
+	.more a:hover{
+		color:#333;
+		text-decoration:underline;
+		}
+#notice{
+	position:relative;
+	height:120px;
+}
+#notice ul{
+	margin:0px 10px 0 10px;
+	}
+#notice ul li{
+	line-height:22px;
+	}
+#notice ul li a:hover{
+	line-height:22px;
+	text-decoration:underline;
+	}
+/*middle*/
+#MidWrapper{
+	width:400px;
+	height:173px;
+	float:left;
+	margin-right:9px;
+	margin-left:9px;
+	}
+#noticeWrapper{
+	width:250px;
+	height:173px;
+	float:left;
+	}
+#SbWrapper{
+	width:400px;
+	float:left;
+	margin-right:9px;
+	margin-left:9px;
+	}
+#OrgInsWrapper{
+	float:left;
+	width:250px;
+	}	
+#OrgIns{
+	position:relative;
+	line-height:24px;
+	/**
+	height:290px;
+	**/
+	}	
+	#OrgIns1{
+	position:relative;
+	 height:290px;
+	/**
+	height:290px;
+	**/
+	}	
+		#OrgIns2{
+	position:relative;
+	 height:120px;
+	/**
+	height:290px;
+	**/
+	}
+#OrgIns dl{
+	margin:0;
+	padding:0;
+	line-height:24px;
+	}
+#OrgIns1 dl{
+	margin:0;
+	padding:0;
+	line-height:24px;
+	}
+#OrgIns dl dt{
+	font-weight:bold;}	
+#OrgIns1 dl dt{
+	font-weight:bold;}
+#OrgIns ul li a:hover{
+	line-height:22px;
+	text-decoration:underline;
+	}
+	
+
+
+/**registerbtn**/
+#registerbtn{
+	width:200px;
+	padding:0;
+	height:130px;
+/*	position:absolute;
+	border-right:1px dotted #ccc;*/
+	}
+.personbtn{
+	background:url(images/zhucebtn.png) 0 0px no-repeat;
+	width:140px;
+	height:35px;
+	margin:5px auto 0 20px;
+	border:none;
+	cursor:pointer;
+	}
+.companybtn{
+	background:url(images/zhucebtn.png) 0 -44px no-repeat;
+	width:140px;
+	height:35px;
+	margin:5px auto 0 20px;
+	border:none;
+	cursor:pointer;
+	}
+.linkbtn{
+	background:url(images/zhucebtn.png) 0 -88px no-repeat;
+	width:140px;
+	height:35px;
+	margin:5px auto 0 20px;
+	border:none;
+	cursor:pointer;
+	}
+/**chamberinfo**/
+/*#chamberContainer{
+	position:absolute;
+	width:250px;
+	height:170px;
+	left:200px;
+	border-right:1px dotted #ccc;
+	}
+#chambertitle{
+	margin-left:20px;
+	margin-right:20px;
+	line-height:35px;
+	font-weight:bold;
+	color:#C00;
+	border-bottom:1px solid #39F;
+	}
+#chamberContainer ul{
+	margin:8px 0 0 20px;
+	}
+#chamberContainer ul li{
+	line-height:24px;
+	}
+#chamberContainer ul li a:hover{
+	text-decoration:underline;
+	}
+/**personbar**/
+/*#personBar{
+	position:absolute;
+	width:230px;
+	height:170px;
+	left:450px;
+	border-right:1px dotted #ccc;
+	}
+#personInfo{
+	padding-top:10px;
+	line-height:20px;
+	}
+#personInfo img{
+	float:right;
+	width:80px;
+	height:80px;
+	border:1px solid #ccc;
+	margin-right:10px;}
+/**vip**/
+/*#vipBar{
+	position:absolute;
+	width:230px;
+	height:170px;
+	left:680px;
+	}
+#vipMore a{
+	position:absolute;
+	right:10px;
+	color:#BB6117;}
+#vipMore a:hover{
+		color:#333;
+		text-decoration:underline;
+		}*/
+
+/*footer*/
+#footer{
+	width:100%;
+	height:50px;
+	margin:0 auto 0 auto;
+	text-align:center;
+	}
+#footer ul li{
+	display:inline;
+	margin:0 10px 0 10px;
+	}
