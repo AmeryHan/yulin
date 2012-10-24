@@ -8,3 +8,4 @@ http://localhost:8080/yulin/AnSelect.do
 http://localhost:8080/yulin/System/main.jsp
 admin/admin
 
+下一步计划，maven build，修正浏览访问错位问题
