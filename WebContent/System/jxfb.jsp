@@ -1,10 +1,17 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
+<%
+	String root = request.getContextPath();//equal to : /appname
+	String appURL = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ root + "/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>家乡信息发布</title>
 <link href="../layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<%= root %>/js/ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
@@ -89,7 +96,20 @@
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;内容：</td>
                         <td >
-                            <textarea   name="homecontent"  style="height:250px;" cols="60" rows="50"></textarea>                       </td>
+                            <textarea  name="homecontent"  style="height:250px;" cols="60" rows="50"></textarea>                       </td>
+        	<script type="text/javascript">
+			//<![CDATA[
+				CKEDITOR.replace( 'homecontent',
+					{
+						fullPage : true,
+
+						extraPlugins : 'docprops',
+						language: 'zh-cn'
+
+					});
+			//]]>
+			</script>           
+                   
                     </tr>
                     <tr>
                       <td height="35" align="right">&nbsp;&nbsp;&nbsp;
