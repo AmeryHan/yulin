@@ -21,38 +21,7 @@
     </div>
 <div id="mainContent">
 	<div id="tips">当前位置：<span class="fontColor">组织列表</span></div>
-    <div id="mainLeft">
-    	<div class="sharp color1">
-            <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b> 
-            <div class="content">  
-                  <h3><span class="fontColor"><big><big>M</big></big>enu</span>导航</h3>
-                  <div id="menuLeft">
-                  	<ul>
-                <li><a href="System/ggaofb.jsp">公告发布</a></li>					
-    <li><a href="${pageContext.request.contextPath}/PersonalSelect.do?plid=2">个人申请审批</a></li>
-        <li><a href="${pageContext.request.contextPath}/UnitSelect.do?utid=2">单位申请审批</a></li>
-        <li><a href="System/shdtfb.jsp">商会动态发布</a></li>
-        <li><a href="System/zcdxfb.jsp">管理前线发布</a></li>
-            <li><a href="System/jxfb.jsp">家乡信息发布</a></li>
-               <li><a href="System/zzadd.jsp">组织人员添加</a></li>
-                
-                       <li><a href="${pageContext.request.contextPath}/StructureList.do">组织人员列表</a></li>
-        <li><a href="${pageContext.request.contextPath}/AnSelect2.do?anid=2">公告列表</a></li>
-      <li><a href="${pageContext.request.contextPath}/NewSelect.do?newid=2">商会动态列表</a></li>
-     <li><a href="${pageContext.request.contextPath}/PolicySelect.do?pyid=2">管理前线列表</a></li>
-        <li><a href="${pageContext.request.contextPath}/LaoxSelect.do?lxid=2">老乡留言列表</a></li>
-        <li><a href="${pageContext.request.contextPath}/MemberSelect.do?mbid=2">会员随笔列表</a></li>
-        <li><a href="${pageContext.request.contextPath}/HometownSelect.do?htid=2">家乡信息列表</a></li>
-          <li><a href="${pageContext.request.contextPath}/PhotoSelect.do?mbid=2">相册</a></li>
-        
-                    </ul>
-                  </div>
-            </div>
-            <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>    
-    	</div>
-<!-- registerbtn       --> 
-           
-    </div>
+    <jsp:include page="SystemMenu.jsp" flush="true"/>
     <div id="mainRight">
     	<div class="sharp color1">
                 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b> 
