@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>登录管理系统</title>
 <link href="../layout.css" rel="stylesheet" type="text/css" />
+<script type=""></script>
 </head>
 
 <body>
@@ -13,10 +14,6 @@
 		<ul>
 			<li><a href="main.jsp">登录管理系统</a>
 			</li>
-
-
-
-
 		</ul>
 	</div>
 	<div id="mainContent">

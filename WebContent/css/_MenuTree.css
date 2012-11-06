@@ -1,0 +1,61 @@
+/* ---- WinXP 文件夹常见任务样式 ---- */
+/* ---- MSDN 目录树样式 ---- */
+.MSDN {
+	margin: 0px 0px 0px 13px;/* 边距 */
+	padding: 2px;
+	width: 166px;/* 宽度 */;
+	border: 0px;
+	white-space: nowrap;
+}
+.MSDN * {
+	margin: 0px;
+	padding: 0px;
+}
+.MSDN ul {
+	list-style-type: none;
+}
+.MSDN ul p {
+    height: 20px;
+    padding: 2px;
+    text-indent: 2em;
+}
+
+.MSDN li {
+	margin-top: 1px !important;/* Firefox修正 */
+	margin-top: 2px;/* IE6修正 */
+}
+.MSDN div {
+	padding: 2px;
+}
+.MSDN img {
+	vertical-align: middle;
+}
+.MSDN a {
+	margin-left: 2px;
+	padding: 1px 2px 0px 2px;
+	cursor: pointer;
+	color: #595959;
+	font-size: 12px;/* 字号 */
+	line-height: 12px;/* 行距 */
+	text-decoration: none;
+}
+.MSDN a:hover {
+	border: 1px #999999 solid;
+	background-color: #cccccc;
+}
+.MSDN a.ACTIVE {
+	border: 1px #999999 solid;
+	background-color: #cccccc;
+}
+/* ---- MT_L0 ---- */
+.sharp .content div {
+    padding: 2px 0px 2px 20px;
+}
+.MSDN .MT_L0_ITEM {
+	padding: 1px 0px 1px 2px;
+}
+.MSDN .MT_L1_BODY {
+	padding-top: 1px;
+	padding-left: 1px;
+}
+/* ---- MSDN 目录树样式 ---- */
