@@ -16,7 +16,7 @@
 
 <body>
 <div id="header"></div>	
-	<jsp:include page="SystemMenu.jsp" flush="true"/>
+	<jsp:include page="SystemNav.jsp" flush="true"/>
 <div id="mainContent">
 	<div id="tips">当前位置：<span class="fontColor">家乡信息发布</span></div>
     <jsp:include page="SystemMenu.jsp" flush="true"/>

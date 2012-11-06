@@ -11,7 +11,7 @@
 
 	<body>
 		<div id="header"></div>
-		<jsp:include page="SystemMenu.jsp" flush="true"/>
+		<jsp:include page="SystemNav.jsp" flush="true"/>
 		<div id="mainContent">
 			<div id="tips">
 				µ±«∞Œª÷√£∫
