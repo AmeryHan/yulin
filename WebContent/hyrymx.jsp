@@ -13,7 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 String str= request.getSession().getServletContext().getRealPath("photosc"); 
 str+="\\";
-System.err.println(path+"="+str);
+System.err.println(path+"="+str + "...." +basePath);
 %>
 <body>
 <div id="header"></div>	
@@ -88,7 +88,7 @@ System.err.println(path+"="+str);
                  
 					  <tr>
     <td rowspan="5"  style="text-align:center">&nbsp;
-    	<img src="<%=str %>${map.ptoux }"  width="110" height="120" />
+    	<img src="<%=basePath %>photosc/${map.ptoux }"  width="110" height="120" />
 	 
 	</td>
     <td colspan="2">&nbsp;ĞÕÃû£º${map.PName} </td>

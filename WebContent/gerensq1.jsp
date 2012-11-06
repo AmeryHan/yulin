@@ -120,7 +120,7 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
                         <td>&nbsp;&nbsp;&nbsp;Í·Ïñ£º</td>
                         <td> 
                         
-     	<img src="<%=str %>${map1.ptoux }" height="142px" alt=""   
+     	<img src="<%=basePath %>photosc/${map.ptoux }" height="142px" alt=""   
             style="width: 136px" />
             <!--  
                         <div>
