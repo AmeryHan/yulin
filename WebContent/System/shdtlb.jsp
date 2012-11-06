@@ -10,15 +10,7 @@
 
 <body>
 <div id="header"></div>	
-	<div id="nav">
-    	<ul>
-           <li><a href="System/main.jsp">登录管理系统</a></li>
-         
-        <li><a href="${pageContext.request.contextPath}/AnSelect.do">显示首页</a></li>
- 
- 
-    	</ul>
-    </div>
+	<jsp:include page="SystemMenu.jsp" flush="true"/>
 <div id="mainContent">
 	<div id="tips">当前位置：<span class="fontColor">商会介绍</span></div>
     <jsp:include page="SystemMenu.jsp" flush="true"/>
