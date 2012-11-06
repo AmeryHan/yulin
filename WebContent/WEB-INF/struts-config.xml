@@ -219,7 +219,7 @@
 			<forward name="list" path="/System/hysblb.jsp" />
 			<forward name="list2" path="/shicdt.jsp" />
 		</action>
-		<action path="/main" type="com.yulinsh.Action.Member.main"
+		<action path="/System/main" type="com.yulinsh.Action.Member.main"
 			scope="session">
 			<forward name="denglu" path="/System/SystemIndex.jsp" />
 			<forward name="denglu2" path="/System/error.jsp" />

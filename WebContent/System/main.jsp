@@ -27,7 +27,7 @@
 				<div class="content">
 					<h3>ÏµÍ³µÇÂ¼</h3>
 					<form id="form1" name="form1" method="post"
-						action="${pageContext.request.contextPath}/main.do">
+						action="${pageContext.request.contextPath}/System/main.do">
 						<table width="50%" align="center">
 							<tr height="135">
 								<td width="300" align="right">&nbsp;</td>
