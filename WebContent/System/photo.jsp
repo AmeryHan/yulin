@@ -75,23 +75,7 @@ window.location.href='${pageContext.request.contextPath}/photosc.do?url='+filepa
     </div>
     <div class="clear"></div>
 </div>
-<div id="footer">
-  <ul>
-  <!-- 
-    	 <li><a href="chamberDetial.jsp">商会介绍</a></li>
-        <li><a href="shanghuidt.jsp">商会动态</a></li>
-        <li><a href="huiyuandw.jsp">会员单位</a></li>
-        <li><a href="guanliqx.jsp">管理前线</a></li>
-        <li><a href="shicdt.jsp">市场动态</a></li>
-        <li><a href="wuhuaxinyu.jsp">物华心语</a></li>
-        <li><a href="falvweiq.jsp">法律维权</a></li>
-        <li><a href="lxwm.jsp">联系我们</a></li>
-         -->
-    </ul>
-    <hr />
-<p>版权所有：陕西商会 榆林分会&nbsp;&nbsp;&nbsp;&nbsp; <a
-	href="yrzdmain.html">技术支持：上海悠得信息科技工作室</a></p>
-</div>
+<jsp:include page="SystemFooter.jsp" flush="true"/>
 
 </body>
 </html>

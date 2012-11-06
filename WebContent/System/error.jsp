@@ -44,12 +44,7 @@
  
     <div class="clear"></div>
 </div>
-<div id="footer">
- 
-    <hr />
-<p>版权所有：陕西商会 榆林分会&nbsp;&nbsp;&nbsp;&nbsp; <a
-	href="../yrzdmain.html">技术支持：悠然自得工作室</a></p>
-</div>
+<jsp:include page="SystemFooter.jsp" flush="true"/>
 
 </body>
 </html>

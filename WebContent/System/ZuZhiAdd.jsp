@@ -116,13 +116,7 @@ window.location.href='${pageContext.request.contextPath}/StructureAdd.do?url='+f
     </div>
     <div class="clear"></div>
 </div>
-<div id="footer">
-  <ul>
- 
-    <hr />
-<p>版权所有：陕西商会 榆林分会&nbsp;&nbsp;&nbsp;&nbsp; <a
-	href="yrzdmain.html">技术支持：上海悠得信息科技工作室</a></p>
-</div>
+<jsp:include page="SystemFooter.jsp" flush="true"/>
 
 </body>
 </html>
