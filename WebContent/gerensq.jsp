@@ -113,21 +113,13 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
                 <div class="content">  
                 	 
 					 	<h3>个人申请</h3>
-					  
- 				  <html:form action="/upload.do" method="post" enctype="multipart/form-data">
-				   file : <html:file property="file"/><html:errors property="file"/><br/>
-				   <html:submit/>
-				  </html:form>
-                <form id="form1" name="form1" method="post" action="">
-                  <b class="b5"></b>
-                  <table width="80%"  >
                     <tr>
                      <td>&nbsp;&nbsp;&nbsp; </td>
                         <td> 
                      
  
 	 
-     	<img src=" #" height="142px" alt=""   
+     	<img src="<%=basePath %>photosc/<%=request.getParameter("fileName") %>" height="142px" alt=""   
             style="width: 136px" />
  
 
@@ -135,7 +127,16 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
                         </td>
                         </tr>
                         <tr>
-                        <td>&nbsp;&nbsp;&nbsp;头像：</td>
+                        <td>&nbsp;&nbsp;&nbsp;头像：</td>					  
+ 				  <html:form action="/upload.do" method="post" enctype="multipart/form-data">
+ 				  <html:hidden property="requestURL" value="<%=new String(request.getRequestURL()) %>"/>
+				   file : <html:file property="file"/><html:errors property="file"/><br/>
+				   <html:submit/>
+				  </html:form>
+                <form id="form1" name="form1" method="post" action="">
+                  <b class="b5"></b>
+                  <table width="80%"  >
+
                         <td> 
                         <div>
 				<!-- 

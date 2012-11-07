@@ -22,19 +22,19 @@ public class UploadFileAction extends Action {
 		UploadFileForm uploadFileForm = (UploadFileForm) form;// TODO
 																// Auto-generated
 																// method stub
+		String path = request.getSession().getServletContext()
+				.getRealPath("photosc");
+
 		FormFile fName = uploadFileForm.getFile();
 		System.out.println("上传成功！");
+		Date date = new Date(System.currentTimeMillis());
+		String strDate = new SimpleDateFormat("yyyyMMddhhmmss")
+				.format(date);
+		int random = (int) (Math.random() * 99);
+		String photname = strDate + random + ".jpg";
+		String fileName = path + "\\" + photname;
 
 		try {
-			String path = request.getSession().getServletContext()
-					.getRealPath("photosc");
-			Date date = new Date(System.currentTimeMillis());
-			String strDate = new SimpleDateFormat("yyyyMMddhhmmss")
-					.format(date);
-			int random = (int) (Math.random() * 99);
-			String photname = strDate + random + ".jpg";
-			String fileName = path + "\\" + photname;
-
 			FileOutputStream fos = new FileOutputStream(fileName);
 			fos.write(fName.getFileData());
 			fos.flush();
@@ -42,6 +42,12 @@ public class UploadFileAction extends Action {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			response.sendRedirect(uploadFileForm.getRequestURL()+"?fileName="+photname);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

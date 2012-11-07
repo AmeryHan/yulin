@@ -9,6 +9,7 @@ import org.apache.struts.upload.FormFile;
 public class UploadFileForm extends ActionForm {
 
  private FormFile file;
+ private String requestURL;
 
 
  public ActionErrors validate(ActionMapping mapping,
@@ -29,4 +30,14 @@ public class UploadFileForm extends ActionForm {
  public void setFile(FormFile file) {
   this.file = file;
  }
+
+
+public String getRequestURL() {
+	return requestURL;
+}
+
+
+public void setRequestURL(String requestURL) {
+	this.requestURL = requestURL;
+}
 }
