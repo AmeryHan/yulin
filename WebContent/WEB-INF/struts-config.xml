@@ -7,6 +7,9 @@
 		<form-bean name="userFrom"
 			type="com.yulinsh.actionFrom.UserActionFrom">
 		</form-bean>
+		<form-bean name="uploadFileForm"
+			type="com.yulinsh.Action.UploadFileForm">
+		</form-bean>
 		<form-bean name="personalFrom"
 			type="com.yulinsh.actionFrom.PersonalFrom">
 		</form-bean>
@@ -266,13 +269,19 @@
 			scope="session">
 			<forward name="list" path="/System/zuzhilist.jsp" />
 		</action>
-			<action path="/StructureXS" type="com.yulinsh.Action.Structure.StructureXS"
+		<action path="/StructureXS" type="com.yulinsh.Action.Structure.StructureXS"
 			scope="session">
 			<forward name="list" path="/zzjg.jsp" />
+		</action>
+		
+		<action path="/upload" name="uploadFileForm" type="com.yulinsh.Action.UploadFileAction"
+			scope="session">
+			<forward name="success" path="/success.jsp" />
 		</action>
 			 
 	</action-mappings>
 	<controller processorClass="com.yulinsh.Action.setcharrequest"></controller>
+	<!-- <controller maxFileSize="10M"></controller> -->
 	<message-resources
 		parameter="com.yourcompany.struts.ApplicationResources" />
 	<plug-in
