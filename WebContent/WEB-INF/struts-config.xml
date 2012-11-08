@@ -222,11 +222,17 @@
 			<forward name="list" path="/System/hysblb.jsp" />
 			<forward name="list2" path="/shicdt.jsp" />
 		</action>
-		<action path="/System/main" type="com.yulinsh.Action.Member.main"
+		<action path="/main" type="com.yulinsh.Action.Member.main"
 			scope="session">
 			<forward name="denglu" path="/System/SystemIndex.jsp" />
 			<forward name="denglu2" path="/System/error.jsp" />
 		</action>
+		<action path="/ggaofb" type="org.apache.struts.actions.ForwardAction" parameter="/System/ggaofb.jsp"/>
+		<action path="/zzadd" type="org.apache.struts.actions.ForwardAction" parameter="/System/zzadd.jsp"/>
+		<action path="/ggaofb" type="org.apache.struts.actions.ForwardAction" parameter="/System/ggaofb.jsp"/>
+		<action path="/zcdxfb" type="org.apache.struts.actions.ForwardAction" parameter="/System/zcdxfb.jsp"/>
+		<action path="/shdtfb" type="org.apache.struts.actions.ForwardAction" parameter="/System/shdtfb.jsp"/>
+		<action path="/jxfb" type="org.apache.struts.actions.ForwardAction" parameter="/System/jxfb.jsp"/>
 		
 		<!-- 上传图片 -->
 			<action path="/photosc" type="com.yulinsh.photo.PhotoSC"

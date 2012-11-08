@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/_MenuTree.js"></script>
-<link href="${pageContext.request.contextPath}/css/_MenuTree.css" rel="stylesheet" type="text/css" />
+<script language='javascript' src='js/_MenuTree.js'></script>
+<link href="css/_MenuTree.css" rel="stylesheet" type="text/css" />
 <div id="mainLeft">
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
@@ -10,25 +10,25 @@
 						//<![CDATA[
 						var arrData = new Array(
 							[0,"公告管理","#"],
-								[1,"公告发布","ggaofb.jsp"],
+								[1,"公告发布","${pageContext.request.contextPath}/ggaofb.do"],
 								[1,"公告列表","${pageContext.request.contextPath}/AnSelect2.do?anid=2"],
 							[0,"审批管理","#"],
 								[1,"个人审批","${pageContext.request.contextPath}/PersonalSelect.do?plid=2"],
 								[1,"企业审批","${pageContext.request.contextPath}/UnitSelect.do?utid=2"],
 							[0,"组织人员管理","#"],
-								[1,"人员添加","zzadd.jsp"],
+								[1,"人员添加","${pageContext.request.contextPath}/zzadd.do"],
 								[1,"人员列表","${pageContext.request.contextPath}/StructureList.do"],
 							[0,"公告管理","#"],
-								[1,"公告发布","ggaofb.jsp"],
+								[1,"公告发布","${pageContext.request.contextPath}/ggaofb.do"],
 								[1,"公告列表","${pageContext.request.contextPath}/AnSelect2.do?anid=2"],
 							[0,"管理前线管理","#"],
-								[1,"前线发布","zcdxfb.jsp"],
+								[1,"前线发布","${pageContext.request.contextPath}/zcdxfb.do"],
 								[1,"前线列表","${pageContext.request.contextPath}/PolicySelect.do?pyid=2"],
 							[0,"商会信息管理","#"],
-								[1,"动态发布","shdtfb.jsp"],
+								[1,"动态发布","${pageContext.request.contextPath}/shdtfb.do"],
 								[1,"动态列表","${pageContext.request.contextPath}/NewSelect.do?newid=2"],
 							[0,"家乡信息管理","#"],
-								[1,"信息发布","jxfb.jsp"],
+								[1,"信息发布","${pageContext.request.contextPath}/jxfb.do"],
 								[1,"信息列表","${pageContext.request.contextPath}/HometownSelect.do?htid=2"],
 							[0,"相册管理","#"],
 								[1,"相册发布","#"],
@@ -37,7 +37,7 @@
 								[1,"老乡留言","${pageContext.request.contextPath}/LaoxSelect.do?lxid=2"],
 								[1,"会员随笔","${pageContext.request.contextPath}/MemberSelect.do?mbid=2"]
 						);
-						var MSDN = new _MenuTree("MSDN", arrData, "../images/MSDN/");
+						var MSDN = new _MenuTree("MSDN", arrData, "images/MSDN/");
 						MSDN.Draw();
 						//]]>
 					</script>
