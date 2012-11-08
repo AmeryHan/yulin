@@ -87,7 +87,8 @@ public class PersonalAdd extends Action {
 			vo.setPHometown(request.getParameter("pHometown"));
 			vo.setPcontent(request.getParameter("pContent"));
 			
-		   	service.getUpdatePersonal(vo,strid);
+			vo.setPtoux(request.getParameter("ptoux"));
+		   	service.getInsertPersonal(vo);
 			return mapping.findForward("add");
 		}
 	 

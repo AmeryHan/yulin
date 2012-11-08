@@ -133,7 +133,7 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
 				   file : <html:file property="file"/><html:errors property="file"/><br/>
 				   <html:submit/>
 				  </html:form>
-                <form id="form1" name="form1" method="post" action="">
+                <form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/PersonalAdd.do?&tupdid=2&id=${map1.pid }">
                   <b class="b5"></b>
                   <table width="80%"  >
 
@@ -194,8 +194,10 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
                        </td>
                     </tr>
                     <tr>
+                        <input name="ptoux" value="<%=request.getParameter("fileName") %>"/>
                         <td align="right"><input align="right" class="regBtn" type="submit" value="×¢²á"  /></td>
                         <td ><input class="canselBtn" type="button" value="È¡Ïû"  /></td>
+
                     </tr>
                 </table>
           
