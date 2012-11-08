@@ -1,5 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false" %>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-logic" prefix="logic" %>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -55,9 +57,22 @@ window.location.href='${pageContext.request.contextPath}/StructureAdd.do?url='+f
                 <div class="content">  
                 	 
 					 	<h3>组织人员添加</h3>
-					  
+     	<img src="<%=basePath %>photosc/<%=request.getParameter("fileName") %>" height="142px" alt=""   
+            style="width: 136px" />
  
-                <form id="form1" name="form1" method="post" action="">
+
+                        
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>&nbsp;&nbsp;&nbsp;头像：</td>					  
+ 				  <html:form action="/upload.do" method="post" enctype="multipart/form-data">
+ 				  <html:hidden property="requestURL" value="<%=new String(request.getRequestURL()) %>"/>
+				   file : <html:file property="file"/><html:errors property="file"/><br/>
+				   <html:submit/>
+				  </html:form>					  
+ 
+                <form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/StructureAdd.do?&tupdid=2&id=${map1.id }">
                   <b class="b5"></b>
                   <table width="80%"  >
                     <tr>
@@ -66,21 +81,7 @@ window.location.href='${pageContext.request.contextPath}/StructureAdd.do?url='+f
                      
  		 
 	 
-     	<img src="#" height="142px" alt=""   
-            style="width: 136px" />
- 
 
-                        
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>&nbsp;&nbsp;&nbsp;头像：</td>
-                        <td> 
-                        <div>
-				<input type="file" id="file"   />
-				<span id="error" class='errorInfo'></span>
-				<input type="button" value="上传" id="DataReport"
-					onclick="validateFile()"/>
 			</div>
 		 </td>
                     </tr>
@@ -106,6 +107,7 @@ window.location.href='${pageContext.request.contextPath}/StructureAdd.do?url='+f
                         </select>
                         </td>
                     </tr>
+                    <input name="photname" value="<%=request.getParameter("fileName") %>"/>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp; 简介：</td>
                         <td>

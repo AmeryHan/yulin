@@ -81,9 +81,9 @@ public class StructureAdd extends Action {
 			vo.setSshzw(request.getParameter("pHometown"));
 			vo.setSjs(request.getParameter("pContent"));
 		 
- 
+			vo.setStoux(request.getParameter("photname"));
 			
-		   	service.getUpdateZuZhi(vo,strid);
+		   	service.getInsertZuZhi(vo);
 			return mapping.findForward("add");
 		}
 	 
