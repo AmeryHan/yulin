@@ -11,11 +11,15 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String str= request.getSession().getServletContext().getRealPath("photosc"); 
 str+="\\";
-
+//String root = request.getContextPath();//equal to : /appname
+//String appURL = request.getScheme() + "://"
+	//	+ request.getServerName() + ":" + request.getServerPort()
+	//	+ root + "/";
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>个人申请</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
+<script src="<%= path %>/js/datepick/WdatePicker.js"></script>
 </head>
 <script type="text/javascript"> 
 function validateFile(){ 
@@ -160,7 +164,8 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
                     </tr>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;出生日期：</td>
-                        <td><input class="inputStyle"  name="pBirthTime"/></td>
+                        <td><input class="inputStyle" name="pBirthTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"
+														onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value=""/></td>
                     </tr>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;电话：</td>
