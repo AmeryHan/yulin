@@ -260,3 +260,12 @@ a:hover{text-decoration:none; border-bottom:1px orange solid;color:orange;}
 	color:#C30;}
 .time{
 	color:#CCC;}
+.divMargen {
+	margin:10px 0px 10px 0px;
+	padding:5px;
+}
+.tableFontAlign {
+	float:right;
+	width:65px;
+	text-align:right;
+}
