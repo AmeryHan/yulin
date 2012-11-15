@@ -1,5 +1,11 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
+<script language='javascript' src='js/jquery.js'></script>
+<script language='javascript' src='js/jquery.dataTables.js'></script>
 <script language='javascript' src='js/_MenuTree.js'></script>
+<style type="text/css" title="currentStyle">
+			@import "css/demo_page.css";
+			@import "css/demo_table.css";
+		</style>
 <link href="css/_MenuTree.css" rel="stylesheet" type="text/css" />
 <div id="mainLeft">
 			<div class="sharp color1">
