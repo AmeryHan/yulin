@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
-	prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -46,51 +47,42 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>会员随笔</h3>
-
 					<div id="ListWrapper">
-
-
-						<ul>
-							<table>
-								<tr>
-									<td style="text-align: right;"><input type="button"
-										onclick="window.location.href='huiyfb.jsp'; " value="发布"
-										align="right" />
-									</td>
-
-								</tr>
-								<tr>
-									<td colspan="5">
-										<hr /></td>
-								</tr>
-								<logic:iterate id="map" collection="${requestScope.arr}">
+						<ul><input type="button" onclick="window.location.href='huiyfb.jsp'; " value="发布随笔" align="right" />
+							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
+								<thead>
 									<tr>
-
-										<td id="t1" style="text-align: left"><a
-											href="${pageContext.request.contextPath}/MemberOne.do?id=${map.memberid}">${map.membertitle}
-										</a>
-										</td>
-										<td style="text-align: right">&nbsp; &nbsp; &nbsp; &nbsp;
-											<span id="Date">${map.username}</span>
-										</td>
-										<td style="text-align: right">&nbsp; &nbsp; &nbsp; &nbsp;
-											<span id="Date">${map.membertime}</span>
-										</td>
-
+										<th>标题</th>
+										<th>发布人</th>
+										<th>发布时间</th>
 									</tr>
-
-
-
-								</logic:iterate>
+								</thead>
+								<tbody>
+									<logic:iterate id="map" collection="${requestScope.arr}">
+										<tr class="gradeC">
+											<c:choose>
+												<c:when test="${fn:length(map.membertitle) > 10}">
+													<td title="${map.membertitle}">&nbsp;<a href="${pageContext.request.contextPath}/MemberOne.do?id=${map.memberid}">${fn:substring(map.membertitle,
+														0, 10)}...</a></td>
+												</c:when>
+												<c:otherwise>
+													<td>&nbsp;<a href="${pageContext.request.contextPath}/MemberOne.do?id=${map.memberid}">${map.membertitle}</a></td>
+												</c:otherwise>
+											</c:choose>
+											<c:choose>
+												<c:when test="${fn:length(map.username) > 15}">
+													<td title="${map.username}">&nbsp;${fn:substring(map.username,
+														0, 15)}...</td>
+												</c:when>
+												<c:otherwise>
+													<td>&nbsp;${map.username}</td>
+												</c:otherwise>
+											</c:choose>
+											<td>&nbsp;${map.membertime}</td>
+										</tr>
+									</logic:iterate>
+								</tbody>
 							</table>
-							<!-- 
-                           	 <li><a href="${pageContext.request.contextPath}/MemberOne.do?id=${map.memberid}">${map.membertitle} 
-                   	 </a><span id="Date">${map.membertime}</span></li>
-                        <li><a href="#">1、列表数据风动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-                        <li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						<li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						<li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						 -->
 						</ul>
 					</div>
 				</div>

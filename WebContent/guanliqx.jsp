@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
-	prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -48,32 +49,41 @@
 					<h3>管理前线</h3>
 					<div id="ListWrapper">
 						<ul>
-
-
-							<logic:iterate id="map2" collection="${requestScope.arr1}">
-								<li><a
-									href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a>
-									<span id="Date">${map2.policyTime}</span>
-								</li>
-
-							</logic:iterate>
-
-							<!-- 
-                       	<li><a href="glqxmx.jsp">1、列表数据风动 旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-                        <li><a href="#">1、列表数据风动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-                        <li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						<li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						<li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						 -->
+							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
+								<thead>
+									<tr>
+										<th  align="left">标题</th>
+										<th>发布人</th>
+										<th>发布时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<logic:iterate id="map2" collection="${requestScope.arr1}">
+										<tr class="gradeC">
+											<c:choose>
+												<c:when test="${fn:length(map2.policyTitle) > 10}"><td title="${map2.policyTitle}">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${fn:substring(map2.policyTitle, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a></td></c:otherwise>
+										    </c:choose>
+										    <c:choose>
+												<c:when test="${fn:length(map2.policyAuthor) > 15}"><td title="${map2.policyAuthor}">&nbsp;${fn:substring(map2.policyAuthor, 0, 15)}...</td></c:when>   
+										    	<c:otherwise><td>&nbsp;${map2.policyAuthor}</td></c:otherwise>
+										    </c:choose>
+											<td>&nbsp;${map2.policyTime}</td>
+										</tr>
+									</logic:iterate>
+								</tbody>
+							</table>
 						</ul>
 					</div>
-
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>
 		</div>
 		<div class="clear"></div>
 	</div>
+	<script type="text/javascript" charset="GBK">
+			$(document).ready(function() {$('#listNotice').dataTable();} );
+		</script>
 	<div id="footer">
 		<ul>
 			<li><a href="chamberDetial.jsp">商会介绍</a>

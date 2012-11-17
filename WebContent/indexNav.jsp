@@ -18,9 +18,9 @@
 		<li><a
 			href="${pageContext.request.contextPath}/HometownSelect.do?htid=1">家乡</a>
 		</li>
-		<li><a
+		<%-- <li><a
 			href="${pageContext.request.contextPath}/LaoxSelect.do?lxid=1">老乡留言</a>
-		</li>
+		</li> --%>
 		<li><a
 			href="${pageContext.request.contextPath}/PhotoSelect.do?mbid=1&str1=0&str2=6">图片展示</a>
 		</li>

@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
-	prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,7 +18,7 @@ int i=0;
 	<jsp:include page="indexMenu.jsp" flush="true"/>
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">会员单位</span>
+			当前位置：<span class="fontColor">会员企业</span>
 		</div>
 		<div id="mainLeft">
 			<div class="sharp color1">
@@ -48,78 +49,53 @@ int i=0;
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>会员单位</h3>
+					<h3>会员企业</h3>
 					<div id="ListWrapper">
-						<form id="lyname">
-							<table>
-								<tr>
-									<td colspan="10" style="text-align: left">以下会员单位显示没有先后顺序
-										&nbsp;</td>
-
-								</tr>
-								<tr>
-									<td width=600><hr />
-									</td>
-									<td></td>
-								</tr>
-								<ul>
+						<ul>
+							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
+								<thead>
 									<tr>
-
-										<td><logic:iterate id="map"
-												collection="${requestScope.arr}">
-
-
-												<%
-    
-        
-                i++;
-                if(i!=12){
-                	 
-               
-                %>
-
-												<a
-													href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map.unitID } ">${map.unitName}</a>&nbsp;&nbsp; &nbsp;&nbsp;
-           
-            <%
-                }else
-                {
-                
-                	%>
-
-												</br>
-												<a
-													href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map.unitID } ">${map.unitName}</a>&nbsp;&nbsp; &nbsp;&nbsp;
-           
-
-                     
-                	<%
-                	 if(i==24)
-                	 {
-                		 i=0;
-                	 }
-                }
-                
-           
-            %>
-
-											</logic:iterate></td>
-
+										<th>企业名称</th>
+										<th>姓名</th>
+										<th>性别</th>
+										<th>职务</th>
+										<th>电话</th>
+										<th>注册时间</th>
 									</tr>
-								</ul>
-
+								</thead>
+								<tbody>
+									<logic:iterate id="map" collection="${requestScope.arr}">
+										<tr class="gradeC">
+											<c:choose>
+												<c:when test="${fn:length(map.unitName) > 10}"><td align="center" title="${map.unitName}">&nbsp;<a href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map.unitID } ">${fn:substring(map.unitName, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td align="center">&nbsp;<a href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map.unitID } ">${map.unitName}</a></td></c:otherwise>
+										    </c:choose>
+										    <c:choose>
+												<c:when test="${fn:length(map.pname) > 8}"><td align="center" title="${map.pname}">&nbsp;${fn:substring(map.pname, 0, 8)}...</td></c:when>   
+										    	<c:otherwise><td align="center">&nbsp;${map.pname}</td></c:otherwise>
+										    </c:choose>
+											<td align="center">&nbsp;${map.psex}</td>
+											<td align="center">&nbsp;${map.unitPost}</td>
+											<td align="center">&nbsp;${map.unitPhone}</td>
+											<c:choose>
+												<c:when test="${fn:length(map.unittime) > 10}"><td align="center" title="${map.unittime}">&nbsp;${fn:substring(map.unittime, 0, 10)}</td></c:when>   
+										    	<c:otherwise><td align="center">&nbsp;${map.unittime}</td></c:otherwise>
+										    </c:choose>
+										</tr>
+									</logic:iterate>
+								</tbody>
 							</table>
-						</form>
-
+						</ul>
 					</div>
-
-
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>
 		</div>
 		<div class="clear"></div>
 	</div>
+	<script type="text/javascript" charset="GBK">
+		$(document).ready(function() {$('#listNotice').dataTable();} );
+	</script>
 	<div id="footer">
 		<ul>
 			<li><a href="chamberDetial.jsp">商会介绍</a>

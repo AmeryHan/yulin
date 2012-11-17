@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
-	prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -48,13 +49,53 @@
 					<h3>家乡</h3>
 					<div id="ListWrapper">
 						<ul>
+							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
+								<thead>
+									<tr>
+										<th>标题</th>
+										<th>发布人</th>
+										<th>发布时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<logic:iterate id="map" collection="${requestScope.arr}">
+										<tr class="gradeC">
+											<c:choose>
+												<c:when test="${fn:length(map.hometitle) > 10}">
+													<td title="${map.hometitle}">&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${fn:substring(map.hometitle,
+														0, 10)}...</a></td>
+												</c:when>
+												<c:otherwise>
+													<td>&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${map.hometitle}</a></td>
+												</c:otherwise>
+											</c:choose>
+											<c:choose>
+												<c:when test="${fn:length(map.username) > 15}">
+													<td title="${map.username}">&nbsp;${fn:substring(map.username,
+														0, 15)}...</td>
+												</c:when>
+												<c:otherwise>
+													<td>&nbsp;${map.username}</td>
+												</c:otherwise>
+											</c:choose>
+											<td>&nbsp;${map.hometime}</td>
+										</tr>
+									</logic:iterate>
+								</tbody>
+							</table>
+						</ul>
+					</div>
+					
+					
+					
+					<div id="ListWrapper">
+						<ul>
 							<table>
 								<logic:iterate id="map" collection="${requestScope.arr}">
 
 									<tr id="r1">
 
-										<td id="tt" style="text-align: left"><a
-											href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">
+										<td id="tt" style="text-align: left"><a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">
 												${map.hometitle}</a>
 										</td>
 										<td id="tt" style="text-align: left">&nbsp; &nbsp; &nbsp;
@@ -81,6 +122,11 @@
 		</div>
 		<div class="clear"></div>
 	</div>
+	<script type="text/javascript" charset="GBK">
+		$(document).ready(function() {
+			$('#listNotice').dataTable();
+		});
+	</script>
 	<div id="footer">
 		<ul>
 			<li><a href="chamberDetial.jsp">商会介绍</a>
