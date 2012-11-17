@@ -94,22 +94,6 @@
     </div>
     <div class="clear"></div>
 </div>
-<div id="footer">
-  <ul>
-    	 <li><a href="chamberDetial.jsp">商会介绍</a></li>
-                <li><a href="${pageContext.request.contextPath}/NewSelect.do">商会动态</a></li>
-        <li><a href="${pageContext.request.contextPath}/PolicySelect.do">政策动向</a></li>
-        <li><a href="huiyuandw.jsp">会员单位</a></li>
-        <li><a href="guanliqx.jsp">管理前线</a></li>
-        <li><a href="shicdt.jsp">市场动态</a></li>
-        <li><a href="wuhuaxinyu.jsp">物华心语</a></li>
-        <li><a href="falvweiq.jsp">法律维权</a></li>
-        <li><a href="lxwm.jsp">联系我们</a></li>
-    </ul>
-    <hr />
-   <p>版权所有：陕西商会 榆林分会&nbsp;&nbsp;&nbsp;&nbsp; <a
-	href="yrzdmain.html">技术支持：悠然自得工作室</a></p>
-</div>
-
+<jsp:include page="indexFooter.jsp" flush="true" />
 </body>
 </html>

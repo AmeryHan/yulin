@@ -80,22 +80,6 @@
     </div>
 </div>
 <div class="clear"></div>
-<div id="footer">
-  <ul>
-              <li><a href="#">商会介绍</a></li>
-        <li><a href="#">商会动态</a></li>
-        <li><a href="#">会员单位</a></li>
-        <li><a href="#">管理前线</a></li>
-        <li><a href="#">市场动态</a></li>
-		<li><a href="#">政策动向</a></li>
-        <li><a href="#">物华心语</a></li>
-        <li><a href="#">法律维权示</a></li>
-        <li><a href="#">联系我们</a></li>
-    </ul>
-    <hr />
-<p>版权所有：陕西商会 榆林分会&nbsp;&nbsp;&nbsp;&nbsp; <a
-	href="yrzdmain.html">技术支持：悠然自得工作室</a></p>
-</div>
-
+<jsp:include page="indexFooter.jsp" flush="true" />
 </body>
 </html>
