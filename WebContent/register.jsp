@@ -10,19 +10,7 @@
 
 <body>
 <div id="header"></div>	
-<div id="nav">
-    <ul>
-    	        <li><a href="index.html" >首页</a></li>
-        <li><a href="chamberDetial.html">商会介绍</a></li>
-        <li><a href="shanghuidt.html">商会动态</a></li>
-        <li><a href="huiyuandw.html">会员单位</a></li>
-        <li><a href="guanliqx.html">管理前线</a></li>
-        <li><a href="shicdt.html">会员随笔</a></li>
-        <li><a href="wuhuaxinyu.html">家乡</a></li>
-        <li><a href="falvweiq.html">老乡留言</a></li>
-        <li><a href="lxwm.html">联系我们</a></li>
-    </ul>
-</div>
+<jsp:include page="indexMenu.jsp" flush="true"/>
 <div id="registerWrapper">
 	<div id="tips">当前位置：<span class="fontColor">个人申请</span></div>
 	<div class="sharp color1">
