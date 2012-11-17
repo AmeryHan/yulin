@@ -20,37 +20,8 @@
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>
-						<span class="fontColor"><big><big>M</big>
-						</big>enu</span>导航
-					</h3>
-					<div id="menuLeft">
-						<ul>
-							<li><a href="chamberDetial.jsp">商会介绍</a>
-							</li>
-							<li><a
-								href="${pageContext.request.contextPath}/NewSelect.do?newid=1">商会动态</a>
-							</li>
-							<li><a
-								href="${pageContext.request.contextPath}/UnitSelect.do?utid=1">会员单位</a>
-							</li>
-							<li><a
-								href="${pageContext.request.contextPath}/PolicySelect.do?pyid=1">管理前线</a>
-							</li>
-							<li><a
-								href="${pageContext.request.contextPath}/MemberSelect.do?mbid=1">会员随笔</a>
-							</li>
-							<li><a
-								href="${pageContext.request.contextPath}/HometownSelect.do?htid=1">家乡</a>
-							</li>
-							<li><a
-								href="${pageContext.request.contextPath}/LaoxSelect.do?lxid=1">老乡留言</a>
-							</li>
-							<li><a
-								href="${pageContext.request.contextPath}/PhotoSelect.do?mbid=1&str1=0&str2=6">图片展示</a>
-							</li>
-						</ul>
-					</div>
+					<h3>导航</h3>
+					<jsp:include page="indexNav.jsp" flush="true" />
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>

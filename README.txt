@@ -54,3 +54,4 @@ Amery，你怎么看。
 前台：
 现在可以直接访问http://localhost:8080/yulin/。以后有域名了也可以直接访问顶级域名了。会自动做跳转。
 提取前台所有菜单到indexMenu.jsp。
+提取前台所有导航菜单到indexNav.jsp。
