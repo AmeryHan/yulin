@@ -1,10 +1,17 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
+<%
+	String root = request.getContextPath();//equal to : /appname
+	String appURL = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ root + "/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>管理前线发布</title>
 <link href="../layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<%= root %>/js/ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
@@ -33,6 +40,16 @@
 									<td class="tableFontAlign">内容：</td>
 									<td><textarea   name="policyContent"  style="height: 250px; width:520px;" cols="60" rows="50"></textarea></td>
 								</tr>
+								<script type="text/javascript">
+									//<![CDATA[
+										CKEDITOR.replace( 'policyContent',
+											{
+												fullPage : true,
+												extraPlugins : 'docprops',
+												language: 'zh-cn'
+											});
+									//]]>
+								</script>
 								<tr>
 									<td></td>
 									<td align="right"><input class="canselBtn" type="submit" value="发布"/>
