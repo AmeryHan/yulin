@@ -23,7 +23,7 @@
 					<div class="divMargen">
 						<form id="form1" name="form1" method="post"
 							action="${pageContext.request.contextPath}/AnAdd.do">
-							<table width="80%">
+							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<tr>
 									<td class="tableFontAlign">±êÌâ£º</td>
 									<td><input class="inputStyle" name="anTitle" />
@@ -36,8 +36,8 @@
 								</tr>
 								<tr>
 									<td class="tableFontAlign">ÄÚÈÝ£º</td>
-									<td><textarea name="anConent" style="height: 250px;"
-											cols="60" rows="50"></textarea></td>
+									<td><textarea name="anConent" style="height: 250px; width:520px;"
+											cols="60" rows="60"></textarea></td>
 								</tr>
 								<tr>
 									<td></td>

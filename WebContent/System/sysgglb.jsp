@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
-	prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -36,8 +37,14 @@
 								<tbody>
 									<logic:iterate id="map1" collection="${requestScope.arr}">
 										<tr class="gradeC">
-											<td>&nbsp;${map1.anTitle}</td>
-											<td>&nbsp;${map1.anAuthor}</td>
+											<c:choose>
+												<c:when test="${fn:length(map1.anTitle) > 10}"><td title="${map1.anTitle}">&nbsp;${fn:substring(map1.anTitle, 0, 10)}...</td></c:when>   
+										    	<c:otherwise><td>&nbsp;${map1.anTitle}</td></c:otherwise>
+										    </c:choose>
+										    <c:choose>
+												<c:when test="${fn:length(map1.anAuthor) > 15}"><td title="${map1.anAuthor}">&nbsp;${fn:substring(map1.anAuthor, 0, 15)}...</td></c:when>   
+										    	<c:otherwise><td>&nbsp;${map1.anAuthor}</td></c:otherwise>
+										    </c:choose>
 											<td>&nbsp;${map1.anTime}</td>
 											<td><a href="#" onclick="window.location.href='${pageContext.request.contextPath}/AnDel.do?id=${map1.anID}';">É¾³ý</a></td>
 										</tr>
@@ -53,12 +60,7 @@
 		<div class="clear"></div>
 	</div>
 	<script type="text/javascript" charset="GBK">
-			$(document).ready(function() {
-				$('#listNotice').dataTable({
-					"sScrollX": "95%",
-			        "bScrollCollapse": true 
-				});
-			} );
+			$(document).ready(function() {$('#listNotice').dataTable();} );
 		</script>
 	<jsp:include page="SystemFooter.jsp" flush="true" />
 

@@ -1,5 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic" prefix="logic" %>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,42 +11,59 @@
 </head>
 
 <body>
-<div id="header"></div>	
-	<jsp:include page="SystemNav.jsp" flush="true"/>
-<div id="mainContent">
-	<div id="tips">当前位置：<span class="fontColor">商会介绍</span></div>
-    <jsp:include page="SystemMenu.jsp" flush="true"/>
-    <div id="mainRight">
-    	<div class="sharp color1">
-                <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b> 
-                <div class="content">  
-                	  
-                   	<h3>商会动态</h3>
-                    <div id="ListWrapper">
-                   	  <ul>
-                   	 
-                       	  					<table>
-						<logic:iterate id="map1" collection="${requestScope.arr1}" >
-	<tr id="r1">
-	<td  id="t1" style="text-align:left">&nbsp;<a href="#">${map1.newsTitle}</a></td>
-	<td  id="t1" style="text-align:left">&nbsp;<a href="#">${map1.newsAuthor}</a></td>
-   <td style="text-align:right">&nbsp;${map1.newsTime}</td>
- <td align="right"><input type="checkbox" onclick="window.location.href='${pageContext.request.contextPath}/NewDel.do?id=${map1.newsId}'; "    ></input></td>
-   </tr>
-</logic:iterate>
-</table>
-                    
-                        </ul>
-                    </div>
- 
-					 
-          </div>
-                <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>    
-            </div>
-    </div>
-    <div class="clear"></div>
-</div>
-<jsp:include page="SystemFooter.jsp" flush="true"/>
+	<div id="header"></div>
+	<jsp:include page="SystemNav.jsp" flush="true" />
+	<div id="mainContent">
+		<div id="tips">
+			当前位置：<span class="fontColor">商会介绍</span>
+		</div>
+		<jsp:include page="SystemMenu.jsp" flush="true" />
+		<div id="mainRight">
+			<div class="sharp color1">
+				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+				<div class="content">
+					<h3>商会动态</h3>
+					<div id="ListWrapper">
+						<ul>
+							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
+								<thead>
+									<tr>
+										<th>标题</th>
+				                        <th>发布人</th>
+				                        <th>发布时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<logic:iterate id="map1" collection="${requestScope.arr1}">
+										<tr class="gradeC">
+											<c:choose>
+												<c:when test="${fn:length(map1.newsTitle) > 10}"><td title="${map1.newsTitle}">&nbsp;${fn:substring(map1.newsTitle, 0, 10)}...</td></c:when>   
+										    	<c:otherwise><td>&nbsp;${map1.newsTitle}</td></c:otherwise>
+										    </c:choose>
+										    
+										    <c:choose>
+												<c:when test="${fn:length(map1.newsAuthor) > 15}"><td title="${map1.newsAuthor}">&nbsp;${fn:substring(map1.newsAuthor, 0, 15)}...</td></c:when>   
+										    	<c:otherwise><td>&nbsp;${map1.newsAuthor}</td></c:otherwise>
+										    </c:choose>
+										    <td>&nbsp;${map1.newsTime}</td>
+											<td><a href="#" onclick="window.location.href='${pageContext.request.contextPath}/NewDel.do?id=${map1.newsId}';">删除</a></td>
+										</tr>
+									</logic:iterate>
+								</tbody>
+							</table>
+						</ul>
+					</div>
+				</div>
+				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript" charset="GBK">
+			$(document).ready(function() {$('#listNotice').dataTable();} );
+		</script>
+	<jsp:include page="SystemFooter.jsp" flush="true" />
 
 </body>
 </html>

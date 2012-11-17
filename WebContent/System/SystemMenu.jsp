@@ -37,7 +37,7 @@
 								[1,"相册发布","#"],
 								[1,"相册列表","${pageContext.request.contextPath}/PhotoSelect.do?mbid=2"],
 							[0,"其他管理","#"],
-								[1,"老乡留言","${pageContext.request.contextPath}/LaoxSelect.do?lxid=2"],
+								//[1,"老乡留言","${pageContext.request.contextPath}/LaoxSelect.do?lxid=2"],
 								[1,"会员随笔","${pageContext.request.contextPath}/MemberSelect.do?mbid=2"]
 						);
 						var MSDN = new _MenuTree("MSDN", arrData, "images/MSDN/");
