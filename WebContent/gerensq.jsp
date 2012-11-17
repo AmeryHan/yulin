@@ -53,7 +53,7 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
  </script>
 <body>
 	<div id="header"></div>
-	<jsp:include page="indexMenu.jsp" flush="true"/>
+	<jsp:include page="indexMenu.jsp" flush="true" />
 	<div id="mainContent">
 		<div id="tips">
 			当前位置：<span class="fontColor">个人申请</span>
@@ -87,115 +87,100 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-
 					<h3>个人申请</h3>
-					<tr>
-						<td>&nbsp;&nbsp;&nbsp;</td>
-						<td><img
-							src="<%=basePath %>photosc/<%=request.getParameter("fileName") %>"
-							height="142px" alt="" style="width: 136px" /></td>
-					</tr>
-					<tr>
-						<td>&nbsp;&nbsp;&nbsp;头像：</td>
-						<html:form action="/upload.do" method="post"
-							enctype="multipart/form-data">
-							<html:hidden property="requestURL"
-								value="<%=new String(request.getRequestURL()) %>" />
-				   file : <html:file property="file" />
-							<html:errors property="file" />
-							<br />
-							<html:submit />
-						</html:form>
-						<form id="form1" name="form1" method="post"
-							action="${pageContext.request.contextPath}/PersonalAdd.do?&tupdid=2&id=${map1.pid }">
-							<b class="b5"></b>
-							<table width="80%">
-
-								<td>
-									<div>
-										<!-- 
-				<input type="file" id="file"   />
-				<span id="error" class='errorInfo'></span>
-				<input type="button" value="上传" id="DataReport"
-					onclick="validateFile()"/>
-				 -->
-
-									</div></td>
-								</tr>
-
+					<div class="divMargen">
+						<table width="80%" class="display" width="100%" cellpadding="0"
+							cellspacing="0" border="0">
+							<tr>
+								<td class="tableFontAlign">头像：</td>
+								<td height="144px;"><img
+									src="<%=basePath%>photosc/<%=request.getParameter("fileName")%>"
+									alt="<%=request.getParameter("fileName")%>"
+									style="width: 142px; height: 142px; border: 1px solid grey;" />
+								</td>
+							</tr>
+							<html:form action="/upload.do" method="post"
+								enctype="multipart/form-data">
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;注册姓名：</td>
+									<td class="tableFontAlign"><html:hidden
+											property="requestURL"
+											value="<%=new String(request.getRequestURL()) %>" />上传图片：</td>
+									<td><html:file property="file" />&nbsp;<html:submit>上传</html:submit>&nbsp;</td>
+								</tr>
+							</html:form>
+							<tr>
+								<td class="tableFontAlign"></td>
+								<td height="20px;"></td>
+							</tr>
+							<form id="form1" name="form1" method="post"
+								action="${pageContext.request.contextPath}/PersonalAdd.do?&tupdid=2&id=${map1.pid }">
+								<tr>
+									<td class="tableFontAlign">注册姓名：</td>
 									<td><input class="inputStyle" name="pName" />
 									</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;性别：</td>
-									<td><input name="pSex" type="radio" value="" />男
-										&nbsp;&nbsp; <input name="pSex" type="radio" value="" />女</td>
+									<td class="tableFontAlign">性别：</td>
+									<td><input name="pSex" type="radio" value="" checked />男&nbsp;&nbsp;
+										<input name="pSex" type="radio" value="" />女</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;出生日期：</td>
+									<td class="tableFontAlign">出生日期：</td>
 									<td><input class="inputStyle" name="pBirthTime"
 										onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"
 										onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"
-										value="" />
-									</td>
+										value="" /></td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;电话：</td>
+									<td class="tableFontAlign">电话：</td>
 									<td><input class="inputStyle" name="pPhone" />
 									</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;邮箱：</td>
+									<td class="tableFontAlign">邮箱：</td>
 									<td><input class="inputStyle" name="pMailbox" />
 									</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;QQ：</td>
+									<td class="tableFontAlign">QQ：</td>
 									<td><input class="inputStyle" name="pQQ" />
 									</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;msn：</td>
+									<td class="tableFontAlign">MSN：</td>
 									<td><input class="inputStyle" name="pMsn" />
 									</td>
 								</tr>
-
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;现居地址：</td>
+									<td class="tableFontAlign">现居地址：</td>
 									<td><input class="inputStyle" name="pResidence" />
 									</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;家乡：</td>
+									<td class="tableFontAlign">家乡：</td>
 									<td><input class="inputStyle" name="pHometown" />
 									</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;个人简介：</td>
-									<td><textarea name="pContent" cols="60" rows="10"></textarea>
+									<td class="tableFontAlign">个人简介：</td>
+									<td><textarea name="pContent" cols="60" rows="10" style="width:530px;"></textarea>
 									</td>
 								</tr>
-								<tr>
-									<input name="ptoux"
-										value="<%=request.getParameter("fileName") %>" />
-									<td align="right"><input align="right" class="regBtn"
-										type="submit" value="注册" />
-									</td>
-									<td><input class="canselBtn" type="button" value="取消" />
-									</td>
-
-								</tr>
-							</table>
-
-						</form>
-				</div>
-				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
-
+							<tr>
+								<td></td>
+								<td align="right"><input class="canselBtn" type="submit"
+									value="申请" />
+								</td>
+							</tr>
+							</form>
+						</table>
+					</div>
 			</div>
+			<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
+
 		</div>
-		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
 	</div>
 	<jsp:include page="indexFooter.jsp" flush="true" />
 </body>

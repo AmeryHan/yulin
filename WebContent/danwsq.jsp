@@ -74,80 +74,69 @@ window.location.href='${pageContext.request.contextPath}/UnitAdd.do?url='+filepa
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>单位申请</h3>
-
-					<form id="form1" name="form1" method="post"
-						action="${pageContext.request.contextPath}/UnitAdd.do">
-						<table width="80%">
-
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;公司名称：</td>
-								<td><input class="inputStyle" name="unitName" />
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;注册姓名：</td>
-								<td><input class="inputStyle" name="pname" />
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;性别：</td>
-								<td><input name="psex" type="radio" value="男" />男
-									&nbsp;&nbsp; <input name="psex" type="radio" value="女" />女</td>
-							</tr>
-
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;职务：</td>
-								<td><input class="inputStyle" name="unitPost" />
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;电话：</td>
-								<td><input class="inputStyle" name="unitPhone" />
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;邮箱：</td>
-								<td><input class="inputStyle" name="unitMailBox" />
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;QQ：</td>
-								<td><input class="inputStyle" name="unitQQ" />
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;msn：</td>
-								<td><input class="inputStyle" name="unitMsn" />
-								</td>
-							</tr>
-							<!-- 
-                    <tr>
-                        <td >&nbsp;&nbsp;&nbsp;审核状态：</td>
-                        <td><input class="inputStyle" name="unitAuditState" /></td>
-                    </tr>
-                     -->
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;公司网址：</td>
-								<td><input class="inputStyle" name="unitWebsite" />
-								</td>
-							</tr>
-
-							<tr>
-								<td>&nbsp;&nbsp;&nbsp;个人简介：</td>
-								<td><textarea class="inputStyle" name="unitContent"
-										style="height: 50px;" cols="3" rows="10"></textarea></td>
-							</tr>
-							<tr>
-								<td height="35" align="right">&nbsp;&nbsp;&nbsp;<input
-									align="middle" class="canselBtn" type="submit" value="注册" />
-								</td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									&nbsp;&nbsp;&nbsp;<input align="middle" name="button"
-									type="button" class="canselBtn" value="取消" />
-								</td>
-							</tr>
-						</table>
-					</form>
+					<div class="divMargen">
+						<form id="form1" name="form1" method="post"
+							action="${pageContext.request.contextPath}/UnitAdd.do">
+							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td class="tableFontAlign">公司名称：</td>
+									<td><input class="inputStyle" name="unitName" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">注册姓名：</td>
+									<td><input class="inputStyle" name="pname" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">性别：</td>
+									<td><input name="psex" type="radio" value="男" />男
+										&nbsp;&nbsp; <input name="psex" type="radio" value="女" />女</td>
+								</tr>
+	
+								<tr>
+									<td class="tableFontAlign">职务：</td>
+									<td><input class="inputStyle" name="unitPost" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">电话：</td>
+									<td><input class="inputStyle" name="unitPhone" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">邮箱：</td>
+									<td><input class="inputStyle" name="unitMailBox" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">QQ：</td>
+									<td><input class="inputStyle" name="unitQQ" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">MSN：</td>
+									<td><input class="inputStyle" name="unitMsn" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">公司网址：</td>
+									<td><input class="inputStyle" name="unitWebsite" />
+									</td>
+								</tr>
+								<tr>
+									<td class="tableFontAlign">个人简介：</td>
+									<td><textarea class="inputStyle" name="unitContent"
+											style="height: 250px; width:520px;" cols="3" rows="10"></textarea></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td align="right"><input class="canselBtn" type="submit" value="申请"/>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>

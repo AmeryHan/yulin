@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
-	prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
 <%@ page import="java.util.*,com.yulinsh.vo.StructureVO;"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -37,35 +38,18 @@
 							<span class="fontColor">公告</span>
 						</h3>
 						<div id="notice">
-							<span class="more"><a
-								href="${pageContext.request.contextPath}/AnSelect2.do?anid=1">更多</a>
-							</span>
-							<ul>
-								<table>
-									<logic:iterate id="map" collection="${requestScope.arr}">
-
-										<tr id="r1">
-											<td id="tt" style="text-align: left"><a
-												href="${pageContext.request.contextPath}/AnSelOne.do?id=${map.anID}">${map.anTitle}
-											</a>
-											</td>
-											<td style="text-align: right">&nbsp; &nbsp; &nbsp;
-												&nbsp; <span id="Date">${map.anTime}</span>
-											</td>
-										</tr>
-									</logic:iterate>
-									<!-- 
-				<tr id="r1">
-				<td  id="tt" style="text-align:left"><a href="ggmx.html">公告一 </a></td>
-				<td style="text-align:right">&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></td>
-				</tr>
-					<tr id="r1">
-				<td style="text-align:left"><a href="ggmx.html">8号召开成立大会</a></td>
-				<td style="text-align:right">&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></td>
-				</tr>
-			 -->
-								</table>
-							</ul>
+							<span class="more"><a href="${pageContext.request.contextPath}/AnSelect2.do?anid=1">更多</a></span>
+							<table width="100%" cellpadding="2" cellspacing="3" border="0">
+								<logic:iterate id="map" collection="${requestScope.arr}">
+									<tr id="r1">
+										<c:choose>
+											<c:when test="${fn:length(map.anTitle) > 20}"><td title="${map.anTitle}">&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map.anID}"><span>${fn:substring(map.anTitle, 0, 20)}...</span></a></td></c:when>   
+									    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map.anID}">${map.anTitle}</a></td></c:otherwise>
+									    </c:choose>
+									    <td align="right"><span>${map.anTime}</span></td>
+									</tr>
+								</logic:iterate>
+							</table>
 						</div>
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
@@ -80,35 +64,18 @@
 							<span class="fontColor">商会动态</span>
 						</h3>
 						<div id="notice">
-							<span class="more"><a
-								href="${pageContext.request.contextPath}/NewSelect.do?newid=1">更多</a>
-							</span>
-							<ul>
-								<table>
-									<logic:iterate id="map1" collection="${requestScope.arr1}">
-										<tr id="r1">
-											<td id="t1" style="text-align: left">&nbsp;<a
-												href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map1.newsTitle}</a>
-											</td>
-											<td style="text-align: right">&nbsp;${map1.newsTime}</td>
-										</tr>
-									</logic:iterate>
-									<!-- 
-				<tr id="r1">
-			 
-				<td  id="t1" style="text-align:left"><a href="shdtmx.html">1、上海举办处理商会大会 </a></td>
-				<td style="text-align:right">&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></td>
-			 
-				</tr>
-				<tr id="r1">
-				<td  id="t1" style="text-align:left"><a href="shdtmx.html">2、上海举办处理商会大会 </a></td>
-				<td style="text-align:right">&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></td>
-				</tr>
-  -->
-								</table>
-
-
-							</ul>
+							<span class="more"><a href="${pageContext.request.contextPath}/NewSelect.do?newid=1">更多</a></span>
+							<table width="100%" cellpadding="2" cellspacing="3" border="0">
+								<logic:iterate id="map1" collection="${requestScope.arr1}">
+									<tr id="r1">
+										<c:choose>
+											<c:when test="${fn:length(map1.newsTitle) > 35}"><td align="left" title="${map1.newsTitle}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }"><span>${fn:substring(map1.newsTitle, 0, 35)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map1.newsTitle}</a></td></c:otherwise>
+									    </c:choose>
+									    <td align="right"><span>${map1.newsTime}</span></td>
+									</tr>
+								</logic:iterate>
+							</table>
 						</div>
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
@@ -123,21 +90,24 @@
 							<span class="fontColor">企业会员</span>
 						</h3>
 						<div id="notice">
-							<span class="more"><a
-								href="${pageContext.request.contextPath}/UnitSelect.do?utid=1">更多</a>
-							</span>
-							<div id="personInfo">
-								<table>
-									<tr>
-										<logic:iterate id="map6" collection="${requestScope.arr6}">
+							<span class="more"><a href="${pageContext.request.contextPath}/UnitSelect.do?utid=1">更多</a></span>
+							<table width="100%" cellpadding="2" cellspacing="3" border="0">
+								<logic:iterate id="map6" collection="${requestScope.arr6}">
+									<tr id="r1">
+										<c:choose>
+											<c:when test="${fn:length(map6.unitName) > 15}"><td align="left" title="${map6.unitName}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }"><span>${fn:substring(map6.unitName, 0, 15)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map6.unitName}</a></td></c:otherwise>
+									    </c:choose>
+									    <td><span>${map6.pname}</span></td>
+									    <td align="right"><span>${map6.unitPost}</span></td>
+									    <%-- <logic:iterate id="map6" collection="${requestScope.arr6}">
 											<td>姓名:${map6.pname }</br> 性别:${map6.psex } </br>
 												公司名称:${map6.unitName }</br> 职务:${map6.unitPost }</br> 介绍:
 												${map6.unitContent }</td>
-										</logic:iterate>
+										</logic:iterate> --%>
 									</tr>
-
-								</table>
-							</div>
+								</logic:iterate>
+							</table>
 						</div>
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
@@ -175,40 +145,18 @@
 							<span class="fontColor">管理前线</span>
 						</h3>
 						<div id="notice">
-							<span class="more"> <a
-								href="${pageContext.request.contextPath}/PolicySelect.do?pyid=1">更多</a>
-							</span>
-							<ul>
-								<table>
-									<logic:iterate id="map2" collection="${requestScope.arr2}">
-
-
-										<tr id="r1">
-											<td style="text-align: left" id="t1"><a
-												href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a>
-											</td>
-											<td style="text-align: right">&nbsp; &nbsp; &nbsp;
-												&nbsp; <span id="Date">${map2.policyTime}</span>
-											</td>
-
-
-										</tr>
-									</logic:iterate>
-									<!-- 
-		<tr id="r1">
-			<td style="text-align: left" id="t1"><a href="glqxmx.html">2、上海举办处理商会大会</a></td>
-			<td style="text-align: right">&nbsp; &nbsp; &nbsp; &nbsp; <span
-				id="Date">2012/2/4</span></td>
-		</tr>
- -->
-								</table>
-								<!--
-                            <li><a href="#">2、上海举办处理商会大会</a>&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></li>
-                            <li><a href="#">3、上海举办处理商会大会</a>&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></li>
-                            <li><a href="#">4、上海举办处理商会大会</a>&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></li>
-                            <li><a href="#">5、上海举办处理商会大会</a>&nbsp; &nbsp; &nbsp; &nbsp; <span id="Date">2012/2/4</span></li>
-							-->
-							</ul>
+							<span class="more"> <a href="${pageContext.request.contextPath}/PolicySelect.do?pyid=1">更多</a></span>
+							<table width="100%" cellpadding="2" cellspacing="3" border="0">
+								<logic:iterate id="map2" collection="${requestScope.arr2}">
+									<tr id="r1">
+										<c:choose>
+											<c:when test="${fn:length(map2.policyTitle) > 35}"><td align="left" title="${map2.policyTitle}">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}"><span>${fn:substring(map2.policyTitle, 0, 35)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a></td></c:otherwise>
+									    </c:choose>
+									    <td align="right"><span>${map2.policyTime}</span></td>
+									</tr>
+								</logic:iterate>
+							</table>
 						</div>
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
@@ -223,27 +171,22 @@
 							<span class="fontColor">个人会员</span>
 						</h3>
 						<div id="notice">
-							<span class="more"><a
-								href="${pageContext.request.contextPath}/PersonalSelect.do?plid=1">更多</a>
-							</span>
-							<div id="personInfo">
-								<table>
-									<tr>
-										<logic:iterate id="map7" collection="${requestScope.arr7}">
-											<td><img src="<%=str%>${map7.ptoux }" width="80"
-												height="100" />
-
-												<td>&nbsp;&nbsp;&nbsp;姓名:${map7.PName }</br>
-													&nbsp;&nbsp;&nbsp;性别:${map7.PSex } </br> &nbsp;&nbsp;&nbsp;介绍:
-
-													&nbsp;&nbsp;${map7.pcontent }</td>
-										</logic:iterate>
-
-
+							<span class="more"><a href="${pageContext.request.contextPath}/PersonalSelect.do?plid=1">更多</a></span>
+							<table width="100%" cellpadding="2" cellspacing="3" border="0">
+								<logic:iterate id="map7" collection="${requestScope.arr7}">
+									<tr id="r1">
+										<c:choose>
+											<c:when test="${fn:length(map7.PName) > 8}"><td align="left" title="${map7.PName}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }"><span>${fn:substring(map7.PName, 0, 8)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map7.PName}</a></td></c:otherwise>
+									    </c:choose>
+									    <c:choose>
+											<c:when test="${fn:length(map7.PHometown) > 15}"><td align="left" title="${map7.PHometown}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }"><span>${fn:substring(map7.PHometown, 0, 15)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map7.PHometown}</a></td></c:otherwise>
+									    </c:choose>
+									    <td align="right"><span>${map7.PSex}</span></td>
 									</tr>
-
-								</table>
-							</div>
+								</logic:iterate>
+							</table>
 						</div>
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
@@ -266,19 +209,12 @@
 								href="${pageContext.request.contextPath}/StructureXS.do">更多</a>
 							</span>
 							<table>
-
-								<tr>
-									<td colspan="0" style="text-align: left">荣誉会长：&nbsp;</td>
-
-								</tr>
-
-
+								<tr><td colspan="0" style="text-align: left">荣誉会长：&nbsp;</td></tr>
 								<tr>
 									<td>
 										<%
 											int a = 0;
 											ArrayList arr = (ArrayList) request.getAttribute("arr8");
-
 											for (int i = 0; i < arr.size(); i++) {
 												StructureVO vo = (StructureVO) arr.get(i);
 												if (vo.getSshzw().equals("1")) {
@@ -466,63 +402,35 @@
 							<span class="fontColor">会员随笔</span>
 						</h3>
 						<div id="OrgIns2">
-							<span class="more"> <a
-								href="${pageContext.request.contextPath}/MemberSelect.do?mbid=1">更多</a>
-							</span>
-
-							<ul>
-								<table>
-									<logic:iterate id="map4" collection="${requestScope.arr4}">
-
-
-
-										<tr>
-
-											<td id="t1" style="text-align: left"><a
-												href="${pageContext.request.contextPath}/MemberOne.do?id=${map4.memberid}">
-													${map4.membertitle} </a>
-											</td>
-											<td style="text-align: right">&nbsp; &nbsp; &nbsp;
-												&nbsp; <span id="Date">${map4.membertime}</span>
-											</td>
-
-										</tr>
-									</logic:iterate>
-
-
-								</table>
-
-							</ul>
+							<span class="more"> <a href="${pageContext.request.contextPath}/MemberSelect.do?mbid=1">更多</a></span>
+							<table width="100%" cellpadding="2" cellspacing="3" border="0">
+								<logic:iterate id="map4" collection="${requestScope.arr4}">
+									<tr id="r1">
+										<c:choose>
+											<c:when test="${fn:length(map4.membertitle) > 35}"><td align="left" title="${map4.membertitle}">&nbsp;<a href="${pageContext.request.contextPath}/MemberOne.do?id=${map4.memberid}"><span>${fn:substring(map4.membertitle, 0, 35)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/MemberOne.do?id=${map4.memberid}">${map4.membertitle}</a></td></c:otherwise>
+									    </c:choose>
+									    <td align="right"><span>${map4.membertime}</span></td>
+									</tr>
+								</logic:iterate>
+							</table>
 						</div>
 						<h3>
-							<span class="fontColor">家乡</span>
+							<span class="fontColor">家乡风采</span>
 						</h3>
 						<div id="OrgIns2">
-							<span class="more"><a
-								href="${pageContext.request.contextPath}/HometownSelect.do?htid=1">更多</a>
-							</span>
-							<ul>
-								<table>
-									<logic:iterate id="map3" collection="${requestScope.arr3}">
-
-
-										<tr id="0">
-
-											<td id="t1" style="text-align: left"><a
-												href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map3.homeid}">${map3.hometitle}
-											</a>
-											</td>
-											<td style="text-align: right">&nbsp; &nbsp; &nbsp;
-												&nbsp; <span id="Date">${map3.hometitle}</span>
-											</td>
-
-										</tr>
-									</logic:iterate>
-
-
-
-								</table>
-							</ul>
+							<span class="more"><a href="${pageContext.request.contextPath}/HometownSelect.do?htid=1">更多</a></span>
+							<table width="100%" cellpadding="2" cellspacing="3" border="0">
+								<logic:iterate id="map3" collection="${requestScope.arr3}">
+									<tr id="r1">
+										<c:choose>
+											<c:when test="${fn:length(map3.hometitle) > 35}"><td align="left" title="${map3.hometitle}">&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map3.homeid}"><span>${fn:substring(map3.hometitle, 0, 35)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map3.homeid}">${map3.hometitle}</a></td></c:otherwise>
+									    </c:choose>
+									    <td align="right"><span>${map3.hometime}</span></td>
+									</tr>
+								</logic:iterate>
+							</table>
 						</div>
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
