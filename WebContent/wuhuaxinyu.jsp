@@ -85,37 +85,6 @@
 							</table>
 						</ul>
 					</div>
-					
-					
-					
-					<div id="ListWrapper">
-						<ul>
-							<table>
-								<logic:iterate id="map" collection="${requestScope.arr}">
-
-									<tr id="r1">
-
-										<td id="tt" style="text-align: left"><a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">
-												${map.hometitle}</a>
-										</td>
-										<td id="tt" style="text-align: left">&nbsp; &nbsp; &nbsp;
-											&nbsp; &nbsp;${map.username}</td>
-
-										<td style="text-align: right">&nbsp; &nbsp; &nbsp; &nbsp;
-											&nbsp;${map.hometime}</td>
-
-									</tr>
-								</logic:iterate>
-							</table>
-							<!-- 
-                       	<li><a href="jxmx.jsp">1、列表数据风动 旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-                        <li><a href="#">1、列表数据风动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-                        <li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						<li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						<li><a href="#">1、列表数据风 动旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
-						 -->
-						</ul>
-					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>
