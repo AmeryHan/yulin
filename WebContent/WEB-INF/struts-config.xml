@@ -230,8 +230,8 @@
 		
 		<action path="/OtherAdd"
 			type="com.yulinsh.Action.other.OtherAdd" scope="session">
-			<forward name="shjs" path="/shjs.do" />
-			<forward name="lxwm" path="/lxwm.jsp" />
+			<forward name="shjs" path="/System/shjs.jsp" />
+			<forward name="lxwm" path="/System/lxwm.jsp" />
 		</action>
 		
 		<action path="/ggaofb" type="org.apache.struts.actions.ForwardAction" parameter="/System/ggaofb.jsp"/>

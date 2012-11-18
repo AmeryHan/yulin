@@ -28,7 +28,7 @@
 				<div class="content">
 					<h3>商会介绍</h3>
 					<div class="divMargen">
-						<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/OtherAdd.do">
+						<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/OtherAdd.do?type=shjs">
 							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								
 								<tr>
@@ -37,11 +37,11 @@
 								</tr>
 								<tr>
 									<td class="tableFontAlign">商会介绍：</td>
-									<td><textarea name="homecontent" style="height: 250px; width:520px;" cols="60" rows="50"></textarea></td>
+									<td><textarea name="content" style="height: 250px; width:520px;" cols="60" rows="50"></textarea></td>
 								</tr>
 								<script type="text/javascript">
 									//<![CDATA[
-										CKEDITOR.replace( 'homecontent',
+										CKEDITOR.replace( 'content',
 											{
 												fullPage : true,
 												extraPlugins : 'docprops',

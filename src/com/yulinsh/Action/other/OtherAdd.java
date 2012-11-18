@@ -28,15 +28,15 @@ public class OtherAdd extends Action {
 
 		AnFrom anfrom =  (AnFrom)form;
 		AnnouncementVO vo = new AnnouncementVO();
-		String anTitle=request.getParameter("anTitle");
+		String anTitle=request.getParameter("username");
 		 vo.setAnTitle(anTitle);
-		String anAuthor=request.getParameter("anAuthor");
-		vo.setAnAuthor(anAuthor);
-		String anConent=request.getParameter("anConent");
+		String type=request.getParameter("type");
+		//vo.setAnAuthor(anAuthor);
+		String anConent=request.getParameter("content");
 		vo.setAnConent(anConent);
 		service.getInsertAn(vo);
 
-		return mapping.findForward("add");
+		return mapping.findForward(type);
 	}
 
 	public OtherService getService() {

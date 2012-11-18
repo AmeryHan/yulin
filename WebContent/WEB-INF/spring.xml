@@ -245,6 +245,23 @@
 			<ref bean="anService" />
 		</property>
 	</bean>
+
+	 <bean id="otherDAO" class="com.yulinsh.DAO.OtherDAO">
+		<property name="template">
+			<ref bean="template" />
+		</property>
+	</bean>
+	<bean id="otherService" class="com.yulinsh.service.OtherService">
+		<property name="dao">
+			<ref bean="otherDAO" />
+		</property>
+	</bean>
+	<bean name="/OtherAdd" class="com.yulinsh.Action.other.OtherAdd">
+		<property name="service">
+			<ref bean="otherService" />
+		</property>
+	</bean>
+
 	<bean name="/AnDel" class="com.yulinsh.Action.An.AnDel">
 		<property name="service">
 			<ref bean="anService" />
