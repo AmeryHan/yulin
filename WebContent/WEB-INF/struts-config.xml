@@ -227,6 +227,13 @@
 			<forward name="denglu" path="/System/SystemIndex.jsp" />
 			<forward name="denglu2" path="/System/error.jsp" />
 		</action>
+		
+		<action path="/OtherAdd"
+			type="com.yulinsh.Action.other.OtherAdd" scope="session">
+			<forward name="shjs" path="/shjs.do" />
+			<forward name="lxwm" path="/lxwm.jsp" />
+		</action>
+		
 		<action path="/ggaofb" type="org.apache.struts.actions.ForwardAction" parameter="/System/ggaofb.jsp"/>
 		<action path="/zzadd" type="org.apache.struts.actions.ForwardAction" parameter="/System/zzadd.jsp"/>
 		<action path="/ggaofb" type="org.apache.struts.actions.ForwardAction" parameter="/System/ggaofb.jsp"/>

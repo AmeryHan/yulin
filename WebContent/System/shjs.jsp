@@ -26,9 +26,9 @@
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>信息发布</h3>
+					<h3>商会介绍</h3>
 					<div class="divMargen">
-						<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/HometownAdd.do">
+						<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/OtherAdd.do">
 							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								
 								<tr>
