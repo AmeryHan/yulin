@@ -158,5 +158,11 @@ public class OtherService {
 		arr=dao.ListZuZhiXS();
 		return arr;
 	}
+
+	public AnnouncementVO getLatestOne(String type) {
+		AnnouncementVO announcementVO = dao.getLatestOne(type);
+		return announcementVO;
+		
+	}
 	
 }

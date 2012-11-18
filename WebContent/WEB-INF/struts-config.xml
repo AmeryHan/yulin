@@ -233,6 +233,11 @@
 			<forward name="shjs" path="/System/shjs.jsp" />
 			<forward name="lxwm" path="/System/lxwm.jsp" />
 		</action>
+		<action path="/otherSelect" name="anFrom"
+			type="com.yulinsh.Action.other.OtherSelect" scope="session">
+			<forward name="shjs" path="/System/shjs.jsp" />
+			<forward name="lxwm" path="/System/lxwm.jsp" />
+		</action>
 		
 		<action path="/ggaofb" type="org.apache.struts.actions.ForwardAction" parameter="/System/ggaofb.jsp"/>
 		<action path="/zzadd" type="org.apache.struts.actions.ForwardAction" parameter="/System/zzadd.jsp"/>

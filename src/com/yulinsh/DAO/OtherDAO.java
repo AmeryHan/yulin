@@ -448,4 +448,27 @@ public class OtherDAO {
 		});
 		return list;
 	}
+
+	public AnnouncementVO getLatestOne(String type) {
+
+		String sql ="select * from shjs where  type='"+type+"' order by updateTime desc limit 0,1";
+		System.out.println(sql);
+		System.out.println(template);
+		Object list = template.queryForObject(sql, new RowMapper()
+		{
+		 
+			public Object mapRow(ResultSet rs, int arg1) throws SQLException {
+				AnnouncementVO  vo = new AnnouncementVO();
+				 vo.setAnID(rs.getString("idshjs").toString());
+				 //vo.setAnTitle(rs.getString("anTitle").toString());
+				 vo.setAnConent((String)rs.getString("neirong"));
+				 //vo.setAnTime(rs.getString("anTime").toString());
+				 vo.setAnAuthor((String)rs.getString("fagaoren")); 
+		 
+				return vo;
+			}
+			
+		});
+		return (AnnouncementVO)list;
+	}
 }

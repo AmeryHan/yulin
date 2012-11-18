@@ -39,8 +39,8 @@
 							[0,"其他管理","#"],
 								//[1,"老乡留言","${pageContext.request.contextPath}/LaoxSelect.do?lxid=2"],
 								[1,"会员随笔","${pageContext.request.contextPath}/MemberSelect.do?mbid=2"],
-								[1,"商会介绍","${pageContext.request.contextPath}/shjs.do"],
-								[1,"联系我们","${pageContext.request.contextPath}/lxwm.do"]
+								[1,"商会介绍","${pageContext.request.contextPath}/otherSelect.do?type=shjs"],
+								[1,"联系我们","${pageContext.request.contextPath}/otherSelect.do?type=lxwm"]
 						);
 						var MSDN = new _MenuTree("MSDN", arrData, "images/MSDN/");
 						MSDN.Draw();

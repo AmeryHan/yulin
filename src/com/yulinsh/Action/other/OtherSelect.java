@@ -22,7 +22,7 @@ import com.yulinsh.vo.AnnouncementVO;
  * @author Eric
  *
  */
-public class OtherAdd extends Action {
+public class OtherSelect extends Action {
 	OtherService service;
 
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
@@ -36,16 +36,9 @@ public class OtherAdd extends Action {
 		vo.setAnAuthor(username);
 		vo.setAnConent(anConent);
 		vo.setType(type);
-		service.addOrUpdate(vo);
-
-		try {
-			response.sendRedirect(request.getContextPath()+"/otherSelect.do?type="+type);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
-		
+		vo = service.getLatestOne(type);
+		request.setAttribute("vo", vo);
+		return mapping.findForward(type);
 	}
 
 	public OtherService getService() {
