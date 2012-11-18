@@ -233,7 +233,7 @@
 			<forward name="shjs" path="/System/shjs.jsp" />
 			<forward name="lxwm" path="/System/lxwm.jsp" />
 		</action>
-		<action path="/otherSelect" name="anFrom"
+		<action path="/otherSelect"
 			type="com.yulinsh.Action.other.OtherSelect" scope="session">
 			<forward name="shjs" path="/System/shjs.jsp" />
 			<forward name="lxwm" path="/System/lxwm.jsp" />

@@ -32,15 +32,15 @@
 							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<tr>
 									<td class="tableFontAlign">发稿人：</td>
-									<td><input class="inputStyle" name="username" /></td>
+									<td><input class="inputStyle" name="username" value="${vo.anAuthor }" /></td>
 								</tr>
 								<tr>
-									<td class="tableFontAlign">联系我们：</td>
-									<td><textarea name="content" style="height: 250px; width:520px;" cols="60" rows="50"></textarea></td>
+									<td class="tableFontAlign">商会介绍：</td>
+									<td><textarea name="content" style="height: 250px; width:520px;" cols="60" rows="50">${vo.anConent }</textarea></td>
 								</tr>
 								<script type="text/javascript">
 									//<![CDATA[
-										CKEDITOR.replace('content',
+										CKEDITOR.replace( 'content',
 											{
 												fullPage : true,
 												extraPlugins : 'docprops',
