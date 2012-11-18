@@ -26,9 +26,9 @@
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>信息发布</h3>
+					<h3>联系我们</h3>
 					<div class="divMargen">
-						<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/HometownAdd.do">
+						<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/OtherAdd.do?type=lxwm">
 							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<tr>
 									<td class="tableFontAlign">发稿人：</td>
@@ -36,11 +36,11 @@
 								</tr>
 								<tr>
 									<td class="tableFontAlign">联系我们：</td>
-									<td><textarea name="homecontent" style="height: 250px; width:520px;" cols="60" rows="50"></textarea></td>
+									<td><textarea name="content" style="height: 250px; width:520px;" cols="60" rows="50"></textarea></td>
 								</tr>
 								<script type="text/javascript">
 									//<![CDATA[
-										CKEDITOR.replace( 'homecontent',
+										CKEDITOR.replace('content',
 											{
 												fullPage : true,
 												extraPlugins : 'docprops',
