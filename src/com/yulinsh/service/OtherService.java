@@ -22,9 +22,9 @@ public class OtherService {
 	 * ÐÂÎÅ¶¯Ì¬ 
 	 * @param vo
 	 */
-	public void getInsertAn(AnnouncementVO vo)
+	public void addOrUpdate(AnnouncementVO vo)
 	{
-		dao.InsertAn(vo);
+		dao.addOrUpdate(vo);
 	}
  
 	/**

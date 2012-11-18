@@ -12,6 +12,7 @@ public class AnnouncementVO {
 	String anConent="";
 	String anTime="";
 	String anAuthor ="";
+	String type = "";
 	public String getAnID() {
 		return anID;
 	}
@@ -41,5 +42,11 @@ public class AnnouncementVO {
 	}
 	public void setAnAuthor(String anAuthor) {
 		this.anAuthor = anAuthor;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 }

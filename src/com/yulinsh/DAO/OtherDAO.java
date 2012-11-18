@@ -44,23 +44,20 @@ public class OtherDAO {
 	 * 创建人：Eric 创建时间：2011-12-1
 	 * @param vo
 	 */
-	public void InsertAn(AnnouncementVO vo)
+	public void addOrUpdate(AnnouncementVO vo)
 	{
 		String anid="";
 		try {
-			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd");
+			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			String datetime=tempDate.format(new java.util.Date());
 
 			anid=RandomStrg.getGUID();
-			sql="insert into antable (anID,anTitle,anConent,anTime,anAuthor ) " +
-					"values('"+anid+"',?,?,'"+datetime+"',? )";//5
+			sql="insert into shjs (fagaoren,neirong,updatetime,type)" +
+					"values(?,?,'"+datetime+"',?)";//5
 			 Object []args = new Object[]{
-					 vo.getAnTitle(),
-					 vo.getAnConent() ,
-//					 vo.getAnTime(),
 					 vo.getAnAuthor(),
-					 
-			
+					 vo.getAnConent(),
+					 vo.getType(),
 			 };
 			template.update(sql, args);
 		

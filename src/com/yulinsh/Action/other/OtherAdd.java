@@ -26,15 +26,15 @@ public class OtherAdd extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 
-		AnFrom anfrom =  (AnFrom)form;
+		//AnFrom anfrom =  (AnFrom)form;
 		AnnouncementVO vo = new AnnouncementVO();
-		String anTitle=request.getParameter("username");
-		 vo.setAnTitle(anTitle);
+		String username=request.getParameter("username");
 		String type=request.getParameter("type");
-		//vo.setAnAuthor(anAuthor);
 		String anConent=request.getParameter("content");
+		vo.setAnAuthor(username);
 		vo.setAnConent(anConent);
-		service.getInsertAn(vo);
+		vo.setType(type);
+		service.addOrUpdate(vo);
 
 		return mapping.findForward(type);
 	}
