@@ -27,10 +27,10 @@
 							[0,"管理前线管理","#"],
 								[1,"前线发布","${pageContext.request.contextPath}/zcdxfb.do"],
 								[1,"前线列表","${pageContext.request.contextPath}/PolicySelect.do?pyid=2"],
-							[0,"商会信息管理","#"],
+							[0,"商会动态管理","#"],
 								[1,"动态发布","${pageContext.request.contextPath}/shdtfb.do"],
 								[1,"动态列表","${pageContext.request.contextPath}/NewSelect.do?newid=2"],
-							[0,"家乡信息管理","#"],
+							[0,"家乡风采管理","#"],
 								[1,"信息发布","${pageContext.request.contextPath}/jxfb.do"],
 								[1,"信息列表","${pageContext.request.contextPath}/HometownSelect.do?htid=2"],
 							[0,"相册管理","#"],
@@ -38,7 +38,9 @@
 								[1,"相册列表","${pageContext.request.contextPath}/PhotoSelect.do?mbid=2"],
 							[0,"其他管理","#"],
 								//[1,"老乡留言","${pageContext.request.contextPath}/LaoxSelect.do?lxid=2"],
-								[1,"会员随笔","${pageContext.request.contextPath}/MemberSelect.do?mbid=2"]
+								[1,"会员随笔","${pageContext.request.contextPath}/MemberSelect.do?mbid=2"],
+								[1,"商会介绍","${pageContext.request.contextPath}/shjs.do"],
+								[1,"联系我们","${pageContext.request.contextPath}/lxwm.do"]
 						);
 						var MSDN = new _MenuTree("MSDN", arrData, "images/MSDN/");
 						MSDN.Draw();

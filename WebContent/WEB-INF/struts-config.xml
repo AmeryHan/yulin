@@ -233,6 +233,8 @@
 		<action path="/zcdxfb" type="org.apache.struts.actions.ForwardAction" parameter="/System/zcdxfb.jsp"/>
 		<action path="/shdtfb" type="org.apache.struts.actions.ForwardAction" parameter="/System/shdtfb.jsp"/>
 		<action path="/jxfb" type="org.apache.struts.actions.ForwardAction" parameter="/System/jxfb.jsp"/>
+		<action path="/shjs" type="org.apache.struts.actions.ForwardAction" parameter="/System/shjs.jsp"/>
+		<action path="/lxwm" type="org.apache.struts.actions.ForwardAction" parameter="/System/lxwm.jsp"/>
 		
 		<!-- 上传图片 -->
 			<action path="/photosc" type="com.yulinsh.photo.PhotoSC"
