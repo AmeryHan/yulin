@@ -44,7 +44,7 @@ public class UnitDAO {
 	{
 		try
 		{
-			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss HH:mm:ss");
+			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			String datetime=tempDate.format(new java.util.Date());
 			String   UnitID=RandomStrg.getGUID();
 				sql="insert into unittable (UnitID,pname,psex,UnitName,UnitPost,UnitPhone,UnitMailBox," +

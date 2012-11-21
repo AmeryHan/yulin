@@ -55,7 +55,7 @@ public class PersonalDAO {
 			/***
 			 * 1没有审批通过 2审批通过
 			 */
-			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss HH:mm:ss");
+			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			String datetime=tempDate.format(new java.util.Date());
 			userid =RandomStrg.getGUID();
 			sql = "insert into personaltable (pID, ptoux,pName, pSex,pBirthTime,pPhone,pMailbox,pQQ,pMsn,pAuditState,"
