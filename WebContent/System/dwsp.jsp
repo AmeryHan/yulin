@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>单位申请审批</title>
+<title>企业审批</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -42,26 +42,26 @@
 									<logic:iterate id="map" collection="${requestScope.arr}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map.unitName) > 10}"><td title="${map.unitName}">&nbsp;${fn:substring(map.unitName, 0, 10)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map.unitName}</td></c:otherwise>
+												<c:when test="${fn:length(map.unitName) > 10}"><td align="center" title="${map.unitName}">&nbsp;${fn:substring(map.unitName, 0, 10)}...</td></c:when>   
+										    	<c:otherwise><td align="center">&nbsp;${map.unitName}</td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
-												<c:when test="${fn:length(map.pname) > 8}"><td title="${map.pname}">&nbsp;${fn:substring(map.pname, 0, 8)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map.pname}</td></c:otherwise>
+												<c:when test="${fn:length(map.pname) > 8}"><td align="center" title="${map.pname}">&nbsp;${fn:substring(map.pname, 0, 8)}...</td></c:when>   
+										    	<c:otherwise><td align="center">&nbsp;${map.pname}</td></c:otherwise>
 										    </c:choose>
-											<td>&nbsp;${map.psex}</td>
-											<td>&nbsp;${map.unitPost}</td>
-											<td>&nbsp;${map.unitPhone}</td>
+											<td align="center">&nbsp;${map.psex}</td>
+											<td align="center">&nbsp;${map.unitPost}</td>
+											<td align="center">&nbsp;${map.unitPhone}</td>
 											<c:choose>
-												<c:when test="${fn:length(map.unittime) > 10}"><td title="${map.unittime}">&nbsp;${fn:substring(map.unittime, 0, 10)}</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map.unittime}</td></c:otherwise>
+												<c:when test="${fn:length(map.unittime) > 10}"><td align="center" title="${map.unittime}">&nbsp;${fn:substring(map.unittime, 0, 10)}</td></c:when>   
+										    	<c:otherwise><td align="center">&nbsp;${map.unittime}</td></c:otherwise>
 										    </c:choose>
 											<c:choose>
 												<c:when test="${(map.unitAuditState) == 2}"><td>&nbsp;通过</td></c:when>
 										    	<c:otherwise><td>&nbsp;未审核</td></c:otherwise>
 										    </c:choose>
-										    <td>
-										    	<a href="#" onclick="window.location.href='${pageContext.request.contextPath}/UnitDel.do?id=${map.unitID}';">删除</a>
+										    <td align="left">
+										    	<a href="#" onclick="confirmation();">删除</a>
 										    	<c:choose>
 													<c:when test="${(map.unitAuditState) != 2}"><a href="#" onclick="window.location.href='${pageContext.request.contextPath}/UnitUpd.do?id=${map.unitID}';">通过&nbsp;</a></c:when>
 											    </c:choose>
@@ -72,49 +72,6 @@
 							</table>
 						</ul>
 					</div>
-					
-					<p>
-						<table>
-
-							<tr>
-								<td>&nbsp;&nbsp;公司名称：</td>
-
-								<td>&nbsp;&nbsp;姓名：</td>
-
-								<td>&nbsp;&nbsp;性别：</td>
-
-								<td>&nbsp;&nbsp;职务：</td>
-
-								<td>&nbsp;&nbsp;电话：</td>
-
-								<td>&nbsp;&nbsp;QQ：</td>
-								<td>&nbsp;&nbsp;&nbsp;注册时间</td>
-								<td>&nbsp;&nbsp;&nbsp;审批状态</td>
-							</tr>
-
-
-							<logic:iterate id="map" collection="${requestScope.arr}">
-								<tr>
-									<td>&nbsp;&nbsp;&nbsp;${map.unitName}</td>
-									<td>&nbsp;&nbsp;&nbsp;${map.pname}</td>
-									<td>&nbsp;&nbsp;&nbsp;${map.psex}</td>
-									<td>&nbsp;&nbsp;&nbsp;${map.unitPost}</td>
-									<td>&nbsp;&nbsp;&nbsp;${map.unitPhone}</td>
-									<td>&nbsp;&nbsp;&nbsp;${map.unitQQ}</td>
-									<td width="100px">${map.unittime}</td>
-									<td>&nbsp;&nbsp;&nbsp;${map.unitAuditState}</td>
-									<td align="right"><input type="checkbox"
-										onclick="window.location.href='${pageContext.request.contextPath}/UnitUpd.do?id=${map.unitID}' ;"></input>
-									</td>
-									<td align="right"><input type="checkbox"
-										onclick="window.location.href='${pageContext.request.contextPath}/UnitDel.do?id=${map.unitID}' ;"></input>
-									</td>
-
-								</tr>
-							</logic:iterate>
-						</table>
-					</p>
-
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>
@@ -123,6 +80,11 @@
 	</div>
 	<script type="text/javascript" charset="GBK">
 		$(document).ready(function() {$('#listNotice').dataTable();} );
+		function confirmation() {
+			if (confirm("您确定要删除这条记录吗？")){
+				window.location.href="${pageContext.request.contextPath}/UnitDel.do?id=${map.unitID}";
+			}
+		}
 	</script>
 	<jsp:include page="SystemFooter.jsp" flush="true" />
 </body>

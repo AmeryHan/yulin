@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>管理前线列表</title>
+<title>前线列表</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -28,7 +28,7 @@
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<thead>
 									<tr>
-										<th>标题</th>
+										<th  align="left">标题</th>
 										<th>发布人</th>
 										<th>发布时间</th>
 										<th>操作</th>
@@ -46,7 +46,7 @@
 										    	<c:otherwise><td>&nbsp;${map2.policyAuthor}</td></c:otherwise>
 										    </c:choose>
 											<td>&nbsp;${map2.policyTime}</td>
-											<td><a href="#" onclick="window.location.href='${pageContext.request.contextPath}/PolicyDel.do?id=${map2.policyId}';">删除</a></td>
+											<td><a href="#" onclick="confirmation();">删除</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>
@@ -61,6 +61,11 @@
 	</div>
 	<script type="text/javascript" charset="GBK">
 			$(document).ready(function() {$('#listNotice').dataTable();} );
+			function confirmation() {
+				if (confirm("您确定要删除这条记录吗？")){
+					window.location.href="${pageContext.request.contextPath}/PolicyDel.do?id=${map2.policyId}";
+				}
+			}
 		</script>
 	<jsp:include page="SystemFooter.jsp" flush="true" />
 

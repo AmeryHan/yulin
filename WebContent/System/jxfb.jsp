@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>家乡信息发布</title>
+<title>风采发布</title>
 <link href="../layout.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<%= root %>/js/ckeditor/ckeditor.js"></script>
 </head>
@@ -19,14 +19,14 @@
 	<jsp:include page="SystemNav.jsp" flush="true" />
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">信息发布</span>
+			当前位置：<span class="fontColor">风采发布</span>
 		</div>
 		<jsp:include page="SystemMenu.jsp" flush="true" />
 		<div id="mainRight">
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>信息发布</h3>
+					<h3>风采发布</h3>
 					<div class="divMargen">
 						<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/HometownAdd.do">
 							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">

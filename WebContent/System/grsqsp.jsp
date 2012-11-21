@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>个人申请审批</title>
+<title>个人审批</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -64,7 +64,7 @@
 										    </c:choose>
 											<td>
 												<a href="#" onclick="window.location.href='${pageContext.request.contextPath}/PersonalUpd.do?tupdid=3&id=${map.pid}';">通过&nbsp;</a>
-												<a href="#" onclick="window.location.href='${pageContext.request.contextPath}/PersonalDel.do?tupdid=3&id=${map.pid}';">删除</a>
+												<a href="#" onclick="confirmation();">删除</a>
 											</td>
 										</tr>
 									</logic:iterate>
@@ -80,6 +80,11 @@
 	</div>
 	<script type="text/javascript" charset="GBK">
 		$(document).ready(function() {$('#listNotice').dataTable();} );
+		function confirmation() {
+			if (confirm("您确定要删除这条记录吗？")){
+				window.location.href="${pageContext.request.contextPath}/PersonalDel.do?tupdid=3&id=${map.pid}";
+			}
+		}
 	</script>
 	<jsp:include page="SystemFooter.jsp" flush="true" />
 

@@ -254,7 +254,7 @@
 			<forward name="denglu" path="/System/SystemIndex.jsp" />
 			<forward name="denglu2" path="/PhotoSelect.do?mbid=2" />
 		</action>
-				<action path="/PhotoSelect" type="com.yulinsh.photo.PhotoSelect"
+		<action path="/PhotoSelect" type="com.yulinsh.photo.PhotoSelect"
 			scope="session">
 			<forward name="select" path="/photoShow.jsp" />
 			<forward name="select2" path="/System/photo2.jsp" />

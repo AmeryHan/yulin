@@ -16,7 +16,7 @@
 	str += "\\";
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>组织人员添加</title>
+<title>人员添加</title>
 <link href="../layout.css" rel="stylesheet" type="text/css" />
 </head>
 <script type="text/javascript">
@@ -54,14 +54,14 @@
 	<jsp:include page="SystemNav.jsp" flush="true" />
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">组织人员添加</span>
+			当前位置：<span class="fontColor">人员添加</span>
 		</div>
 		<jsp:include page="SystemMenu.jsp" flush="true" />
 		<div id="mainRight">
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>组织人员添加</h3>
+					<h3>人员添加</h3>
 					<div class="divMargen">
 						<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 							<tr>

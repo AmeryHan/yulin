@@ -57,7 +57,7 @@ int i=0;
 					<p>
 						<logic:iterate id="map" collection="${requestScope.arr}">
 
-							<img src="<%=str %>${map.url }" height=100% " alt=""
+							<img src="<%=basePath%>/photosc/${map.url }" height=100% " alt=""
 								style="width: 70%" />
 						</logic:iterate>
 					</p>

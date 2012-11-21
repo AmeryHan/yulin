@@ -31,14 +31,14 @@
 								[1,"动态发布","${pageContext.request.contextPath}/shdtfb.do"],
 								[1,"动态列表","${pageContext.request.contextPath}/NewSelect.do?newid=2"],
 							[0,"家乡风采管理","#"],
-								[1,"信息发布","${pageContext.request.contextPath}/jxfb.do"],
-								[1,"信息列表","${pageContext.request.contextPath}/HometownSelect.do?htid=2"],
+								[1,"风采发布","${pageContext.request.contextPath}/jxfb.do"],
+								[1,"风采列表","${pageContext.request.contextPath}/HometownSelect.do?htid=2"],
 							[0,"相册管理","#"],
 								[1,"相册发布","#"],
 								[1,"相册列表","${pageContext.request.contextPath}/PhotoSelect.do?mbid=2"],
 							[0,"其他管理","#"],
 								//[1,"老乡留言","${pageContext.request.contextPath}/LaoxSelect.do?lxid=2"],
-								[1,"会员随笔","${pageContext.request.contextPath}/MemberSelect.do?mbid=2"],
+								[1,"会员随笔列表","${pageContext.request.contextPath}/MemberSelect.do?mbid=2"],
 								[1,"商会介绍","${pageContext.request.contextPath}/otherSelect.do?type=shjs"],
 								[1,"联系我们","${pageContext.request.contextPath}/otherSelect.do?type=lxwm"]
 						);
