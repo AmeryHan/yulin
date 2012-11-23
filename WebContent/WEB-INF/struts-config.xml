@@ -298,7 +298,10 @@
 			scope="session">
 			<forward name="success" path="/success.jsp" />
 		</action>
-			 
+		<action path="/display" type="com.yulinsh.Action.DisplayAction"
+			scope="session">
+			<forward name="success" path="/chamberDetial.jsp" />
+		</action>
 	</action-mappings>
 	<controller processorClass="com.yulinsh.Action.setcharrequest"></controller>
 	<!-- <controller maxFileSize="10M"></controller> -->

@@ -98,7 +98,7 @@ public class OtherDAO {
 		String sql ="select * from shjs where  type='"+type+"' order by updateTime desc limit 0,1";
 		System.out.println(sql);
 		System.out.println(template);
-		Object list = template.queryForObject(sql, new RowMapper()
+		List list = template.query(sql, new RowMapper()
 		{
 		 
 			public Object mapRow(ResultSet rs, int arg1) throws SQLException {
@@ -113,6 +113,10 @@ public class OtherDAO {
 			}
 			
 		});
-		return (AnnouncementVO)list;
+		if(list.size() > 0) {
+			return (AnnouncementVO)list.get(0);
+		}else{
+			return new AnnouncementVO();
+		}
 	}
 }

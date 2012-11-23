@@ -266,6 +266,11 @@
 			<ref bean="otherService" />
 		</property>
 	</bean>
+	<bean name="/display" class="com.yulinsh.Action.DisplayAction">
+		<property name="service">
+			<ref bean="otherService" />
+		</property>
+	</bean>
 
 	<bean name="/AnDel" class="com.yulinsh.Action.An.AnDel">
 		<property name="service">
