@@ -57,7 +57,7 @@
 											</c:choose>
 											<td>&nbsp;${map.hometime}</td>
 											<td><a href="#"
-												onclick="confirmation();">删除</a>
+												onclick="confirmation(${map.homeid});">删除</a>
 											</td>
 										</tr>
 									</logic:iterate>
@@ -75,9 +75,9 @@
 		$(document).ready(function() {
 			$('#listNotice').dataTable();
 		});
-		function confirmation() {
+		function confirmation(id) {
 			if (confirm("您确定要删除这条记录吗？")){
-				window.location.href="${pageContext.request.contextPath}/HometownDel.do?id=${map.homeid}";
+				window.location.href="${pageContext.request.contextPath}/HometownDel.do?id="+id;
 			}
 		}
 	</script>

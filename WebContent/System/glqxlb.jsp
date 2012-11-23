@@ -46,7 +46,7 @@
 										    	<c:otherwise><td>&nbsp;${map2.policyAuthor}</td></c:otherwise>
 										    </c:choose>
 											<td>&nbsp;${map2.policyTime}</td>
-											<td><a href="#" onclick="confirmation();">删除</a></td>
+											<td><a href="#" onclick="confirmation(${map2.policyId});">删除</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>
@@ -61,9 +61,9 @@
 	</div>
 	<script type="text/javascript" charset="GBK">
 			$(document).ready(function() {$('#listNotice').dataTable();} );
-			function confirmation() {
+			function confirmation(id) {
 				if (confirm("您确定要删除这条记录吗？")){
-					window.location.href="${pageContext.request.contextPath}/PolicyDel.do?id=${map2.policyId}";
+					window.location.href="${pageContext.request.contextPath}/PolicyDel.do?id="+id;
 				}
 			}
 		</script>

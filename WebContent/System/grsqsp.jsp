@@ -64,7 +64,7 @@
 										    </c:choose>
 											<td>
 												<a href="#" onclick="window.location.href='${pageContext.request.contextPath}/PersonalUpd.do?tupdid=3&id=${map.pid}';">通过&nbsp;</a>
-												<a href="#" onclick="confirmation();">删除</a>
+												<a href="#" onclick="confirmation(${map.pid});">删除</a>
 											</td>
 										</tr>
 									</logic:iterate>
@@ -80,9 +80,9 @@
 	</div>
 	<script type="text/javascript" charset="GBK">
 		$(document).ready(function() {$('#listNotice').dataTable();} );
-		function confirmation() {
+		function confirmation(id) {
 			if (confirm("您确定要删除这条记录吗？")){
-				window.location.href="${pageContext.request.contextPath}/PersonalDel.do?tupdid=3&id=${map.pid}";
+				window.location.href="${pageContext.request.contextPath}/PersonalDel.do?tupdid=3&id="+id;
 			}
 		}
 	</script>

@@ -44,7 +44,7 @@
 												<c:when test="${fn:length(map.sshzw) > 15}"><td title="${map.sshzw}">&nbsp;${fn:substring(map.sshzw, 0, 15)}...</td></c:when>   
 										    	<c:otherwise><td>&nbsp;${map.sshzw}</td></c:otherwise>
 										    </c:choose>
-											<td><a href="#" onclick="confirmation();">删除</a></td>
+											<td><a href="#" onclick="confirmation(${map.id});">删除</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>
@@ -59,9 +59,9 @@
 </div>
 <script type="text/javascript" charset="GBK">
 			$(document).ready(function() {$('#listNotice').dataTable();} );
-			function confirmation() {
+			function confirmation(id) {
 				if (confirm("您确定要删除这条记录吗？")){
-					window.location.href="${pageContext.request.contextPath}/StructureDel.do?tupdid=3&id=${map.id}";
+					window.location.href="${pageContext.request.contextPath}/StructureDel.do?tupdid=3&id="+id;
 				}
 			}
 		</script>

@@ -61,7 +61,7 @@
 										    	<c:otherwise><td>&nbsp;未审核</td></c:otherwise>
 										    </c:choose>
 										    <td align="left">
-										    	<a href="#" onclick="confirmation();">删除</a>
+										    	<a href="#" onclick="confirmation(${map.unitID});">删除</a>
 										    	<c:choose>
 													<c:when test="${(map.unitAuditState) != 2}"><a href="#" onclick="window.location.href='${pageContext.request.contextPath}/UnitUpd.do?id=${map.unitID}';">通过&nbsp;</a></c:when>
 											    </c:choose>
@@ -80,9 +80,9 @@
 	</div>
 	<script type="text/javascript" charset="GBK">
 		$(document).ready(function() {$('#listNotice').dataTable();} );
-		function confirmation() {
+		function confirmation(id) {
 			if (confirm("您确定要删除这条记录吗？")){
-				window.location.href="${pageContext.request.contextPath}/UnitDel.do?id=${map.unitID}";
+				window.location.href="${pageContext.request.contextPath}/UnitDel.do?id="+id;
 			}
 		}
 	</script>
