@@ -47,29 +47,14 @@
 				<div class="content">
 					<h3>管理前线明细</h3>
 
-					<div id="ListWrapper">
-						<form id="lyname">
-							<table width="600" border="0" align="center">
+					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
 								<logic:iterate id="map2" collection="${requestScope.arr1}">
-
-
-									<tr>
-										<td colspan="2" style="text-align: center">
-											${map2.policyTitle} &nbsp;</td>
-									</tr>
-									<tr>
-										<td style="text-align: right">发布者：${map2.policyAuthor}
-											&nbsp;&nbsp; &nbsp;&nbsp;</td>
-										<td style="text-align: left">时间：${map2.policyTime}</td>
-									</tr>
-									<tr>
-										<td colspan="2">&nbsp;&nbsp;&nbsp; ${map2.policyContent}
-										</td>
-									</tr>
+											${map2.policyTitle} &nbsp;<br/>
+										发布者：${map2.policyAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map2.policyTime}<br/>
+										&nbsp;&nbsp;&nbsp; 
+										<div style="text-align:left;">${map2.policyContent}</div>
 								</logic:iterate>
 							</table>
-						</form>
-
 					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
