@@ -44,7 +44,7 @@
 												<c:when test="${fn:length(map.sshzw) > 15}"><td title="${map.sshzw}">&nbsp;${fn:substring(map.sshzw, 0, 15)}...</td></c:when>   
 										    	<c:otherwise><td>&nbsp;${map.sshzw}</td></c:otherwise>
 										    </c:choose>
-											<td><a href="#" onclick="confirmation(${map.id});">É¾³ý</a></td>
+											<td><a href="#" onclick="confirmation('${map.id}');">É¾³ý</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>

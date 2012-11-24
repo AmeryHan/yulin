@@ -61,7 +61,7 @@
 										    	<c:otherwise><td>&nbsp;Î´ÉóºË</td></c:otherwise>
 										    </c:choose>
 										    <td align="left">
-										    	<a href="#" onclick="confirmation(${map.unitID});">É¾³ý</a>
+										    	<a href="#" onclick="confirmation('${map.unitID}');">É¾³ý</a>
 										    	<c:choose>
 													<c:when test="${(map.unitAuditState) != 2}"><a href="#" onclick="window.location.href='${pageContext.request.contextPath}/UnitUpd.do?id=${map.unitID}';">Í¨¹ý&nbsp;</a></c:when>
 											    </c:choose>

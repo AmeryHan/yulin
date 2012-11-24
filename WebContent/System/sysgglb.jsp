@@ -46,7 +46,7 @@
 										    	<c:otherwise><td>&nbsp;${map1.anAuthor}</td></c:otherwise>
 										    </c:choose>
 											<td>&nbsp;${map1.anTime}</td>
-											<td><a href="#" onclick="confirmation(${map1.anID});">É¾³ý</a></td>
+											<td><a href="#" onclick="confirmation('${map1.anID}');">É¾³ý</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>

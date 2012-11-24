@@ -64,7 +64,7 @@
 										    </c:choose>
 											<td>
 												<a href="#" onclick="window.location.href='${pageContext.request.contextPath}/PersonalUpd.do?tupdid=3&id=${map.pid}';">Í¨¹ý&nbsp;</a>
-												<a href="#" onclick="confirmation(${map.pid});">É¾³ý</a>
+												<a href="#" onclick="confirmation('${map.pid}');">É¾³ý</a>
 											</td>
 										</tr>
 									</logic:iterate>

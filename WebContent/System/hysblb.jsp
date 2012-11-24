@@ -55,7 +55,7 @@
 											</c:choose>
 											<td>&nbsp;${map.membertime}</td>
 											<td><a href="#"
-												onclick="confirmation(${map.memberid});">É¾³ý</a>
+												onclick="confirmation('${map.memberid}');">É¾³ý</a>
 											</td>
 										</tr>
 									</logic:iterate>

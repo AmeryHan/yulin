@@ -46,7 +46,7 @@
 										    	<c:otherwise><td>&nbsp;${map2.policyAuthor}</td></c:otherwise>
 										    </c:choose>
 											<td>&nbsp;${map2.policyTime}</td>
-											<td><a href="#" onclick="confirmation(${map2.policyId});">É¾³ý</a></td>
+											<td><a href="#" onclick="confirmation('${map2.policyId}');">É¾³ý</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>
