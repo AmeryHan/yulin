@@ -229,8 +229,7 @@ a:hover{text-decoration:none; border-bottom:1px orange solid;color:orange;}
 	}
 /*商会动态列表样式*/
 #ListWrapper img{
-	width:300px;
-	height:300px;
+	width:500px;
 	}
 #ListWrapper ul li a{
 	line-height:25px;

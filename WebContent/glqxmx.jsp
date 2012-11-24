@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>管理前线明细</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
+<script language='javascript' src='js/jquery.js'></script>
 </head>
 
 <body>
@@ -46,11 +47,11 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>管理前线明细</h3>
-
 					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
 								<logic:iterate id="map2" collection="${requestScope.arr1}">
-											${map2.policyTitle} &nbsp;<br/>
+											<h2>${map2.policyTitle} &nbsp;</h2><br/>
 										发布者：${map2.policyAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map2.policyTime}<br/>
+										<hr width="550px;"/>
 										&nbsp;&nbsp;&nbsp; 
 										<div style="text-align:left;">${map2.policyContent}</div>
 								</logic:iterate>
@@ -63,5 +64,8 @@
 		<div class="clear"></div>
 	</div>
 	<jsp:include page="indexFooter.jsp" flush="true" />
+	<script>
+		$("#ListWrapper img").removeAttr("style");
+	</script>
 </body>
 </html>
