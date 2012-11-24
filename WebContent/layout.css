@@ -228,12 +228,9 @@ a:hover{text-decoration:none; border-bottom:1px orange solid;color:orange;}
 	border:none;
 	}
 /*商会动态列表样式*/
-#ListWrapper{
- 
- /**
-	margin:10px;
-	**/
-	height:380px;
+#ListWrapper img{
+	width:300px;
+	height:300px;
 	}
 #ListWrapper ul li a{
 	line-height:25px;
