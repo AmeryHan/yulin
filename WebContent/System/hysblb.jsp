@@ -37,11 +37,11 @@
 										<tr class="gradeC">
 											<c:choose>
 												<c:when test="${fn:length(map.membertitle) > 10}">
-													<td title="${map.membertitle}">&nbsp;${fn:substring(map.membertitle,
-														0, 10)}...</td>
+													<td title="${map.membertitle}">&nbsp;<a href="${pageContext.request.contextPath}/MemberOne.do?id=${map.memberid}">${fn:substring(map.membertitle,
+														0, 10)}...</a></td>
 												</c:when>
 												<c:otherwise>
-													<td>&nbsp;${map.membertitle}</td>
+													<td>&nbsp;<a href="${pageContext.request.contextPath}/MemberOne.do?id=${map.memberid}">${map.membertitle}</a></td>
 												</c:otherwise>
 											</c:choose>
 											<c:choose>

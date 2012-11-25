@@ -39,11 +39,11 @@
 										<tr class="gradeC">
 											<c:choose>
 												<c:when test="${fn:length(map.hometitle) > 10}">
-													<td title="${map.hometitle}">&nbsp;${fn:substring(map.hometitle,
-														0, 10)}...</td>
+													<td title="${map.hometitle}">&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${fn:substring(map.hometitle,
+														0, 10)}...</a></td>
 												</c:when>
 												<c:otherwise>
-													<td>&nbsp;${map.hometitle}</td>
+													<td>&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${map.hometitle}</a></td>
 												</c:otherwise>
 											</c:choose>
 											<c:choose>

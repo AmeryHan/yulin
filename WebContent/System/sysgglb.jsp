@@ -37,8 +37,8 @@
 									<logic:iterate id="map1" collection="${requestScope.arr}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map1.anTitle) > 10}"><td title="${map1.anTitle}">&nbsp;${fn:substring(map1.anTitle, 0, 10)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map1.anTitle}</td></c:otherwise>
+												<c:when test="${fn:length(map1.anTitle) > 10}"><td title="${map1.anTitle}">&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map1.anID}">${fn:substring(map1.anTitle, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map1.anID}">${map1.anTitle}</a></td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
 												<c:when test="${fn:length(map1.anAuthor) > 15}"><td title="${map1.anAuthor}">&nbsp;${fn:substring(map1.anAuthor, 0, 15)}...</td></c:when>   

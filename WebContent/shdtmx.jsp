@@ -46,30 +46,13 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>商会动态明细</h3>
-
-					<div id="ListWrapper">
-						<form id="lyname">
-
-							<table width="600" border="0" align="center">
-								<logic:iterate id="map1" collection="${requestScope.arr}">
-
-
-									<tr>
-										<td colspan="2" style="text-align: center">
-											${map1.newsTitle} &nbsp;</td>
-									</tr>
-									<tr>
-										<td style="text-align: right">发布者：${map1.newsAuthor}
-											&nbsp;&nbsp; &nbsp;&nbsp;</td>
-										<td style="text-align: left">时间：${map1.newsTime}</td>
-									</tr>
-									<tr>
-										<td colspan="2">&nbsp;&nbsp;&nbsp; ${map1.newsContent}</td>
-									</tr>
-								</logic:iterate>
-							</table>
-						</form>
-
+					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
+						<logic:iterate id="map1" collection="${requestScope.arr}">
+							<h2>${map1.newsTitle} &nbsp;</h2><br/>
+							发布者：${map1.newsAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map1.newsTime}<br/>
+							<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
+							<div style="text-align:left;">${map1.newsContent}</div>
+						</logic:iterate>
 					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>

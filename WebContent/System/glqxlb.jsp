@@ -38,8 +38,8 @@
 									<logic:iterate id="map2" collection="${requestScope.arr1}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map2.policyTitle) > 10}"><td title="${map2.policyTitle}">&nbsp;${fn:substring(map2.policyTitle, 0, 10)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map2.policyTitle}</td></c:otherwise>
+												<c:when test="${fn:length(map2.policyTitle) > 10}"><td title="${map2.policyTitle}">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${fn:substring(map2.policyTitle, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a></td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
 												<c:when test="${fn:length(map2.policyAuthor) > 15}"><td title="${map2.policyAuthor}">&nbsp;${fn:substring(map2.policyAuthor, 0, 15)}...</td></c:when>   

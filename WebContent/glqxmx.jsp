@@ -48,14 +48,12 @@
 				<div class="content">
 					<h3>管理前线明细</h3>
 					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
-								<logic:iterate id="map2" collection="${requestScope.arr1}">
-											<h2>${map2.policyTitle} &nbsp;</h2><br/>
-										发布者：${map2.policyAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map2.policyTime}<br/>
-										<hr width="550px;"/>
-										&nbsp;&nbsp;&nbsp; 
-										<div style="text-align:left;">${map2.policyContent}</div>
-								</logic:iterate>
-							</table>
+						<logic:iterate id="map2" collection="${requestScope.arr1}">
+							<h2>${map2.policyTitle} &nbsp;</h2><br/>
+							发布者：${map2.policyAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map2.policyTime}<br/>
+							<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
+							<div style="text-align:left;">${map2.policyContent}</div>
+						</logic:iterate>
 					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>

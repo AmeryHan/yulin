@@ -45,46 +45,33 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>会员随笔信息发布</h3>
-					<p>
+					<div class="divMargen">
 						<form id="form1" name="form1" method="post"
 							action="${pageContext.request.contextPath}/MemberAdd.do">
-							<table width="80%">
-
+							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;标题：</td>
+									<td class="tableFontAlign">标题：</td>
 									<td><input class="inputStyle" name="membertitle" />
 									</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;发布人：</td>
+									<td class="tableFontAlign">发布人：</td>
 									<td><input class="inputStyle" name="username" />
 									</td>
 								</tr>
-
-								<!-- 
-					   <tr>
-                        <td>&nbsp;&nbsp;&nbsp;发布时间：</td>
-                        <td><input class="inputStyle" name="membertime"/></td>
-                    </tr>
-                  -->
-
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;内容：</td>
-									<td><textarea name="membercontent" style="height: 250px;"
-											cols="65" rows="50"></textarea></td>
+									<td class="tableFontAlign">内容：</td>
+									<td><textarea name="membercontent" style="height: 250px; width:520px;"
+											cols="60" rows="60"></textarea></td>
 								</tr>
 								<tr>
-									<td height="35" align="right">&nbsp;&nbsp;&nbsp; <input
-										align="middle" class="canselBtn" type="submit" value="发布" />
-									</td>
-									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										&nbsp;&nbsp;&nbsp; <input align="middle" name="button"
-										type="button" class="canselBtn" value="取消" />
+									<td></td>
+									<td align="right"><input class="canselBtn" type="submit" value="发布"/>
 									</td>
 								</tr>
 							</table>
 						</form>
-					</p>
+					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>

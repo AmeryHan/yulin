@@ -36,8 +36,8 @@
 									<logic:iterate id="map" collection="${requestScope.arr1}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map.sname) > 10}"><td title="${map.sname}">&nbsp;${fn:substring(map.sname, 0, 10)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map.sname}</td></c:otherwise>
+												<c:when test="${fn:length(map.sname) > 10}"><td title="${map.sname}">&nbsp;<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}">${fn:substring(map.sname, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}">${map.sname}</a></td></c:otherwise>
 										    </c:choose>
 										    <td>&nbsp;${map.ssex}</td>
 										    <c:choose>

@@ -150,7 +150,7 @@
 								<logic:iterate id="map2" collection="${requestScope.arr2}">
 									<tr id="r1">
 										<c:choose>
-											<c:when test="${fn:length(map2.policyTitle) > 35}"><td align="left" title="${map2.policyTitle}">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}"><span>${fn:substring(map2.policyTitle, 0, 35)}...</span></a></td></c:when>   
+											<c:when test="${fn:length(map2.policyTitle) > 35}"><td align="left" title="${map2.policyTitle}">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${fn:substring(map2.policyTitle, 0, 35)}...</a></td></c:when>   
 									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a></td></c:otherwise>
 									    </c:choose>
 									    <td align="right"><span>${map2.policyTime}</span></td>
