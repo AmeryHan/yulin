@@ -177,12 +177,13 @@
 								<logic:iterate id="map7" collection="${requestScope.arr7}">
 									<tr id="r1">
 										<c:choose>
-											<c:when test="${fn:length(map7.PName) > 8}"><td align="left" title="${map7.PName}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }"><span>${fn:substring(map7.PName, 0, 8)}...</span></a></td></c:when>   
-									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map7.PName}</a></td></c:otherwise>
+											<c:when test="${fn:length(map7.PName) > 8}"><td align="left" title="${map7.PName}">&nbsp;
+											<a href="${pageContext.request.contextPath}/PersonalOne.do?id=${map7.pid}"><span>${fn:substring(map7.PName, 0, 8)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/PersonalOne.do?id=${map7.pid}">${map7.PName}</a></td></c:otherwise>
 									    </c:choose>
 									    <c:choose>
-											<c:when test="${fn:length(map7.PHometown) > 15}"><td align="left" title="${map7.PHometown}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }"><span>${fn:substring(map7.PHometown, 0, 15)}...</span></a></td></c:when>   
-									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map7.PHometown}</a></td></c:otherwise>
+											<c:when test="${fn:length(map7.PHometown) > 15}"><td align="left" title="${map7.PHometown}">&nbsp;<span>${fn:substring(map7.PHometown, 0, 15)}...</span></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;${map7.PHometown}</td></c:otherwise>
 									    </c:choose>
 									    <td align="right"><span>${map7.PSex}</span></td>
 									</tr>
