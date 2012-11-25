@@ -28,37 +28,37 @@
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<thead>
 									<tr>
-										<th>企业名称</th>
-										<th>姓名</th>
-										<th>性别</th>
-										<th>职务</th>
-										<th>电话</th>
-										<th>注册时间</th>
-										<th>状态</th>
-										<th>操作</th>
+										<th align="left">企业名称</th>
+										<th align="left">姓名</th>
+										<th align="left">性别</th>
+										<th align="left">职务</th>
+										<th align="left">电话</th>
+										<th align="left">注册时间</th>
+										<th align="left">状态</th>
+										<th align="left">操作</th>
 									</tr>
 								</thead>
 								<tbody>
 									<logic:iterate id="map" collection="${requestScope.arr}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map.unitName) > 10}"><td align="center" title="${map.unitName}">&nbsp;${fn:substring(map.unitName, 0, 10)}...</td></c:when>   
-										    	<c:otherwise><td align="center">&nbsp;${map.unitName}</td></c:otherwise>
+												<c:when test="${fn:length(map.unitName) > 10}"><td align="left" title="${map.unitName}">&nbsp;${fn:substring(map.unitName, 0, 10)}...</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map.unitName}</td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
-												<c:when test="${fn:length(map.pname) > 8}"><td align="center" title="${map.pname}">&nbsp;${fn:substring(map.pname, 0, 8)}...</td></c:when>   
-										    	<c:otherwise><td align="center">&nbsp;${map.pname}</td></c:otherwise>
+												<c:when test="${fn:length(map.pname) > 8}"><td align="left" title="${map.pname}">&nbsp;${fn:substring(map.pname, 0, 8)}...</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map.pname}</td></c:otherwise>
 										    </c:choose>
-											<td align="center">&nbsp;${map.psex}</td>
-											<td align="center">&nbsp;${map.unitPost}</td>
-											<td align="center">&nbsp;${map.unitPhone}</td>
+											<td align="left">&nbsp;${map.psex}</td>
+											<td align="left">&nbsp;${map.unitPost}</td>
+											<td align="left">&nbsp;${map.unitPhone}</td>
 											<c:choose>
-												<c:when test="${fn:length(map.unittime) > 10}"><td align="center" title="${map.unittime}">&nbsp;${fn:substring(map.unittime, 0, 10)}</td></c:when>   
-										    	<c:otherwise><td align="center">&nbsp;${map.unittime}</td></c:otherwise>
+												<c:when test="${fn:length(map.unittime) > 10}"><td align="left" title="${map.unittime}">&nbsp;${fn:substring(map.unittime, 0, 10)}</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map.unittime}</td></c:otherwise>
 										    </c:choose>
 											<c:choose>
-												<c:when test="${(map.unitAuditState) == 2}"><td>&nbsp;通过</td></c:when>
-										    	<c:otherwise><td>&nbsp;未审核</td></c:otherwise>
+												<c:when test="${(map.unitAuditState) == 2}"><td align="left">&nbsp;通过</td></c:when>
+										    	<c:otherwise><td align="left">&nbsp;未审核</td></c:otherwise>
 										    </c:choose>
 										    <td align="left">
 										    	<a href="#" onclick="confirmation('${map.unitID}');">删除</a>

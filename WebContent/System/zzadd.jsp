@@ -93,8 +93,8 @@
 							</tr>
 							<tr>
 								<td class="tableFontAlign">性别：</td>
-								<td><input name="pSex" type="radio" value="" checked/>男&nbsp;&nbsp;
-									<input name="pSex" type="radio" value="" />女</td>
+								<td><input name="psex" type="radio" value="男" checked/>男&nbsp;&nbsp;
+									<input name="psex" type="radio" value="女" />女</td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">商会职务：</td>

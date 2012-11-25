@@ -54,10 +54,8 @@ window.location.href='${pageContext.request.contextPath}/StructureAdd.do?url='+f
    	  <div class="sharp color1">
                 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b> 
                 <div class="content">  
-                	 
 					 	<h3>组织人员添加</h3>
 					  	   <logic:iterate id="map1" collection="${requestScope.arr}" >
- 
                 <form id="form1" name="form1" method="post" action="${pageContext.request.contextPath}/StructureAdd.do?&tupdid=2&id=${map1.id }">
                   <b class="b5"></b>
                   <table width="80%"  >
