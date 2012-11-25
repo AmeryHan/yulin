@@ -46,7 +46,11 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>…Ãª·ΩÈ…‹</h3>
-					<p>${vo.anConent }</p>
+					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
+						<h2>${vo.anAuthor} &nbsp;</h2><br/>
+						<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
+						<div style="text-align:left;">${vo.anConent}</div>
+					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>
