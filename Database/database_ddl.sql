@@ -200,3 +200,13 @@ CREATE TABLE `zuzhitable` (
   `stoux` varchar(100) default NULL,
   `id` varchar(38) default NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=GBK;
+
+DROP TABLE IF EXISTS `zuzhitable`;
+CREATE  TABLE `shjs` (
+  `idshjs` INT NOT NULL AUTO_INCREMENT ,   
+  `fagaoren` VARCHAR(45) NULL ,   
+  `neirong` VARCHAR(500) NULL ,   
+  `updatetime` TIMESTAMP NULL ,
+  `type` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`idshjs`) 
+) ENGINE=InnoDB DEFAULT CHARSET=GBK;
