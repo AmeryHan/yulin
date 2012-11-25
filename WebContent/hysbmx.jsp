@@ -51,10 +51,6 @@
 						<form id="lyname">
 							<table width="600" border="0" align="center">
 								<logic:iterate id="map" collection="${requestScope.arr}">
-
-
-
-
 									<tr>
 										<td colspan="2" style="text-align: center">
 											${map.membertitle} &nbsp;</td>

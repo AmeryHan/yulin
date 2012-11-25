@@ -52,23 +52,23 @@
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<thead>
 									<tr>
-										<th  align="left">标题</th>
-										<th>发布人</th>
-										<th>发布时间</th>
+										<th align="left">标题</th>
+										<th align="left">发布人</th>
+										<th align="left">发布时间</th>
 									</tr>
 								</thead>
 								<tbody>
 									<logic:iterate id="map2" collection="${requestScope.arr1}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map2.policyTitle) > 10}"><td title="${map2.policyTitle}">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${fn:substring(map2.policyTitle, 0, 10)}...</a></td></c:when>   
-										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a></td></c:otherwise>
+												<c:when test="${fn:length(map2.policyTitle) > 10}"><td align="left" title="${map2.policyTitle}">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${fn:substring(map2.policyTitle, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/PolicySelOne.do?id=${map2.policyId}">${map2.policyTitle}</a></td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
-												<c:when test="${fn:length(map2.policyAuthor) > 15}"><td title="${map2.policyAuthor}">&nbsp;${fn:substring(map2.policyAuthor, 0, 15)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map2.policyAuthor}</td></c:otherwise>
+												<c:when test="${fn:length(map2.policyAuthor) > 15}"><td align="left" title="${map2.policyAuthor}">&nbsp;${fn:substring(map2.policyAuthor, 0, 15)}...</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map2.policyAuthor}</td></c:otherwise>
 										    </c:choose>
-											<td>&nbsp;${map2.policyTime}</td>
+											<td align="left">&nbsp;${map2.policyTime}</td>
 										</tr>
 									</logic:iterate>
 								</tbody>

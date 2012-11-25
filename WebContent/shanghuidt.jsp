@@ -61,14 +61,14 @@
 									<logic:iterate id="map1" collection="${requestScope.arr1}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map1.newsTitle) > 10}"><td title="${map1.newsTitle}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${fn:substring(map1.newsTitle, 0, 10)}...</a></td></c:when>   
-										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map1.newsTitle}</a></td></c:otherwise>
+												<c:when test="${fn:length(map1.newsTitle) > 10}"><td align="left" title="${map1.newsTitle}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${fn:substring(map1.newsTitle, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map1.newsTitle}</a></td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
-												<c:when test="${fn:length(map1.newsAuthor) > 15}"><td title="${map1.newsAuthor}">&nbsp;${fn:substring(map1.newsAuthor, 0, 15)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map1.newsAuthor}</td></c:otherwise>
+												<c:when test="${fn:length(map1.newsAuthor) > 15}"><td align="left" title="${map1.newsAuthor}">&nbsp;${fn:substring(map1.newsAuthor, 0, 15)}...</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map1.newsAuthor}</td></c:otherwise>
 										    </c:choose>
-										    <td>&nbsp;${map1.newsTime}</td>
+										    <td align="left">&nbsp;${map1.newsTime}</td>
 										</tr>
 									</logic:iterate>
 								</tbody>
