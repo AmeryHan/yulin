@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>单位申请</title>
+<title>企业申请</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 <script type="text/javascript"> 
@@ -42,7 +42,7 @@ window.location.href='${pageContext.request.contextPath}/UnitAdd.do?url='+filepa
 	<jsp:include page="indexMenu.jsp" flush="true"/>
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">单位申请</span>
+			当前位置：<span class="fontColor">企业申请</span>
 		</div>
 		<div id="mainLeft">
 			<div class="sharp color1">
@@ -90,7 +90,7 @@ window.location.href='${pageContext.request.contextPath}/UnitAdd.do?url='+filepa
 								</tr>
 								<tr>
 									<td class="tableFontAlign">性别：</td>
-									<td><input name="psex" type="radio" value="男" />男
+									<td><input name="psex" type="radio" value="男" checked/>男
 										&nbsp;&nbsp; <input name="psex" type="radio" value="女" />女</td>
 								</tr>
 	
@@ -121,7 +121,7 @@ window.location.href='${pageContext.request.contextPath}/UnitAdd.do?url='+filepa
 								</tr>
 								<tr>
 									<td class="tableFontAlign">公司网址：</td>
-									<td><input class="inputStyle" name="unitWebsite" />
+									<td><input class="inputStyle" name="unitWebsite" value="http://"/>
 									</td>
 								</tr>
 								<tr>

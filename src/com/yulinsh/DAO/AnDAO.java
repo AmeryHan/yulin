@@ -101,7 +101,7 @@ public class AnDAO {
 	 */
 	public List ListAn()
 	{
-		String sql ="select * from antable t   order by antime   limit  5   ";//where ROWNUM<=5   Order   By anTime  desc";
+		String sql ="select * from antable t   order by antime desc limit  5   ";//where ROWNUM<=5   Order   By anTime  desc";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()
@@ -127,7 +127,7 @@ public class AnDAO {
 	 */
 	public List ListAn2()
 	{
-		String sql ="select * from antable t   order by antime   desc  ";
+		String sql ="select * from antable t   order by antime desc  ";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()
@@ -181,7 +181,7 @@ public class AnDAO {
 	 */
 	public List ListNews()
 	{
-		String sql ="select * from newstable   order by newsTime desc  limit  5 ";// where ROWNUM<=5   Order   By NewsTime   ";
+		String sql ="select * from newstable   order by newsTime desc limit  5 ";// where ROWNUM<=5   Order   By NewsTime   ";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()
@@ -207,7 +207,7 @@ public class AnDAO {
 	 */
 	public List ListPolicy()
 	{
-		String sql ="select * from policytable   order by policyTime  desc limit  5";//where rownum <=5 order by policyTime   ";
+		String sql ="select * from policytable   order by policyTime desc limit  5";//where rownum <=5 order by policyTime   ";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()
@@ -233,7 +233,7 @@ public class AnDAO {
 	 */
 	public List ListHometown()
 	{
-		String sql ="select * from hometowntable  order by hometime desc  limit  5";// where rownum <=5 order by hometime  ";
+		String sql ="select * from hometowntable  order by hometime desc limit  5";// where rownum <=5 order by hometime  ";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()
@@ -260,7 +260,7 @@ public class AnDAO {
 	 */
 	public List ListMember()
 	{
-		String sql ="select  * from membertable t  order by membertime   limit  5";//where rownum <=5 order by membertime  ";
+		String sql ="select  * from membertable t  order by membertime desc limit  5";//where rownum <=5 order by membertime  ";
 		//limit 2 mysql
 		System.out.println(sql);
 		System.out.println(template);
@@ -287,7 +287,7 @@ public class AnDAO {
 	 */
 	public List ListLaox()
 	{
-		String sql ="select * from laoxtable  order by laoxtime   limit  5";// where rownum <=6 order by laoxtime ";
+		String sql ="select * from laoxtable  order by laoxtime desc limit  5";// where rownum <=6 order by laoxtime ";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()
@@ -318,7 +318,7 @@ public class AnDAO {
 		List list=null;
 		 
 		try {
-			String sql = "select * from unittable order by unittime   desc    limit 1";
+			String sql = "select * from unittable order by unittime desc limit 1";
 			
 			System.out.println(template);
 			 list = template.query(sql, new RowMapper() {
@@ -376,7 +376,7 @@ public class AnDAO {
 		List list=null;
 		try {
 			String sql = "select pID, ptoux,pName, pSex,pBirthTime,pPhone,pMailbox,pQQ,pMsn,pAuditState,"
-					+ " pResidence,pHometown,pContent,pzctime from personaltable  order by pzctime   desc  limit 1 ";
+					+ " pResidence,pHometown,pContent,pzctime from personaltable  order by pzctime desc limit 1 ";
 			System.out.println(sql); 
 			System.out.println(template);
 			list = template.query(sql, new RowMapper() {
@@ -430,7 +430,7 @@ public class AnDAO {
 	 */
 	public List ListZuZhiXS()
 	{
-		String sql ="select * from zuzhitable   order by sshzw  ";
+		String sql ="select * from zuzhitable order by sshzw desc";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()

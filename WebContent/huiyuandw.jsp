@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>会员单位</title>
+<title>企业会员</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 <%
@@ -18,7 +18,7 @@ int i=0;
 	<jsp:include page="indexMenu.jsp" flush="true"/>
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">会员企业</span>
+			当前位置：<span class="fontColor">企业会员</span>
 		</div>
 		<div id="mainLeft">
 			<div class="sharp color1">
@@ -49,7 +49,7 @@ int i=0;
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>会员企业</h3>
+					<h3>企业会员</h3>
 					<div id="ListWrapper">
 						<ul>
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">

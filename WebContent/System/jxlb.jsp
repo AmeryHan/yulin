@@ -73,7 +73,9 @@
 	</div>
 	<script type="text/javascript" charset="GBK">
 		$(document).ready(function() {
-			$('#listNotice').dataTable();
+			$('#listNotice').dataTable({
+		        "aaSorting": [[ 2, "desc" ]]
+		    });
 		});
 		function confirmation(id) {
 			if (confirm("您确定要删除这条记录吗？")){

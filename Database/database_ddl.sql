@@ -11,7 +11,7 @@ CREATE TABLE `antable` (
   `anTime` varchar(100) default NULL,
   `an3` varchar(600) default NULL,
   `an2` varchar(600) default NULL,
-  `anConent` varchar(40000) default NULL,
+  `anConent` text default NULL,
   `anTitle` varchar(100) default NULL,
   `anAuthor` varchar(255) default NULL,
   `anID` varchar(38) default NULL
@@ -27,7 +27,7 @@ CREATE TABLE `hometowntable` (
   `HOMETITLE` varchar(100) default NULL,
   `HOME1` varchar(600) default NULL,
   `HOMETIME` varchar(100) default NULL,
-  `HOMECONTENT` varchar(40000) default NULL,
+  `HOMECONTENT` text default NULL,
   `USEID` varchar(38) default NULL,
   `USERNAME` varchar(100) default NULL,
   `HOMEID` varchar(38) default NULL
@@ -42,7 +42,7 @@ CREATE TABLE `huiytable` (
   `HUIY3` varchar(600) default NULL,
   `HUIY1` varchar(600) default NULL,
   `HUIYTIME` varchar(100) default NULL,
-  `HUIYCONTENT` varchar(40000) default NULL,
+  `HUIYCONTENT` text default NULL,
   `USERNAME` varchar(100) default NULL,
   `USERID` varchar(38) default NULL,
   `HUIYID` varchar(38) default NULL
@@ -57,7 +57,7 @@ CREATE TABLE `laoxtable` (
   `LAOX2` varchar(600) default NULL,
   `LAOX1` varchar(600) default NULL,
   `LAOXTIME` varchar(100) default NULL,
-  `LAOXCONTENT` varchar(30000) default NULL,
+  `LAOXCONTENT` text default NULL,
   `USERNAME` varchar(100) default NULL,
   `USERID` varchar(38) default NULL,
   `LAOXID` varchar(38) default NULL
@@ -73,7 +73,7 @@ CREATE TABLE `membertable` (
   `MEMBER1` varchar(600) default NULL,
   `MEMBERTITLE` varchar(100) default NULL,
   `MEMBERTIME` varchar(100) default NULL,
-  `MEMBERCONTENT` varchar(40000) default NULL,
+  `MEMBERCONTENT` text default NULL,
   `USERNAME` varchar(100) default NULL,
   `USERID` varchar(38) default NULL,
   `MEMBERID` varchar(38) default NULL
@@ -87,7 +87,7 @@ CREATE TABLE `newstable` (
   `news3` varchar(600) default NULL,
   `news2` varchar(600) default NULL,
   `news1` varchar(600) default NULL,
-  `NEWSCONTENT` varchar(40000) default NULL,
+  `NEWSCONTENT` text default NULL,
   `NEWSTIME` varchar(100) default NULL,
   `NEWSAUTHOR` varchar(100) default NULL,
   `NEWSTITLE` varchar(600) default NULL,
@@ -99,7 +99,7 @@ CREATE TABLE `newstable` (
 -- ----------------------------
 DROP TABLE IF EXISTS `officetable`;
 CREATE TABLE `officetable` (
-  `OFFICECONTENT` varchar(3600) default NULL,
+  `OFFICECONTENT` text default NULL,
   `OFFICE3` varchar(600) default NULL,
   `OFFICE2` varchar(600) default NULL,
   `OFFICE1` varchar(600) default NULL,
@@ -124,7 +124,7 @@ CREATE TABLE `personaltable` (
   `P1` varchar(600) default NULL,
   `PZCTIME` varchar(100) default NULL,
   `UNITPOST` varchar(100) default NULL,
-  `PCONTENT` varchar(40000) default NULL,
+  `PCONTENT` text default NULL,
   `PHOMETOWN` varchar(100) default NULL,
   `PRESIDENCE` varchar(100) default NULL,
   `PAUDITSTATE` varchar(100) default NULL,
@@ -158,7 +158,7 @@ CREATE TABLE `policytable` (
   `POLICY3` varchar(600) default NULL,
   `POLICY2` varchar(600) default NULL,
   `POLICY1` varchar(600) default NULL,
-  `POLICYCONTENT` varchar(40000) default NULL,
+  `POLICYCONTENT` text default NULL,
   `POLICYTIME` varchar(600) default NULL,
   `POLICYAUTHOR` varchar(600) default NULL,
   `POLICYTITLE` varchar(600) default NULL,
@@ -175,7 +175,7 @@ CREATE TABLE `unittable` (
   `UNIT1` varchar(600) default NULL,
   `UNITTIME` varchar(600) default NULL,
   `UNITPOST` varchar(600) default NULL,
-  `UNITCONTENT` varchar(35000) default NULL,
+  `UNITCONTENT` text default NULL,
   `UNITWEBSITE` varchar(300) default NULL,
   `UNITAUDITSTATE` varchar(200) default NULL,
   `UNITMSN` varchar(100) default NULL,

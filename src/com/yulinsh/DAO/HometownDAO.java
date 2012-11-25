@@ -121,7 +121,7 @@ public class HometownDAO {
 	 */
 	public List ListHometown()
 	{
-		String sql ="select * from hometowntable   order by hometime   desc ";
+		String sql ="select * from hometowntable   order by hometime desc ";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()

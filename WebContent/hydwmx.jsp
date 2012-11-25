@@ -52,9 +52,7 @@
 
 								<table>
 									<tr>
-										<td rowspan="6" style="text-align: center">&nbsp; <!-- 
-	<img  src="../../../../Documents and Settings/zhuhuaqiang/My Documents/Ä£°å1/mm_training_photo.jpg" width="90" height="100"/></td>
-    -->
+										<td rowspan="6" style="text-align: center">&nbsp;
 											<td colspan="2">&nbsp;ÐÕÃû£º${map.pname}</td>
 									</tr>
 									<tr>

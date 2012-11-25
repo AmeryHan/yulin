@@ -95,8 +95,9 @@
 								<logic:iterate id="map6" collection="${requestScope.arr6}">
 									<tr id="r1">
 										<c:choose>
-											<c:when test="${fn:length(map6.unitName) > 15}"><td align="left" title="${map6.unitName}">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }"><span>${fn:substring(map6.unitName, 0, 15)}...</span></a></td></c:when>   
-									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/NewSelOne.do?newid=${map1.newsId }">${map6.unitName}</a></td></c:otherwise>
+											<c:when test="${fn:length(map6.unitName) > 15}"><td align="left" title="${map6.unitName}">&nbsp;
+											<a href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map6.unitID } "><span>${fn:substring(map6.unitName, 0, 15)}...</span></a></td></c:when>   
+									    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map6.unitID } ">${map6.unitName}</a></td></c:otherwise>
 									    </c:choose>
 									    <td><span>${map6.pname}</span></td>
 									    <td align="right"><span>${map6.unitPost}</span></td>

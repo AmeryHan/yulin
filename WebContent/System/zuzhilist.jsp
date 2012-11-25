@@ -58,7 +58,9 @@
     <div class="clear"></div>
 </div>
 <script type="text/javascript" charset="GBK">
-			$(document).ready(function() {$('#listNotice').dataTable();} );
+			$(document).ready(function() {$('#listNotice').dataTable({
+		        "aaSorting": [[ 0, "desc" ]]
+		    });} );
 			function confirmation(id) {
 				if (confirm("您确定要删除这条记录吗？")){
 					window.location.href="${pageContext.request.contextPath}/StructureDel.do?tupdid=3&id="+id;

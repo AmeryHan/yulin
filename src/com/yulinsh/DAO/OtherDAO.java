@@ -95,7 +95,7 @@ public class OtherDAO {
 
 	public AnnouncementVO getLatestOne(String type) {
 
-		String sql ="select * from shjs where  type='"+type+"' order by updateTime desc limit 0,1";
+		String sql ="select * from shjs where  type='"+type+"' order by updateTime desc";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()

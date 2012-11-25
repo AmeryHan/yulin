@@ -121,7 +121,7 @@ public class StructureDAO {
 	 */
 	public List ListZuZhi()
 	{
-		String sql ="select * from zuzhitable    order by sshzw ";
+		String sql ="select * from zuzhitable    order by sshzw desc";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()
@@ -149,7 +149,7 @@ public class StructureDAO {
 	 */
 	public List ListZuZhiXS()
 	{
-		String sql ="select * from zuzhitable   order by sshzw  ";
+		String sql ="select * from zuzhitable   order by sshzw desc ";
 		System.out.println(sql);
 		System.out.println(template);
 		List list = template.query(sql, new RowMapper()

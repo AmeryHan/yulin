@@ -22,7 +22,7 @@
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>单位申请审批</h3>
+					<h3>企业审批</h3>
 					<div id="ListWrapper">
 						<ul>
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -42,8 +42,8 @@
 									<logic:iterate id="map" collection="${requestScope.arr}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map.unitName) > 10}"><td align="left" title="${map.unitName}">&nbsp;${fn:substring(map.unitName, 0, 10)}...</td></c:when>   
-										    	<c:otherwise><td align="left">&nbsp;${map.unitName}</td></c:otherwise>
+												<c:when test="${fn:length(map.unitName) > 10}"><td align="left" title="${map.unitName}">&nbsp;<a href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map.unitID} ">${fn:substring(map.unitName, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/UnitSelectOne.do?utid=1&id=${map.unitID} ">${map.unitName}</a></td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
 												<c:when test="${fn:length(map.pname) > 8}"><td align="left" title="${map.pname}">&nbsp;${fn:substring(map.pname, 0, 8)}...</td></c:when>   
@@ -79,7 +79,9 @@
 		<div class="clear"></div>
 	</div>
 	<script type="text/javascript" charset="GBK">
-		$(document).ready(function() {$('#listNotice').dataTable();} );
+		$(document).ready(function() {$('#listNotice').dataTable({
+	        "aaSorting": [[ 5, "desc" ]]
+	    });} );
 		function confirmation(id) {
 			if (confirm("您确定要删除这条记录吗？")){
 				window.location.href="${pageContext.request.contextPath}/UnitDel.do?id="+id;
