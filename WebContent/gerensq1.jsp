@@ -62,20 +62,7 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>
 			<!-- registerbtn       -->
-			<div class="sharp color1">
-				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
-				<div class="content">
-					<div id="registerbtn">
-						<input type="button" value="" class="personbtn"
-							onclick="window.location.href='gerensq.jsp'; " /> <input
-							type="button" value="" class="companybtn"
-							onclick="window.location.href='danwsq.jsp'; " /> <input
-							type="button" value="" class="linkbtn"
-							onclick="window.location.href='lxwm.jsp'; " />
-					</div>
-				</div>
-				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
-			</div>
+			<jsp:include page="indexRegister.jsp" flush="true"/>
 		</div>
 		<div id="mainRight">
 			<div class="sharp color1">

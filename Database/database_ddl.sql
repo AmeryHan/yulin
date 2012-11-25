@@ -205,7 +205,7 @@ DROP TABLE IF EXISTS `zuzhitable`;
 CREATE  TABLE `shjs` (
   `idshjs` INT NOT NULL AUTO_INCREMENT ,   
   `fagaoren` VARCHAR(45) NULL ,   
-  `neirong` VARCHAR(500) NULL ,   
+  `neirong` text NULL ,   
   `updatetime` TIMESTAMP NULL ,
   `type` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idshjs`) 

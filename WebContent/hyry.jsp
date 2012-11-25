@@ -27,23 +27,13 @@ int   i=0;
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>µ¼º½</h3>
+					<h3><span class="fontColor">µ¼º½</span></h3>
 					<jsp:include page="indexNav.jsp" flush="true" />
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>
 			<!-- registerbtn       -->
-			<div class="sharp color1">
-				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
-				<div class="content">
-					<div id="registerbtn">
-						<input type="button" value="" class="personbtn" /> <input
-							type="button" value="" class="companybtn" /> <input
-							type="button" value="" class="linkbtn" />
-					</div>
-				</div>
-				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
-			</div>
+			<jsp:include page="indexRegister.jsp" flush="true"/>
 		</div>
 		<div id="mainRight">
 			<div class="sharp color1">
