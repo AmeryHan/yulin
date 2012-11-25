@@ -47,7 +47,18 @@ public class AnAdd extends Action {
 		this.service = service;
 	}
 
- 
+ public static  void main(String[] args) {
+	 int i=0;
+	 for(int j=0;j<12;j++) {
+		 i++;
+		 if(i%3!=0) {
+			 System.out.print("------"+i+"\t");
+		 } else {
+			 System.out.println("i:"+i+"\t");
+		 }
+	 }
+ }
 
 	 
 }
+ 
