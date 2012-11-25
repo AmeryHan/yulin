@@ -116,13 +116,13 @@ window.location.href='${pageContext.request.contextPath}/PersonalAdd.do?url='+fi
 								action="${pageContext.request.contextPath}/PersonalAdd.do?&tupdid=2&id=${map1.pid }">
 								<tr>
 									<td class="tableFontAlign">注册姓名：</td>
-									<td><input class="inputStyle" name="pName" />
+									<td><input class="inputStyle" name="pName" /><input type="hidden" name="ptoux" value="<%=request.getParameter("fileName")%>"/>
 									</td>
 								</tr>
 								<tr>
 									<td class="tableFontAlign">性别：</td>
-									<td><input name="pSex" type="radio" value="" checked />男&nbsp;&nbsp;
-										<input name="pSex" type="radio" value="" />女</td>
+									<td><input name="pSex" type="radio" value="男" checked />男&nbsp;&nbsp;
+										<input name="pSex" type="radio" value="女" />女</td>
 								</tr>
 								<tr>
 									<td class="tableFontAlign">出生日期：</td>

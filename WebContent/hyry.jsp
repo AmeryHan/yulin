@@ -5,10 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>会员</title>
+<title>会员列表</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 <%
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://"
+		+ request.getServerName() + ":" + request.getServerPort()
+		+ path + "/";
 int   i=0;
 %>
 <!-- onclick="javascript:window.close()"-->
@@ -17,7 +21,7 @@ int   i=0;
 	<jsp:include page="indexMenu.jsp" flush="true"/>
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">会员</span>
+			当前位置：<span class="fontColor">会员列表</span>
 		</div>
 		<div id="mainLeft">
 			<div class="sharp color1">
@@ -45,70 +49,16 @@ int   i=0;
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>会员</h3>
+					<h3>会员列表</h3>
 					<div id="ListWrapper">
-						<form id="lyname">
-							<table>
-								<tr>
-									<td colspan="10" style="text-align: left">以下会员显示没有先后顺序
-										&nbsp;</td>
-
-								</tr>
-								<tr>
-									<td width=600><hr />
-									</td>
-
-								</tr>
-								<ul>
-									<tr>
-										<td><logic:iterate id="map"
-												collection="${requestScope.arr}">
-
-												<%
-    
-        
-                i++;
-                if(i!=12){
-                	 
-               
-                %>
-												<a
-													href="${pageContext.request.contextPath}/PersonalOne.do?id=${map.pid}">${map.PName}</a>&nbsp;&nbsp; &nbsp;&nbsp; 
-                     
-                <%
-                }else
-                {
-                
-                	%>
-
-												</br>
-												<a
-													href="${pageContext.request.contextPath}/PersonalOne.do?id=${map.pid}">${map.PName}
-												</a>&nbsp;&nbsp; &nbsp;&nbsp; 
-                     
- 
-                
-                     
-                	<%
-                	 
-                	 if(i==24)
-                	 {
-                		 i=0;
-                	 }
-                }
-                
-           
-            %>
-											</logic:iterate></td>
-									</tr>
-								</ul>
-
-							</table>
-						</form>
-
+						<ul>
+							<logic:iterate id="map" collection="${requestScope.arr}" length="12">
+								<div align="center" style="margin:5px 17px; width:130px; height:160px; border:0px; float:left; ">
+									<a href="${pageContext.request.contextPath}/PersonalOne.do?id=${map.pid}"><img style="width:130px; height:130px;" src="<%=basePath%>/photosc/${map.ptoux }"/><br/><br/>${map.PName}</a>
+								</div>
+							</logic:iterate>
+						</ul>
 					</div>
-
-
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>

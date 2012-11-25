@@ -60,27 +60,13 @@
 					<h3>图片展示</h3>
 					<div id="ListWrapper">
 						<ul>
-							<logic:iterate id="map" collection="${requestScope.arr}" length="15">
-								<a href="${pageContext.request.contextPath}/PhotoOne.do?mbid=1&id=${map.id}" title="点击看大图">${map.url }"</a>
-							</logic:iterate>
-							<logic:iterate id="map" collection="${requestScope.arr}" length="15">
-								<div align="center" style="margin:5px 17px; width:150px; height:150px; border:0px; float:left; ">
-								<%i++; if (i%3!=0) {%>
-									<a href="${pageContext.request.contextPath}/PhotoOne.do?mbid=1&id=${map.id}" title="点击看大图"><img width="150" height="150" src="<%=basePath%>/photosc/${map.url }"/></a>
-								<%} else { %>
-								</div>
+							<logic:iterate id="map" collection="${requestScope.arr}" length="12">
 								<div align="center" style="margin:5px 17px; width:150px; height:150px; border:0px; float:left; ">
 									<a href="${pageContext.request.contextPath}/PhotoOne.do?mbid=1&id=${map.id}" title="点击看大图"><img width="150" height="150" src="<%=basePath%>/photosc/${map.url }"/></a>
-								<%} %>
 								</div>
 							</logic:iterate>
 						</ul>
 					</div>
-								<%-- <td><a
-									href="${pageContext.request.contextPath}/PhotoSelect.do?mbid=1&sy=1">上一页
-								</a> <a
-									href="${pageContext.request.contextPath}/PhotoSelect.do?mbid=1&xy=2">下一页</a>
-								</td> --%>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 			</div>

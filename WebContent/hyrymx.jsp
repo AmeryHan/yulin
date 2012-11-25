@@ -56,50 +56,42 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>会员信息</h3>
-
 					<div id="ListWrapper">
-						<form id="lyname">
-							<table>
-								<logic:iterate id="map" collection="${requestScope.arr}">
-
-									<tr>
-										<td rowspan="5" style="text-align: center">&nbsp; <img
-											src="<%=basePath%>photosc/${map.ptoux }" width="110"
-											height="120" /></td>
-										<td colspan="2">&nbsp;姓名：${map.PName}</td>
-
-									</tr>
-									<tr>
-										<td colspan="2">&nbsp;性别：${map.PSex}</td>
-
-									</tr>
-									<tr>
-										<td colspan="2">&nbsp;出生日期：${map.PBirthTime}</td>
-
-									</tr>
-									<tr>
-										<td colspan="2">&nbsp;联系方式：${map.PPhone }</td>
-
-									</tr>
-									<tr>
-										<td>&nbsp;家乡：${map.PHometown}</td>
-
-									</tr>
-							</table>
-
-							<table>
-								<tr>
-									<td colspan="0">&nbsp;个人介绍：</td>
-
-								</tr>
-								<tr>
-									<td colspan="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										${map.pcontent }</td>
-								</tr>
-							</table>
-							</logic:iterate>
-						</form>
-
+						<logic:iterate id="map" collection="${requestScope.arr}">
+						<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0"  style="font-size:14px; line-height:20px;">
+							<tr>
+								<td rowspan="6" style="width:160px;"><div align="center" style="margin:0px 10px; width:130px; height:130px; border:0px; float:left; ">
+									<img style="width:130px;height:130px;" src="<%=basePath%>photosc/${map.ptoux }"/>
+								</div></td>
+								<td align="right" style="width:80px;height:20px;">姓名：</td>
+								<td align="left">${map.PName}</td>
+							</tr>
+							<tr>
+								<td align="right" style="width:80px;height:20px;">性别：</td>
+								<td align="left">${map.PSex}</td>
+							</tr>
+							<tr>
+								<td align="right" style="width:80px;height:20px;">出生日期：</td>
+								<td align="left">${map.PBirthTime}</td>
+							</tr>
+							<tr>
+								<td align="right" style="width:80px;height:20px;">联系方式：</td>
+								<td align="left">${map.PPhone}</td>
+							</tr>
+							<tr>
+								<td align="right" style="width:80px;height:20px;">家乡：</td>
+								<td align="left">${map.PHometown}</td>
+							</tr>
+							<tr>
+								<td align="right" style="width:80px;height:12px;"></td>
+								<td align="left"></td>
+							</tr>
+							<tr>
+								<td colspan="3">个人介绍：${map.pcontent }</td>
+							</tr>
+							<tr></tr>
+						</table>
+						</logic:iterate>
 					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>

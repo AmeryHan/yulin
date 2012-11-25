@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>会员单位信息</title>
+<title>企业会员信息</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -14,7 +14,7 @@
 	<jsp:include page="indexMenu.jsp" flush="true"/>
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">会员单位信息</span>
+			当前位置：<span class="fontColor">企业会员信息</span>
 		</div>
 		<div id="mainLeft">
 			<div class="sharp color1">
@@ -45,53 +45,38 @@
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>会员单位信息</h3>
+					<h3>企业会员信息</h3>
 					<div id="ListWrapper">
 						<form id="lyname">
 							<logic:iterate id="map" collection="${requestScope.arr}">
-
-								<table>
+								<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:14px; line-height:20px;">
 									<tr>
-										<td rowspan="6" style="text-align: center">&nbsp;
-											<td colspan="2">&nbsp;姓名：${map.pname}</td>
+										<td align="right" style="width:80px;">姓名：</td>
+										<td align="left">${map.pname}</td>
 									</tr>
 									<tr>
-										<td colspan="2">&nbsp;性别：${map.psex}</td>
-
+										<td align="right">性别：</td>
+										<td align="left">${map.psex}</td>
 									</tr>
 									<tr>
-										<td colspan="2">&nbsp;职务：${map.unitPost}</td>
-
+										<td align="right">职务：</td>
+										<td align="left">${map.unitPost}</td>
 									</tr>
 									<tr>
-										<td colspan="2">&nbsp;联系方式：${map.unitPhone}</td>
-
+										<td align="right">联系方式：</td>
+										<td align="left">${map.unitPhone}</td>
 									</tr>
 									<tr>
-										<td>&nbsp;公司名称：
-											<td><ul>
-													<a href="hydwmx.jsp">${map.unitName} </a>
-												</ul>
-										</td>
+										<td align="right">公司名称：</td>
+										<td align="left">${map.unitName}</td>
 									</tr>
 									<tr>
-										<td>&nbsp;公司网址：
-											<td><ul>
-													<a href="${map.unitWebsite }">${map.unitWebsite }</a>
-												</ul>
-										</td>
-									</tr>
-								</table>
-								<table>
-									<tr>
-										<td colspan="3">&nbsp;公司介绍：</td>
-
+										<td align="right">公司网址：</td>
+										<td align="left"><a href="${map.unitWebsite }">${map.unitWebsite }</a></td>
 									</tr>
 									<tr>
-										<td colspan="3">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${map.unitContent }</td>
+										<td align="right" colspan="2">公司介绍：${map.unitContent}</td>
 									</tr>
-
 								</table>
 							</logic:iterate>
 						</form>

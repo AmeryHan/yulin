@@ -73,7 +73,7 @@ window.location.href='${pageContext.request.contextPath}/UnitAdd.do?url='+filepa
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>单位申请</h3>
+					<h3>企业申请</h3>
 					<div class="divMargen">
 						<form id="form1" name="form1" method="post"
 							action="${pageContext.request.contextPath}/UnitAdd.do">
