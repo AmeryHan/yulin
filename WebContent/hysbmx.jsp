@@ -46,27 +46,13 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>会员随笔明细</h3>
-
-					<div id="ListWrapper">
-						<form id="lyname">
-							<table width="600" border="0" align="center">
-								<logic:iterate id="map" collection="${requestScope.arr}">
-									<tr>
-										<td colspan="2" style="text-align: center">
-											${map.membertitle} &nbsp;</td>
-									</tr>
-									<tr>
-										<td style="text-align: right">
-											发布者：${map.username}&nbsp;&nbsp; &nbsp;&nbsp;</td>
-										<td style="text-align: left">时间：${map.membertime}</td>
-									</tr>
-									<tr>
-										<td colspan="2">&nbsp;&nbsp;&nbsp; ${map.membercontent}</td>
-									</tr>
-								</logic:iterate>
-							</table>
-						</form>
-
+					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
+						<logic:iterate id="map" collection="${requestScope.arr}">
+							<h2>${map.membertitle} &nbsp;</h2><br/>
+							发布者：${map.username}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map.membertime}<br/>
+							<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
+							<div style="text-align:left;">${map.membercontent}</div>
+						</logic:iterate>
 					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>

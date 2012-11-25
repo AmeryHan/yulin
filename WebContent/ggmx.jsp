@@ -46,29 +46,13 @@
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
 					<h3>公告明细</h3>
-
-					<div id="ListWrapper">
-						<form id="lyname">
-							<table>
-								<logic:iterate id="map" collection="${requestScope.arr}">
-
-
-									<tr>
-										<td colspan="2" style="text-align: center">
-											${map.anTitle} &nbsp;</td>
-									</tr>
-									<tr>
-										<td style="text-align: right">发布者：${map.anAuthor}
-											&nbsp;&nbsp; &nbsp;&nbsp;</td>
-										<td style="text-align: left">时间：${map.anTime}</td>
-									</tr>
-									<tr>
-										<td colspan="2">&nbsp;&nbsp;&nbsp; ${map.anConent}</td>
-									</tr>
-								</logic:iterate>
-							</table>
-						</form>
-
+					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
+						<logic:iterate id="map" collection="${requestScope.arr}">
+							<h2>${map.anTitle} &nbsp;</h2><br/>
+							发布者：${map.anAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map.anTime}<br/>
+							<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
+							<div style="text-align:left;">${map.anConent}</div>
+						</logic:iterate>
 					</div>
 				</div>
 				<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>

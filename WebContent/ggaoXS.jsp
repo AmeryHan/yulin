@@ -46,50 +46,14 @@
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<div id="ListWrapper">
-						<h3>公告显示</h3>
-
-
-						<table width="600" border="0" align="center">
-							<logic:iterate id="map" collection="${requestScope.arr}">
-
-								<tr>
-									<td colspan="10" style="text-align: center">${map.anTitle}
-										&nbsp;</td>
-								</tr>
-								<tr>
-									<td style="text-align: right">发布者：${map.anAuthor}
-										&nbsp;&nbsp; &nbsp;&nbsp;</td>
-									<td style="text-align: left">时间：${map.anTime}</td>
-								</tr>
-								<tr>
-									<td colspan="2">&nbsp;&nbsp;&nbsp;${map.anConent}</td>
-								</tr>
-
-
-
-
-
-							</logic:iterate>
-
-							<!-- 
-                     <logic:iterate id="map" collection="${requestScope.arr}" >
-                      <tr>
-                        <th colspan="3" scope="col">&nbsp;${map.anTitle}</th>
-                      </tr>
-                      <tr>
-                        <th scope="row">&nbsp;${map.anTime}</th>
-                        <td colspan="2">&nbsp;${map.anAuthor}</td>
-                      </tr>
-                      <tr>
-                     <th colspan="4" height="380px"> ${map.anConent}
-         
-                       </th>
-                      </tr>
-                            </logic:iterate>
-                             -->
-						</table>
-
+					<h3>公告显示</h3>
+					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
+						<logic:iterate id="map" collection="${requestScope.arr}">
+							<h2>${map.anTitle} &nbsp;</h2><br/>
+							发布者：${map.anAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map.anTime}<br/>
+							<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
+							<div style="text-align:left;">${map.anConent}</div>
+						</logic:iterate>
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 				</div>
