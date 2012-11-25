@@ -12,7 +12,7 @@
 		<!-- 
 	<li><a href="flgw.jsp">法律顾问</a></li>
 	 -->
-		<li><a href="lxwm.jsp">联系我们</a></li>
+		<li><a href="${pageContext.request.contextPath}/display.do?type=lxwm">联系我们</a></li>
 	</ul>
 	<hr />
 	<p>
