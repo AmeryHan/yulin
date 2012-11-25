@@ -93,17 +93,17 @@
 							</tr>
 							<tr>
 								<td class="tableFontAlign">性别：</td>
-								<td><input name="pSex" type="radio" value="" checked/>男&nbsp;&nbsp;
-									<input name="pSex" type="radio" value="" />女</td>
+								<td><input name="psex" type="radio" value="男" checked/>男&nbsp;&nbsp;
+									<input name="psex" type="radio" value="女" />女</td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">商会职务：</td>
 								<td><select name="pHometown">
-										<option value="1">名誉会长</option>
-										<option value="2">会长</option>
-										<option value="3">副会长</option>
-										<option value="4">秘书长</option>
-										<option value="5">副秘书长</option>
+										<option value="名誉会长">名誉会长</option>
+										<option value="会长">会长</option>
+										<option value="副会长">副会长</option> 
+										<option value="秘书长">秘书长</option>
+										<option value="副秘书长">副秘书长</option>
 								</select></td>
 							</tr>
 							<tr>

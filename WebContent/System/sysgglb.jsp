@@ -27,25 +27,25 @@
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<thead>
 									<tr>
-										<th>标题</th>
-										<th>发布人</th>
-										<th>发布时间</th>
-										<th>操作</th>
+										<th align="left">标题</th>
+										<th align="left">发布人</th>
+										<th align="left">发布时间</th>
+										<th align="left">操作</th>
 									</tr>
 								</thead>
 								<tbody>
 									<logic:iterate id="map1" collection="${requestScope.arr}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map1.anTitle) > 10}"><td title="${map1.anTitle}">&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map1.anID}">${fn:substring(map1.anTitle, 0, 10)}...</a></td></c:when>   
-										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map1.anID}">${map1.anTitle}</a></td></c:otherwise>
+												<c:when test="${fn:length(map1.anTitle) > 10}"><td align="left" title="${map1.anTitle}">&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map1.anID}">${fn:substring(map1.anTitle, 0, 10)}...</a></td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;<a href="${pageContext.request.contextPath}/AnSelOne.do?id=${map1.anID}">${map1.anTitle}</a></td></c:otherwise>
 										    </c:choose>
 										    <c:choose>
-												<c:when test="${fn:length(map1.anAuthor) > 15}"><td title="${map1.anAuthor}">&nbsp;${fn:substring(map1.anAuthor, 0, 15)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map1.anAuthor}</td></c:otherwise>
+												<c:when test="${fn:length(map1.anAuthor) > 15}"><td align="left" title="${map1.anAuthor}">&nbsp;${fn:substring(map1.anAuthor, 0, 15)}...</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map1.anAuthor}</td></c:otherwise>
 										    </c:choose>
-											<td>&nbsp;${map1.anTime}</td>
-											<td><a href="#" onclick="confirmation('${map1.anID}');">删除</a></td>
+											<td align="left">&nbsp;${map1.anTime}</td>
+											<td align="left"><a href="#" onclick="confirmation('${map1.anID}');">删除</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>

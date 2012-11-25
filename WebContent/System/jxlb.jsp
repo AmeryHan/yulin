@@ -28,10 +28,10 @@
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<thead>
 									<tr>
-										<th>标题</th>
-										<th>发布人</th>
-										<th>发布时间</th>
-										<th>操作</th>
+										<th align="left">标题</th>
+										<th align="left">发布人</th>
+										<th align="left">发布时间</th>
+										<th align="left">操作</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -39,24 +39,24 @@
 										<tr class="gradeC">
 											<c:choose>
 												<c:when test="${fn:length(map.hometitle) > 10}">
-													<td title="${map.hometitle}">&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${fn:substring(map.hometitle,
+													<td align="left" title="${map.hometitle}">&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${fn:substring(map.hometitle,
 														0, 10)}...</a></td>
 												</c:when>
 												<c:otherwise>
-													<td>&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${map.hometitle}</a></td>
+													<td align="left">&nbsp;<a href="${pageContext.request.contextPath}/HometownSelectOne.do?id=${map.homeid}">${map.hometitle}</a></td>
 												</c:otherwise>
 											</c:choose>
 											<c:choose>
 												<c:when test="${fn:length(map.username) > 15}">
-													<td title="${map.username}">&nbsp;${fn:substring(map.username,
+													<td align="left" title="${map.username}">&nbsp;${fn:substring(map.username,
 														0, 15)}...</td>
 												</c:when>
 												<c:otherwise>
-													<td>&nbsp;${map.username}</td>
+													<td align="left">&nbsp;${map.username}</td>
 												</c:otherwise>
 											</c:choose>
-											<td>&nbsp;${map.hometime}</td>
-											<td><a href="#"
+											<td align="left">&nbsp;${map.hometime}</td>
+											<td align="left"><a href="#"
 												onclick="confirmation('${map.homeid}');">删除</a>
 											</td>
 										</tr>

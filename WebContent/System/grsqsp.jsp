@@ -28,41 +28,41 @@
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<thead>
 									<tr>
-										<th>注册姓名</th>
-										<th>性别</th>
-										<th>电话</th>
+										<th align="left">注册姓名</th>
+										<th align="left">性别</th>
+										<th align="left">电话</th>
 										<!-- <th>现居地址</th> -->
-										<th>家乡</th>
-										<th>注册时间</th>
-										<th>状态</th>
-										<th>操作</th>
+										<th align="left">家乡</th>
+										<th align="left">注册时间</th>
+										<th align="left">状态</th>
+										<th align="left">操作</th>
 									</tr>
 								</thead>
 								<tbody>
 									<logic:iterate id="map" collection="${requestScope.arr}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map.PName) > 10}"><td title="${map.PName}">&nbsp;${fn:substring(map.PName, 0, 10)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map.PName}</td></c:otherwise>
+												<c:when test="${fn:length(map.PName) > 10}"><td align="left" title="${map.PName}">&nbsp;${fn:substring(map.PName, 0, 10)}...</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map.PName}</td></c:otherwise>
 										    </c:choose>
-										    <td>&nbsp;${map.PSex}</td>
+										    <td align="left">&nbsp;${map.PSex}</td>
 										    <%-- <td>&nbsp;${map.PBirthTime}</td> --%>
-										    <td>&nbsp;${map.PPhone}</td>
+										    <td align="left">&nbsp;${map.PPhone}</td>
 										    <%-- <td>&nbsp;${map.PQQ}</td> --%>
 										    <%-- <c:choose>
 												<c:when test="${fn:length(map.PResidence) > 15}"><td title="${map.PResidence}">&nbsp;${fn:substring(map.PResidence, 0, 15)}...</td></c:when>   
 										    	<c:otherwise><td>&nbsp;${map.PResidence}</td></c:otherwise>
 										    </c:choose> --%>
-										    <td>&nbsp;${map.PHometown}</td>
+										    <td align="left">&nbsp;${map.PHometown}</td>
 										    <c:choose>
-												<c:when test="${fn:length(map.pzctime) > 10}"><td title="${map.pzctime}">&nbsp;${fn:substring(map.pzctime, 0, 10)}</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map.pzctime}</td></c:otherwise>
+												<c:when test="${fn:length(map.pzctime) > 10}"><td align="left" title="${map.pzctime}">&nbsp;${fn:substring(map.pzctime, 0, 10)}</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map.pzctime}</td></c:otherwise>
 										    </c:choose>
 											<c:choose>
-												<c:when test="${(map.PAuditState) == 2}"><td>&nbsp;通过</td></c:when>
-										    	<c:otherwise><td>&nbsp;未审核</td></c:otherwise>
+												<c:when test="${(map.PAuditState) == 2}"><td align="left">&nbsp;通过</td></c:when>
+										    	<c:otherwise><td align="left">&nbsp;未审核</td></c:otherwise>
 										    </c:choose>
-											<td>
+											<td align="left">
 												<a href="#" onclick="window.location.href='${pageContext.request.contextPath}/PersonalUpd.do?tupdid=3&id=${map.pid}';">通过&nbsp;</a>
 												<a href="#" onclick="confirmation('${map.pid}');">删除</a>
 											</td>

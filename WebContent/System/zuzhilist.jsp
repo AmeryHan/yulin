@@ -26,25 +26,25 @@
 							<table id="listNotice" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 								<thead>
 									<tr>
-										<th>姓名</th>
-				                        <th>性别</th>
-				                        <th>商会职务</th>
-										<th>操作</th>
+										<th align="left">姓名</th>
+				                        <th align="left">性别</th>
+				                        <th align="left">商会职务</th>
+										<th align="left">操作</th>
 									</tr>
 								</thead>
 								<tbody>
 									<logic:iterate id="map" collection="${requestScope.arr1}">
 										<tr class="gradeC">
 											<c:choose>
-												<c:when test="${fn:length(map.sname) > 10}"><td title="${map.sname}">&nbsp;<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}">${fn:substring(map.sname, 0, 10)}...</a></td></c:when>   
+												<c:when test="${fn:length(map.sname) > 10}"><td align="left" title="${map.sname}">&nbsp;<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}">${fn:substring(map.sname, 0, 10)}...</a></td></c:when>   
 										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}">${map.sname}</a></td></c:otherwise>
 										    </c:choose>
-										    <td>&nbsp;${map.ssex}</td>
+										    <td align="left">&nbsp;${map.ssex}</td>
 										    <c:choose>
-												<c:when test="${fn:length(map.sshzw) > 15}"><td title="${map.sshzw}">&nbsp;${fn:substring(map.sshzw, 0, 15)}...</td></c:when>   
-										    	<c:otherwise><td>&nbsp;${map.sshzw}</td></c:otherwise>
+												<c:when test="${fn:length(map.sshzw) > 15}"><td align="left" title="${map.sshzw}">&nbsp;${fn:substring(map.sshzw, 0, 15)}...</td></c:when>   
+										    	<c:otherwise><td align="left">&nbsp;${map.sshzw}</td></c:otherwise>
 										    </c:choose>
-											<td><a href="#" onclick="confirmation('${map.id}');">删除</a></td>
+											<td align="left"><a href="#" onclick="confirmation('${map.id}');">删除</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>
