@@ -14,5 +14,5 @@
 				onclick="window.location.href='${pageContext.request.contextPath}/display.do?type=lxwm'; " />
 		</div>
 	</div>
-	<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
+	<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b> 
 </div>
