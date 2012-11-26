@@ -30,24 +30,24 @@
 						action="${pageContext.request.contextPath}/main.do">
 						<table width="50%" align="center">
 							<tr height="135">
-								<td width="300" align="right">&nbsp;</td>
-								<td>&nbsp;</td>
+								<td style="width:300px;" align="right">&nbsp;</td>
+								<td style="width:80px;">&nbsp;</td>
 								<td>&nbsp;</td>
 							</tr>
 							<tr>
-								<td width="300" align="right">&nbsp;</td>
+								<td align="right">&nbsp;</td>
 								<td>&nbsp;&nbsp;&nbsp;用户名：</td>
 								<td><input type="text" class="inputStyle" name="username" />
 								</td>
 							</tr>
 							<tr>
-								<td width="300" align="right">&nbsp;</td>
+								<td align="right">&nbsp;</td>
 								<td>&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;码：</td>
 								<td><input type="password" class="inputStyle" name="userpwsd" />
 								</td>
 							</tr>
 							<tr>
-								<td width="300" align="right" height="70" colspan="3">&nbsp;
+								<td align="right" height="70" colspan="3">&nbsp;
 									<input align="middle" class="canselBtn" type="submit" value="登录" />&nbsp;&nbsp;
 									<input align="middle" name="button"	type="button" class="canselBtn" value="取消" />
 								</td>
