@@ -63,10 +63,10 @@ public class AnService {
 	 * @param id
 	 * @return 
 	 */
-	public List getListAnOne(String id)
+	public AnnouncementVO getListAnOne(String id)
 	{
-		arr1 =new ArrayList();
-		arr1=dao.ListAnOne(id);
+		//arr1 =new ArrayList();
+		AnnouncementVO arr1=dao.ListAnOne(id);
 		return arr1;
 	}
 	/**

@@ -168,6 +168,7 @@
 		<action path="/AnSelOne" type="com.yulinsh.Action.An.AnSelOne"
 			scope="session">
 			<forward name="selone" path="/ggaoXS.jsp" />
+			<forward name="houtai" path="/System/ggaofb.jsp"></forward>
 		</action>
 <!-- 家乡-->
 		<action path="/HometownAdd" name="hometownFrom"

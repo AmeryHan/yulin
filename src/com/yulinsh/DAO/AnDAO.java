@@ -152,7 +152,7 @@ public class AnDAO {
 	 * 创建人：Eric 创建时间：2012-1-1
 	 * @param id
 	 */
-	public List ListAnOne(String id)
+	public AnnouncementVO ListAnOne(String id)
 	{
 		String sql ="select * from antable t   where  anID='"+id+"'";
 		System.out.println(sql);
@@ -172,7 +172,11 @@ public class AnDAO {
 			}
 			
 		});
-		return list;
+		if(null != list && list.size() > 0){
+			return (AnnouncementVO)list.get(0);
+		}
+		
+		return null;
 	}
 	
 	/**

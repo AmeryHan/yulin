@@ -16,7 +16,7 @@
 						//<![CDATA[
 						var arrData = new Array(
 							[0,"公告管理","#"],
-								[1,"公告发布","${pageContext.request.contextPath}/ggaofb.do"],
+								[1,"公告发布","${pageContext.request.contextPath}/AnSelOne.do?type=houtai"],
 								[1,"公告列表","${pageContext.request.contextPath}/AnSelect2.do?anid=2"],
 							[0,"审批管理","#"],
 								[1,"个人审批","${pageContext.request.contextPath}/PersonalSelect.do?plid=2"],

@@ -34,12 +34,12 @@
 				<div class="content">
 					<h3>公告显示</h3>
 					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
-						<logic:iterate id="map" collection="${requestScope.arr}">
+
 							<h2>${map.anTitle} &nbsp;</h2><br/>
 							发布者：${map.anAuthor}&nbsp;&nbsp; &nbsp;&nbsp;时间：${map.anTime}<br/>
 							<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
 							<div style="text-align:left;">${map.anConent}</div>
-						</logic:iterate>
+
 					</div>
 					<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
 				</div>

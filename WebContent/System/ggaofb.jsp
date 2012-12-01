@@ -1,4 +1,6 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false" contentType="text/html; charset=GBK"%>
+<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
+	prefix="logic"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,26 +25,28 @@
 						<form id="form1" name="form1" method="post"
 							action="${pageContext.request.contextPath}/AnAdd.do">
 							<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
+
 								<tr>
 									<td class="tableFontAlign">标题：</td>
-									<td><input class="inputStyle" name="anTitle" />
+									<td><input class="inputStyle" name="anTitle" value="${map.anTitle}"/>
 									</td>
 								</tr>
 								<tr>
 									<td class="tableFontAlign">发布人：</td>
-									<td><input class="inputStyle" name="anAuthor" />
+									<td><input class="inputStyle" name="anAuthor" value="${map.anAuthor}"/>
 									</td>
 								</tr>
 								<tr>
 									<td class="tableFontAlign">内容：</td>
 									<td><textarea name="anConent" style="height: 250px; width:520px;"
-											cols="60" rows="60"></textarea></td>
+											cols="60" rows="60">${map.anConent}</textarea></td>
 								</tr>
 								<tr>
 									<td></td>
 									<td align="right"><input class="canselBtn" type="submit" value="发布"/>
 									</td>
 								</tr>
+
 							</table>
 						</form>
 					</div>

@@ -107,7 +107,7 @@ HI，我已测试网站，现将问题整理如下：
 http://ameryhan.gotoip4.com/display.do?type=lxwm 显示在下面
 http://ameryhan.gotoip4.com/display.do?type=shjs 显示在下面
 http://ameryhan.gotoip4.com/zzadd.do 版权所有跑在左边了
-商会职务内需要添加：顾问、执行会长、常务副会长。
+商会职务内需要添加：顾问、执行会长、常务副会长。包括前台显示以及查询
 上海陕西榆林商会（及页面下方的版权所有）；
 后台
 审批列表在操作位置加一撤销
