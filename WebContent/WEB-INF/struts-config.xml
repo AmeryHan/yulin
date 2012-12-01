@@ -163,7 +163,7 @@
          <action path="/AnSelect2" type="com.yulinsh.Action.An.AnSelect2"
 			scope="session">
 			<forward name="list" path="/gglb.jsp" />
-					<forward name="list2" path="/System/sysgglb.jsp" />
+					<forward name="list2" path="/System/listGonggao.jsp" />
 		</action>
 		<action path="/AnSelOne" type="com.yulinsh.Action.An.AnSelOne"
 			scope="session">
@@ -284,11 +284,12 @@
 		<action path="/StructureShow" type="com.yulinsh.Action.Structure.StructureShow"
 			scope="session">
 			<forward name="selone" path="/zuzhirymx.jsp" />
+			<forward name="houtai" path="/System/zzadd.jsp" />
 		</action>
 	 
 		<action path="/StructureList" type="com.yulinsh.Action.Structure.StructureList"
 			scope="session">
-			<forward name="list" path="/System/zuzhilist.jsp" />
+			<forward name="list" path="/System/listZuzhirenyuan.jsp" />
 		</action>
 		<action path="/StructureXS" type="com.yulinsh.Action.Structure.StructureXS"
 			scope="session">

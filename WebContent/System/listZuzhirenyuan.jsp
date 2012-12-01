@@ -44,7 +44,9 @@
 												<c:when test="${fn:length(map.sshzw) > 15}"><td align="left" title="${map.sshzw}">&nbsp;${fn:substring(map.sshzw, 0, 15)}...</td></c:when>   
 										    	<c:otherwise><td align="left">&nbsp;${map.sshzw}</td></c:otherwise>
 										    </c:choose>
-											<td align="left"><a href="#" onclick="confirmation('${map.id}');">É¾³ý</a></td>
+											<td align="left">
+											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai">ÐÞ¸Ä</a>&nbsp;
+											<a href="#" onclick="confirmation('${map.id}');">É¾³ý</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>
