@@ -16,6 +16,8 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
 
 public class UploadFileAction extends Action {
+	
+	private String seperate = System.getProperty("file.separator");
 
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
@@ -26,13 +28,13 @@ public class UploadFileAction extends Action {
 				.getRealPath("photosc");
 
 		FormFile fName = uploadFileForm.getFile();
-		System.out.println("上传成功！");
+		
 		Date date = new Date(System.currentTimeMillis());
 		String strDate = new SimpleDateFormat("yyyyMMddhhmmss")
 				.format(date);
 		int random = (int) (Math.random() * 99);
 		String photname = strDate + random + ".jpg";
-		String fileName = path + "\\" + photname;
+		String fileName = path + seperate + photname;
 
 		try {
 			FileOutputStream fos = new FileOutputStream(fileName);
@@ -52,6 +54,7 @@ public class UploadFileAction extends Action {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("上传成功！");
 		return null;
 	}
 }
