@@ -27,7 +27,7 @@
 				<div class="content">
 					<h3>ÏµÍ³µÇÂ¼</h3>
 					<form id="form1" name="form1" method="post"
-						action="${pageContext.request.contextPath}/main.do">
+						action="${pageContext.request.contextPath}/AnSelect2.do?anid=2">
 						<table width="50%" align="center">
 							<tr height="135">
 								<td style="width:300px;" align="right">&nbsp;</td>

@@ -45,7 +45,9 @@
 										    	<c:otherwise><td align="left">&nbsp;${map1.anAuthor}</td></c:otherwise>
 										    </c:choose>
 											<td align="left">&nbsp;${map1.anTime}</td>
-											<td align="left"><a href="#" onclick="confirmation('${map1.anID}');">É¾³ý</a></td>
+											<td align="left">
+											<a href="${pageContext.request.contextPath}/ggaofb.do?id=${map1.anID}">ÐÞ¸Ä</a>&nbsp;
+											<a href="#" onclick="confirmation('${map1.anID}');">É¾³ý</a></td>
 										</tr>
 									</logic:iterate>
 								</tbody>
