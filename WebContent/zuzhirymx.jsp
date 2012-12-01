@@ -44,7 +44,6 @@ System.err.println(path+"="+str);
 					<div id="ListWrapper">
 						<form id="lyname">
 							<table>
-								<logic:iterate id="map" collection="${requestScope.arr}">
 
 									<tr>
 										<td rowspan="5" style="text-align: center">&nbsp; <img
@@ -73,7 +72,6 @@ System.err.println(path+"="+str);
 									</td>
 								</tr>
 							</table>
-							</logic:iterate>
 						</form>
 
 					</div>

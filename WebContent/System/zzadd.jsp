@@ -89,12 +89,12 @@
 								action="${pageContext.request.contextPath}/StructureAdd.do?&tupdid=2&id=${map1.id }">
 							<tr>
 								<td class="tableFontAlign">姓名：</td>
-								<td><input class="inputStyle" name="pName" /></td>
+								<td><input class="inputStyle" name="pName" value="${map.sname}" /></td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">性别：</td>
 								<td><input name="psex" type="radio" value="男" checked/>男&nbsp;&nbsp;
-									<input name="psex" type="radio" value="女" />女</td>
+									<input name="psex" type="radio" value="女" />女${map.ssex}</td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">商会职务：</td>
@@ -104,11 +104,11 @@
 										<option value="副会长">副会长</option> 
 										<option value="秘书长">秘书长</option>
 										<option value="副秘书长">副秘书长</option>
-								</select></td>
+								</select>${map.sshzw}</td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">简介：</td>
-								<td><textarea name="pContent" cols="60" rows="10"></textarea>
+								<td><textarea name="pContent" cols="60" rows="10">${map.sjs }</textarea>
 								</td>
 							</tr>
 							<tr>

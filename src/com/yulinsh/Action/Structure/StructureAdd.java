@@ -58,8 +58,8 @@ public class StructureAdd extends Action {
 			       vo.setStoux(photname);
 //			       service.getInsertAn(photname, "1");
 			///////////
-			       List arr = new ArrayList();
-			       arr=	service.getInsertZuZhi(vo);
+			       //List arr = new ArrayList();
+			       StructureVO arr=	service.getInsertZuZhi(vo);
 			   	   request.setAttribute("arr", arr);
 			   	///²éÑ¯³öÀ´
 				return mapping.findForward("upd");

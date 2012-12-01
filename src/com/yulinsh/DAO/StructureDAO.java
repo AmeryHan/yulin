@@ -34,9 +34,9 @@ public class StructureDAO {
 	 * 创建人：Eric 创建时间：2011-12-1
 	 * @param vo
 	 */
-	public List InsertZuZhi(StructureVO vo)
+	public StructureVO InsertZuZhi(StructureVO vo)
 	{
-		List arr=null;
+		StructureVO arr=null;
 		String userid="";
 		try {
 			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -56,7 +56,7 @@ public class StructureDAO {
 			 };
 			template.update(sql, args);
 		
-			   arr=ListZuZhiOne(userid);
+			arr =ListZuZhiOne(userid);
 			System.err.println("sql inset ="+sql);
 		}catch (Exception e) {
  
@@ -175,7 +175,7 @@ public class StructureDAO {
 	 * 创建人：Eric 创建时间：2012-1-2
 	 * @param id
 	 */
-	public List ListZuZhiOne(String id)
+	public StructureVO ListZuZhiOne(String id)
 	{
 		String sql ="select * from zuzhitable t   where  id='"+id+"'";
 		System.out.println(sql);
@@ -195,6 +195,9 @@ public class StructureDAO {
 			}
 			
 		});
-		return list;
+		if(null != list && list.size() >0){
+			return (StructureVO)list.get(0);
+		}
+		return null;
 	}
 }

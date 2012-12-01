@@ -22,7 +22,7 @@
 								[1,"个人审批","${pageContext.request.contextPath}/PersonalSelect.do?plid=2"],
 								[1,"企业审批","${pageContext.request.contextPath}/UnitSelect.do?utid=2"],
 							[0,"组织人员管理","#"],
-								[1,"人员添加","${pageContext.request.contextPath}/zzadd.do"],
+								[1,"人员添加","${pageContext.request.contextPath}/StructureShow.do?type=houtai"],
 								[1,"人员列表","${pageContext.request.contextPath}/StructureList.do"],
 							[0,"管理前线管理","#"],
 								[1,"前线发布","${pageContext.request.contextPath}/zcdxfb.do"],

@@ -20,10 +20,10 @@ public class StructureService {
 	 *组织机构 
 	 * @param vo
 	 */
-	public List getInsertZuZhi(StructureVO vo)
+	public StructureVO getInsertZuZhi(StructureVO vo)
 	{
 		
-		arr=dao.InsertZuZhi(vo);
+		StructureVO arr=dao.InsertZuZhi(vo);
 		return arr;
 	}
  
@@ -72,10 +72,10 @@ public class StructureService {
 	 * 创建人：Eric 创建时间：2012-1-2
 	 * @return
 	 */
-	public List getListZuZhiOne(String id)
+	public StructureVO getListZuZhiOne(String id)
 	{
-		arr =new ArrayList();
-		arr=dao.ListZuZhiOne(id);
+		//arr =new ArrayList();
+		StructureVO arr=dao.ListZuZhiOne(id);
 		return arr;
 	}
 
