@@ -40,13 +40,10 @@
 					<div id="ListWrapper">
 						<form id="lyname">
 							<table>
-
 								<tr>
 									<td colspan="0" style="text-align: left">ÈÙÓþ»á³¤£º&nbsp;</td>
 
 								</tr>
-
-
 								<tr>
 									<td>
 										<%
@@ -56,6 +53,7 @@
     for(int i=0;i<arr.size();i++)
     {
     	 vo=(StructureVO) arr.get(i);
+    	 System.out.println("-------"+vo.getSshzw());
     	if(vo.getSshzw().equals("1"))
     	{
     	 

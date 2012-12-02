@@ -277,7 +277,6 @@
 											for (int i = 0; i < arr2.size(); i++) {
 												vo2 = (StructureVO) arr2.get(i);
 												if (vo2.getSshzw().equals("3")) {
-
 													c++;
 													if (c != 4) {
 										%> <a
@@ -297,13 +296,9 @@
  %>
 									</td>
 								</tr>
-
 								<tr>
-									<td colspan="0" style="text-align: left">秘书长：&nbsp;</td>
-
+									<td colspan="0" style="text-align: left">顾问：&nbsp;</td>
 								</tr>
-
-
 								<tr>
 									<td>
 										<%
@@ -333,13 +328,10 @@
  %>
 									</td>
 								</tr>
-
+								
 								<tr>
-									<td colspan="0" style="text-align: left">副秘书长：&nbsp;</td>
-
+									<td colspan="0" style="text-align: left">执行会长：&nbsp;</td>
 								</tr>
-
-
 								<tr>
 									<td>
 										<%
@@ -350,8 +342,8 @@
 												vo4 = (StructureVO) arr4.get(i);
 												if (vo4.getSshzw().equals("5")) {
 
-													d++;
-													if (d != 4) {
+													e++;
+													if (e != 4) {
 										%> <a
 										href="${pageContext.request.contextPath}/StructureShow.do?id=<%=vo4.getId()%>"><%=vo4.getSname()%></a>&nbsp;&nbsp;
 										&nbsp;&nbsp; <%
@@ -361,6 +353,102 @@
 										&nbsp;&nbsp; <%
  	if (e == 8) {
  					e = 0;
+ 				}
+ 			}
+ %> <%
+ 	}
+ 	}
+ %>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="0" style="text-align: left">常务副会长：&nbsp;</td>
+								</tr>
+								<tr>
+									<td>
+										<%
+											int f = 0;
+											ArrayList arr5 = (ArrayList) request.getAttribute("arr8");
+											StructureVO vo5 = null;
+											for (int i = 0; i < arr5.size(); i++) {
+												vo5 = (StructureVO) arr5.get(i);
+												if (vo5.getSshzw().equals("6")) {
+
+													f++;
+													if (f != 4) {
+										%> <a
+										href="${pageContext.request.contextPath}/StructureShow.do?id=<%=vo5.getId()%>"><%=vo5.getSname()%></a>&nbsp;&nbsp;
+										&nbsp;&nbsp; <%
+ 	} else {
+ %> </br> <a
+										href="${pageContext.request.contextPath}/StructureShow.do?id=<%=vo5.getId()%>"><%=vo5.getSname()%></a>&nbsp;&nbsp;
+										&nbsp;&nbsp; <%
+ 	if (f == 8) {
+ 					f = 0;
+ 				}
+ 			}
+ %> <%
+ 	}
+ 	}
+ %>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="0" style="text-align: left">秘书长：&nbsp;</td>
+								</tr>
+								<tr>
+									<td>
+										<%
+											int g = 0;
+											ArrayList arr6 = (ArrayList) request.getAttribute("arr8");
+											StructureVO vo6 = null;
+											for (int i = 0; i < arr6.size(); i++) {
+												vo6 = (StructureVO) arr6.get(i);
+												if (vo6.getSshzw().equals("7")) {
+
+													g++;
+													if (g != 4) {
+										%> <a
+										href="${pageContext.request.contextPath}/StructureShow.do?id=<%=vo6.getId()%>"><%=vo6.getSname()%></a>&nbsp;&nbsp;
+										&nbsp;&nbsp; <%
+ 	} else {
+ %> </br> <a
+										href="${pageContext.request.contextPath}/StructureShow.do?id=<%=vo6.getId()%>"><%=vo6.getSname()%></a>&nbsp;&nbsp;
+										&nbsp;&nbsp; <%
+ 	if (g == 8) {
+ 					g = 0;
+ 				}
+ 			}
+ %> <%
+ 	}
+ 	}
+ %>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="0" style="text-align: left">副秘书长：&nbsp;</td>
+								</tr>
+								<tr>
+									<td>
+										<%
+											int h = 0;
+											ArrayList arr7 = (ArrayList) request.getAttribute("arr8");
+											StructureVO vo7 = null;
+											for (int i = 0; i < arr7.size(); i++) {
+												vo7 = (StructureVO) arr7.get(i);
+												if (vo7.getSshzw().equals("8")) {
+
+													h++;
+													if (h != 4) {
+										%> <a
+										href="${pageContext.request.contextPath}/StructureShow.do?id=<%=vo7.getId()%>"><%=vo7.getSname()%></a>&nbsp;&nbsp;
+										&nbsp;&nbsp; <%
+ 	} else {
+ %> </br> <a
+										href="${pageContext.request.contextPath}/StructureShow.do?id=<%=vo7.getId()%>"><%=vo7.getSname()%></a>&nbsp;&nbsp;
+										&nbsp;&nbsp; <%
+ 	if (h == 8) {
+ 					h = 0;
  				}
  			}
  %> <%

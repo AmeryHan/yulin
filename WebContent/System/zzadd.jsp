@@ -110,14 +110,14 @@
 							<tr>
 								<td class="tableFontAlign">商会职务：</td>
 								<td><select name="pHometown">
-										<option value="名誉会长" ${"名誉会长" eq map.sshzw ? "selected" : "" }>名誉会长</option>
-										<option value="会长" ${"会长" eq map.sshzw ? "selected" : "" }>会长</option>
-										<option value="副会长" ${"副会长" eq map.sshzw ? "selected" : "" }>副会长</option>
-										<option value="顾问" ${"顾问" eq map.sshzw ? "selected" : "" }>顾问</option>
-										<option value="执行会长" ${"执行会长" eq map.sshzw ? "selected" : "" }>执行会长</option>
-										<option value="常务副会长" ${"常务副会长" eq map.sshzw ? "selected" : "" }>常务副会长</option> 
-										<option value="秘书长" ${"秘书长" eq map.sshzw ? "selected" : "" }>秘书长</option>
-										<option value="副秘书长" ${"副秘书长" eq map.sshzw ? "selected" : "" }>副秘书长</option>
+										<option value="1" ${"1" eq map.sshzw ? "selected" : "" }>名誉会长</option>
+										<option value="2" ${"2" eq map.sshzw ? "selected" : "" }>会长</option>
+										<option value="3" ${"3" eq map.sshzw ? "selected" : "" }>副会长</option>
+										<option value="4" ${"4" eq map.sshzw ? "selected" : "" }>顾问</option>
+										<option value="5" ${"5" eq map.sshzw ? "selected" : "" }>执行会长</option>
+										<option value="6" ${"6" eq map.sshzw ? "selected" : "" }>常务副会长</option> 
+										<option value="7" ${"7" eq map.sshzw ? "selected" : "" }>秘书长</option>
+										<option value="8" ${"8" eq map.sshzw ? "selected" : "" }>副秘书长</option>
 								</select></td>
 							</tr>
 							<tr>

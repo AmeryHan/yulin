@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="GBK" isELIgnored="false"%>
-<%@ taglib uri="http://jakarta.apache.org/struts/tags-logic"
-	prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -47,8 +48,7 @@ System.err.println(path+"="+str);
 
 									<tr>
 										<td rowspan="5" style="text-align: center">&nbsp; <img
-											src="<%=basePath %>photosc/${map.stoux }" width="110"
-											height="120" /></td>
+											src="<%=basePath %>photosc/${map.stoux }" style="width:110px;height:120px;"/></td>
 										<td colspan="2">&nbsp;姓名：${map.sname}</td>
 
 									</tr>
@@ -57,7 +57,17 @@ System.err.println(path+"="+str);
 
 									</tr>
 									<tr>
-										<td colspan="2">&nbsp;商会职务：${map.sshzw}</td>
+										<td colspan="2">&nbsp;商会职务：
+										<c:choose>
+												<c:when test="${map.sshzw eq 1}">名誉会长</c:when>
+												<c:when test="${map.sshzw eq 2}">会长</c:when>
+												<c:when test="${map.sshzw eq 3}">副会长</c:when>
+												<c:when test="${map.sshzw eq 4}">顾问</c:when>
+												<c:when test="${map.sshzw eq 5}">执行会长</c:when>
+												<c:when test="${map.sshzw eq 6}">常务副会长</c:when>
+												<c:when test="${map.sshzw eq 7}">秘书长</c:when>
+										    	<c:otherwise>副秘书长</c:otherwise>
+										    </c:choose></td>
 
 									</tr>
 							</table>
