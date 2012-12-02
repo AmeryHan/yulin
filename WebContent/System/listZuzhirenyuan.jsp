@@ -45,7 +45,8 @@
 										    	<c:otherwise><td align="left">&nbsp;${map.sshzw}</td></c:otherwise>
 										    </c:choose>
 											<td align="left">
-											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai">ÐÞ¸Ä</a>&nbsp;
+											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai&xiugai=1">ÐÞ¸Ä</a>&nbsp;
+											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai&xiugai=1">ÐÞ¸ÄÕÕÆ¬</a>&nbsp;
 											<a href="#" onclick="confirmation('${map.id}');">É¾³ý</a></td>
 										</tr>
 									</logic:iterate>

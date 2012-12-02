@@ -73,6 +73,7 @@
 									style="width: 142px; height: 142px; border: 1px solid grey;" />
 								</td>
 							</tr>
+<% if(request.getParameter("xiugai").equals("0")) {%>
 							<html:form action="/upload.do" method="post"
 								enctype="multipart/form-data">
 								<tr>
@@ -82,6 +83,7 @@
 									<td><html:file property="file" />&nbsp;<html:submit>ÉÏ´«</html:submit>&nbsp;</td>
 								</tr>
 							</html:form>
+<%} %>							
 							<tr>
 								<td class="tableFontAlign"></td>
 								<td height="20px;"></td>
