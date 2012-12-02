@@ -155,6 +155,7 @@ a:hover{
 	}
 	#mainRContent{
 		text-indent:2em;}
+#mainRight .content{height:auto !important;height:440px;min-height:440px;}
 .clear{
 	clear:both;}
 /*footer*/

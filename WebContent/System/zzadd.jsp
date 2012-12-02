@@ -137,8 +137,10 @@
 
 				</div>
 			</div>
+			</div>
 			<div class="clear"></div>
 		</div>
+		
 		<jsp:include page="SystemFooter.jsp" flush="true" />
 </body>
 </html>
