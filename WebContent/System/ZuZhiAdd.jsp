@@ -83,12 +83,12 @@ window.location.href='${pageContext.request.contextPath}/StructureAdd.do?url='+f
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;商会职务：</td>
                         <td>    
-                         <select  name="pHometown">
-                        <option value="1">名誉会长</option>
-                          <option  value="2">会长</option>
-                            <option  value="3">副会长</option>
-                              <option  value="4">秘书长</option>
-                                <option  value="5">副秘书长</option>
+                        <select  name="pHometown">
+	                        <option value="名誉会长">名誉会长</option>
+	                        <option  value="会长">会长</option>
+	                        <option  value="副会长">副会长</option>
+	                        <option  value="秘书长">秘书长</option>
+	                        <option  value="副秘书长">副秘书长</option>
                         </select>
                         
                         </td>
