@@ -71,7 +71,41 @@ public class AnDAO {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * 新闻动态 添加
+	 * 创建人：Eric 创建时间：2011-12-1
+	 * @param vo
+	 */
+	public void updateAn(AnnouncementVO vo,String id) {
+	{
+		String anid="";
+		try {
+			SimpleDateFormat tempDate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+			String datetime=tempDate.format(new java.util.Date());
+
+			anid=RandomStrg.getGUID();
+			sql="update antable set anTitle=?,anConent=?,anTime=?,anAuthor=? where " +
+					"anid = ?";//5
+			 Object []args = new Object[]{
+					 vo.getAnTitle(),
+					 vo.getAnConent() ,
+					 datetime,
+					 vo.getAnAuthor(),
+					 id
+			 };
+			template.update(sql, args);
+		
+		
+			System.err.println("sql inset ="+sql);
+		}catch (Exception e) {
  
+			e.printStackTrace();
+		}}
+	}
+
+	
+	
 	/**
 	 *公告 删除
 	 * 创建人：Eric 创建时间：2011-12-1
