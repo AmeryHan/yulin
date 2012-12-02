@@ -100,7 +100,7 @@
 								action="${pageContext.request.contextPath}/StructureAdd.do?&tupdid=2&id=${map1.id }">
 							<tr>
 								<td class="tableFontAlign">ÐÕÃû£º</td>
-								<td><input class="inputStyle" name="pName" value="${map.sname}" /></td>
+								<td><input class="inputStyle" name="pName" value="${map.sname}" /><input type="hidden" class="inputStyle" name="zuzhiid" value="${map.id}" /></td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">ÐÔ±ð£º</td>
