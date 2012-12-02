@@ -67,12 +67,20 @@
 						<table width="80%" class="display" width="100%" cellpadding="0" cellspacing="0" border="0">
 							<tr>
 								<td class="tableFontAlign">Í·Ïñ£º</td>
+<% if("0".equals(request.getParameter("xiugai")) || null == request.getParameter("xiugai")) {%>								
 								<td height="144px;"><img
 									src="<%=basePath%>photosc/<%=request.getParameter("fileName")%>"
 									alt="<%=request.getParameter("fileName")%>"
 									style="width: 142px; height: 142px; border: 1px solid grey;" />
 								</td>
+<%} else { %>
+							<td height="144px;"><img
+									src="<%=basePath%>photosc/${map.stoux}"
+									alt="${map.stoux}"
+									style="width: 142px; height: 142px; border: 1px solid grey;" />
+								</td>
 							</tr>
+<%} %>
 <% if("0".equals(request.getParameter("xiugai")) || null == request.getParameter("xiugai")) {%>
 							<html:form action="/upload.do" method="post"
 								enctype="multipart/form-data">
