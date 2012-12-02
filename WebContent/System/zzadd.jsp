@@ -102,7 +102,7 @@
 								<td class="tableFontAlign">ÐÕÃû£º</td>
 								<td>
 								<input class="inputStyle" name="pName" value="${map.sname}" />
-								<input class="inputStyle" name="zuzhiid" value="${map.id}" />
+								<input type="hidden" class="inputStyle" name="zuzhiid" value="${map.id}" />
 								</td>
 							</tr>
 							<tr>
