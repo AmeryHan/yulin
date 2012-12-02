@@ -29,6 +29,11 @@ public class AnService {
 		dao.InsertAn(vo);
 	}
  
+	public void updateAn(AnnouncementVO vo,String id)
+	{
+		dao.updateAn(vo, id);
+	}
+	
 	/**
 	 * 新闻动态 删除
 	 * 创建人：Eric 创建时间：2011-12-1

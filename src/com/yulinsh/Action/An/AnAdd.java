@@ -34,7 +34,13 @@ public class AnAdd extends Action {
 		vo.setAnAuthor(anAuthor);
 		String anConent=request.getParameter("anConent");
 		vo.setAnConent(anConent);
-		service.getInsertAn(vo);
+		
+		String strid=request.getParameter("zuzhiid");
+		if(null == strid || "".equals(strid)){
+			service.getInsertAn(vo);
+		}else{
+			service.updateAn(vo, strid);
+		}
 
 		return mapping.findForward("add");
 	}
