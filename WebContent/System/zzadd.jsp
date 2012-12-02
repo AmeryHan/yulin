@@ -3,6 +3,7 @@
 	prefix="logic"%>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -93,18 +94,21 @@
 							</tr>
 							<tr>
 								<td class="tableFontAlign">性别：</td>
-								<td><input name="psex" type="radio" value="男" checked/>男&nbsp;&nbsp;
-									<input name="psex" type="radio" value="女" />女${map.ssex}</td>
+								<td><input name="psex" type="radio" value="男" ${"男" eq map.ssex ? "checked" : "" }/>男&nbsp;&nbsp;
+									<input name="psex" type="radio" value="女" ${"女" eq map.ssex ? "checked" : "" }/>女</td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">商会职务：</td>
 								<td><select name="pHometown">
-										<option value="名誉会长">名誉会长</option>
-										<option value="会长">会长</option>
-										<option value="副会长">副会长</option> 
-										<option value="秘书长">秘书长</option>
-										<option value="副秘书长">副秘书长</option>
-								</select>${map.sshzw}</td>
+										<option value="名誉会长" ${"名誉会长" eq map.sshzw ? "selected" : "" }>名誉会长</option>
+										<option value="会长" ${"会长" eq map.sshzw ? "selected" : "" }>会长</option>
+										<option value="副会长" ${"副会长" eq map.sshzw ? "selected" : "" }>副会长</option>
+										<option value="顾问" ${"顾问" eq map.sshzw ? "selected" : "" }>顾问</option>
+										<option value="执行会长" ${"执行会长" eq map.sshzw ? "selected" : "" }>执行会长</option>
+										<option value="常务副会长" ${"常务副会长" eq map.sshzw ? "selected" : "" }>常务副会长</option> 
+										<option value="秘书长" ${"秘书长" eq map.sshzw ? "selected" : "" }>秘书长</option>
+										<option value="副秘书长" ${"副秘书长" eq map.sshzw ? "selected" : "" }>副秘书长</option>
+								</select></td>
 							</tr>
 							<tr>
 								<td class="tableFontAlign">简介：</td>
