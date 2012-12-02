@@ -73,7 +73,7 @@
 									style="width: 142px; height: 142px; border: 1px solid grey;" />
 								</td>
 							</tr>
-<% if(request.getParameter("xiugai").equals("0")) {%>
+<% if("0".equals(request.getParameter("xiugai")) || null == request.getParameter("xiugai")) {%>
 							<html:form action="/upload.do" method="post"
 								enctype="multipart/form-data">
 								<tr>
