@@ -40,7 +40,7 @@ public class UploadFileAction extends Action {
 			FileOutputStream fos = new FileOutputStream(fileName);
 			fos.write(fName.getFileData());
 			fos.flush();
-			fos.close();
+			fos.close(); 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,11 +49,11 @@ public class UploadFileAction extends Action {
 			e.printStackTrace();
 		}
 		try {
-			response.sendRedirect(uploadFileForm.getRequestURL()+"?fileName="+photname);
+			response.sendRedirect(request.getContextPath()+"/StructureShow.do?type=houtai&fileName="+photname);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 		System.out.println("上传成功！");
 		return null;
 	}
