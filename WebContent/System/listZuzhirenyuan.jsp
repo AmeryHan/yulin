@@ -40,10 +40,17 @@
 										    	<c:otherwise><td>&nbsp;<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}">${map.sname}</a></td></c:otherwise>
 										    </c:choose>
 										    <td align="left">&nbsp;${map.ssex}</td>
+										    <td align="left">&nbsp;
 										    <c:choose>
-												<c:when test="${fn:length(map.sshzw) > 15}"><td align="left" title="${map.sshzw}">&nbsp;${fn:substring(map.sshzw, 0, 15)}...</td></c:when>   
-										    	<c:otherwise><td align="left">&nbsp;${map.sshzw}</td></c:otherwise>
-										    </c:choose>
+												<c:when test="${map.sshzw eq 1}">名誉会长</c:when>
+												<c:when test="${map.sshzw eq 2}">会长</c:when>
+												<c:when test="${map.sshzw eq 3}">副会长</c:when>
+												<c:when test="${map.sshzw eq 4}">顾问</c:when>
+												<c:when test="${map.sshzw eq 5}">执行会长</c:when>
+												<c:when test="${map.sshzw eq 6}">常务副会长</c:when>
+												<c:when test="${map.sshzw eq 7}">秘书长</c:when>
+										    	<c:otherwise>副秘书长</c:otherwise>
+										    </c:choose></td>
 											<td align="left">
 											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai&xiugai=1">修改</a>&nbsp;
 											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai&xiugai=1">修改照片</a>&nbsp;

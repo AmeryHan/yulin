@@ -28,7 +28,9 @@
 
 								<tr>
 									<td class="tableFontAlign">БъЬтЃК</td>
-									<td><input class="inputStyle" name="anTitle" value="${map.anTitle}"/>
+									<td>
+									<input class="inputStyle" name="anTitle" value="${map.anTitle}"/>
+									<input type="hidden" class="inputStyle" name="zuzhiid" value="${map.anID}" />
 									</td>
 								</tr>
 								<tr>
