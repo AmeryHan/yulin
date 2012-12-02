@@ -74,7 +74,7 @@ public class StructureAdd extends Action {
 //		} 
 //		
 		else {
-			String strid=request.getParameter("id");
+			String strid=request.getParameter("zuzhiid");
 			vo.setSname(request.getParameter("pName"));
 			vo.setSsex(request.getParameter("psex"));
 			System.err.println(""+request.getParameter("pHometown"));
@@ -82,8 +82,12 @@ public class StructureAdd extends Action {
 			vo.setSjs(request.getParameter("pContent"));
 		 
 			vo.setStoux(request.getParameter("photname"));
-			
-		   	service.getInsertZuZhi(vo);
+			if(null == strid || "".equals(strid)){
+				service.getInsertZuZhi(vo);
+			}else{
+				service.getUpdateZuZhi(vo, strid);
+			}
+		   	
 			return mapping.findForward("add");
 		}
 	 
