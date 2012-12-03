@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>商会介绍</title>
+<title>${type eq "lxwm" ? "联系我们" : "商会介绍"}</title>
 <link href="layout.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -32,7 +32,7 @@
 			<div class="sharp color1">
 				<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 				<div class="content">
-					<h3>商会介绍</h3>
+					<h3>${type eq "lxwm" ? "联系我们" : "商会介绍"}</h3>
 					<div id="ListWrapper" style="width:600px; border=0px;text-align:center;">
 						<h2>${vo.anAuthor} &nbsp;</h2><br/>
 						<hr width="550px;"/>&nbsp;&nbsp;&nbsp; 
