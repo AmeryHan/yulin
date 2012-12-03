@@ -119,7 +119,7 @@
         <li><a href="#">联系我们</a></li>
     </ul>
     <hr />
-    <p>版权所有:陕西商会 榆林分会&nbsp;&nbsp;&nbsp;&nbsp;技术支持：悠然自得工作室</p>
+    <p>版权所有:上海陕西榆林商会&nbsp;&nbsp;&nbsp;&nbsp;技术支持：悠然自得工作室</p>
 </div>
 </body>
 </html>
