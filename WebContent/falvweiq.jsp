@@ -35,7 +35,7 @@
 					<h3>老乡留言</h3>
 
 					<div id="ListWrapper">
-						<form id="lyname" method="get"
+<%-- 						<form id="lyname" method="get"
 							action="${pageContext.request.contextPath}/LaoxAdd.do">
 							<table>
 								<tr>
@@ -71,7 +71,7 @@
 
 
 							</table>
-						</form>
+						</form> --%>
 						<!--
 				 	  <ul>
                        	<li><a href="lxlymx.jsp">1、列表数据风动 旛动服石髓法发的发色弱</a><span id="Date">2012/12/14</span></li>
