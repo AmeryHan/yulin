@@ -26,6 +26,7 @@ public class DisplayAction extends Action {
 		String type = request.getParameter("type");
 		AnnouncementVO vo = service.getLatestOne(type);
 		request.setAttribute("vo", vo);
+		request.setAttribute("type", type);
 		return mapping.findForward("success");
 	}
 }

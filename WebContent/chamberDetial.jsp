@@ -14,7 +14,7 @@
 	<jsp:include page="indexMenu.jsp" flush="true"/>
 	<div id="mainContent">
 		<div id="tips">
-			当前位置：<span class="fontColor">商会介绍</span>
+			当前位置：<span class="fontColor">${type eq "lxwm" ? "联系我们" : "商会介绍"}</span>
 		</div>
 		<div id="mainLeft">
 			<div class="sharp color1">
