@@ -1,0 +1,1 @@
+alter table personaltable modify psex varchar(100) default '1'

@@ -15,34 +15,31 @@ import com.yulinsh.service.StructureService;
 
 /***
  * 主页面显示
+ * 
  * @author Administrator
- *
+ * 
  */
-public class StructureXS  extends Action {
+public class StructureXS extends Action {
 	StructureService service;
 
-	String  str="";//跳转url
+	String str = "";// 跳转url
+
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		System.err.println(" select ");
 		List arr = new ArrayList();
 		arr = service.getListZuZhiXS();
-//		String id=request.getParameter("id");
-//		arr = service.getListNewsOne(id);
+		System.out.println(arr.get(0).toString());
 		request.setAttribute("arr1", arr);
-	 
-        	
-        	return mapping.findForward("list");
-       
-		
+		return mapping.findForward("list");
 	}
+
 	public StructureService getService() {
 		return service;
 	}
+
 	public void setService(StructureService service) {
 		this.service = service;
 	}
-
- 
 
 }
