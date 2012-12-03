@@ -39,7 +39,7 @@ public class PhotoOne extends Action {
 		arr =  service.getSelectPhotoOne(phid);
 		request.setAttribute("arr", arr);
 		String mbid=request.getParameter("mbid");
-		if(mbid.equals("1"))
+		if("1".equals(mbid))
 		{
 			return mapping.findForward("select");
 		}else

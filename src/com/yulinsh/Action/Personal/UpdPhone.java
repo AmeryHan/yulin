@@ -33,7 +33,7 @@ public class UpdPhone extends Action {
 		request.setAttribute("arr", arr);
 		String plid = request.getParameter("plid").toString().trim();
  
-		if (plid.equals("1")) {
+		if ("1".equals(plid)) {
 			return mapping.findForward("select2");
 		} else {
 			return mapping.findForward("select");

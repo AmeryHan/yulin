@@ -32,7 +32,7 @@ public class MemberList extends Action {
 
 		String strid=request.getParameter("mbid").toString();
 		System.err.println(" select "+strid);
-		if(strid.equals("1"))
+		if("1".equals(strid))
 		{
 			return mapping.findForward("list2");
 		}else 

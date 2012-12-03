@@ -38,7 +38,7 @@ public class AnSelect2  extends Action {
 			request.setAttribute("arr", arr);
 
 			String str=request.getParameter("anid");
-			if(str.equals("1"))
+			if("1".equals(str))
 			{
 				return mapping.findForward("list");
 			}else

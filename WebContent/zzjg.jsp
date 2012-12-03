@@ -54,7 +54,7 @@
     {
     	 vo=(StructureVO) arr.get(i);
     	 System.out.println("-------"+vo.getSshzw());
-    	if(vo.getSshzw().equals("1"))
+    	if("1".equals(vo.getSshzw()))
     	{
     	 
     
@@ -102,7 +102,7 @@
     for(int i=0;i<arr1.size();i++)
     {
     	 vo1=(StructureVO) arr1.get(i);
-    	if(vo1.getSshzw().equals("2"))
+    	if("2".equals(vo1.getSshzw()))
     	{
     	 
     
@@ -151,7 +151,7 @@
     for(int i=0;i<arr2.size();i++)
     {
     	 vo2=(StructureVO) arr2.get(i);
-    	if(vo2.getSshzw().equals("3"))
+    	if("3".equals(vo2.getSshzw()))
     	{
     	 
     
@@ -199,7 +199,7 @@
     for(int i=0;i<arr3.size();i++)
     {
     	 vo3=(StructureVO) arr3.get(i);
-    	if(vo3.getSshzw().equals("4"))
+    	if("4".equals(vo3.getSshzw()))
     	{
     	 
     
@@ -247,7 +247,7 @@
     for(int i=0;i<arr4.size();i++)
     {
     	 vo4=(StructureVO) arr4.get(i);
-    	if(vo4.getSshzw().equals("5"))
+    	if("5".equals(vo4.getSshzw()))
     	{
     	 
     

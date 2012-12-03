@@ -45,7 +45,7 @@ public class PhotoSelect extends Action {
 	
 		if(sy!=null)
 		{
-			if(sy.equals("1"))
+			if("1".equals(sy))
 			{
 				//上一页
 				 sum-=6;
@@ -61,7 +61,7 @@ public class PhotoSelect extends Action {
 			}
 		}
 		if(xy!=null){
-			if(xy.equals("2"))
+			if("2".equals(xy))
 			{
 				//下一页
 				 sum+=6;
@@ -80,7 +80,7 @@ public class PhotoSelect extends Action {
 	 
 		
 		String mbid=request.getParameter("mbid");
-		if(mbid.equals("1"))
+		if("1".equals(mbid))
 		{
 			arr =  service.getSelectPhotoFy(str1,str2);
 			request.setAttribute("arr", arr);

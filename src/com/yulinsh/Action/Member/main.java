@@ -32,7 +32,7 @@ public class main extends Action {
 	 
 		String strname=request.getParameter("username");
 		String strpwsd=request.getParameter("userpwsd");
-		if(strname.equals("admin")|| strpwsd.equals("admin"))
+		if("admin".equals(strname)|| "admin".equals(strpwsd))
 		{
 			return mapping.findForward("denglu");
 		}else 

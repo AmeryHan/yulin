@@ -203,7 +203,7 @@
 											ArrayList arr = (ArrayList) request.getAttribute("arr8");
 											for (int i = 0; i < arr.size(); i++) {
 												StructureVO vo = (StructureVO) arr.get(i);
-												if (vo.getSshzw().equals("1")) {
+												if ("1".equals(vo.getSshzw())) {
 
 													a++;
 													if (a != 4) {
@@ -239,7 +239,7 @@
 											StructureVO vo1 = null;
 											for (int i = 0; i < arr1.size(); i++) {
 												vo1 = (StructureVO) arr1.get(i);
-												if (vo1.getSshzw().equals("2")) {
+												if ("2".equals(vo1.getSshzw())) {
 
 													b++;
 													if (b != 4) {
@@ -276,7 +276,7 @@
 											StructureVO vo2 = null;
 											for (int i = 0; i < arr2.size(); i++) {
 												vo2 = (StructureVO) arr2.get(i);
-												if (vo2.getSshzw().equals("3")) {
+												if ("3".equals(vo2.getSshzw())) {
 													c++;
 													if (c != 4) {
 										%> <a
@@ -307,7 +307,7 @@
 											StructureVO vo3 = null;
 											for (int i = 0; i < arr3.size(); i++) {
 												vo3 = (StructureVO) arr3.get(i);
-												if (vo3.getSshzw().equals("4")) {
+												if ("4".equals(vo3.getSshzw())) {
 
 													d++;
 													if (d != 4) {
@@ -340,7 +340,7 @@
 											StructureVO vo4 = null;
 											for (int i = 0; i < arr4.size(); i++) {
 												vo4 = (StructureVO) arr4.get(i);
-												if (vo4.getSshzw().equals("5")) {
+												if ("5".equals(vo4.getSshzw())) {
 
 													e++;
 													if (e != 4) {
@@ -372,7 +372,7 @@
 											StructureVO vo5 = null;
 											for (int i = 0; i < arr5.size(); i++) {
 												vo5 = (StructureVO) arr5.get(i);
-												if (vo5.getSshzw().equals("6")) {
+												if ("6".equals(vo5.getSshzw())) {
 
 													f++;
 													if (f != 4) {
@@ -404,7 +404,7 @@
 											StructureVO vo6 = null;
 											for (int i = 0; i < arr6.size(); i++) {
 												vo6 = (StructureVO) arr6.get(i);
-												if (vo6.getSshzw().equals("7")) {
+												if ("7".equals(vo6.getSshzw())) {
 
 													g++;
 													if (g != 4) {
@@ -436,7 +436,7 @@
 											StructureVO vo7 = null;
 											for (int i = 0; i < arr7.size(); i++) {
 												vo7 = (StructureVO) arr7.get(i);
-												if (vo7.getSshzw().equals("8")) {
+												if ("8".equals(vo7.getSshzw())) {
 
 													h++;
 													if (h != 4) {

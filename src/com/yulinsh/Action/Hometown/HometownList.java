@@ -38,7 +38,7 @@ public void setService(HometownService service) {
 		request.setAttribute("arr", arr);
 		String strid=request.getParameter("htid");
 		System.err.println(" select "+strid);
-		if(strid.equals("1"))
+		if("1".equals(strid))
 		{
 			return mapping.findForward("list2");
 		}else 

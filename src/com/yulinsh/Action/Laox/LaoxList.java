@@ -39,7 +39,7 @@ public void setService(LaoxService service) {
 
 		String strid=request.getParameter("lxid");
 		System.err.println(" select "+strid);
-		if(strid.equals("1"))
+		if("1".equals(strid))
 		{
 			return mapping.findForward("list2");
 		}else 

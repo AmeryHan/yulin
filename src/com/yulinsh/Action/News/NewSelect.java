@@ -31,7 +31,7 @@ public class NewSelect extends Action {
 //		arr = service.getListNewsOne(id);
 		request.setAttribute("arr1", arr);
 		String id=request.getParameter("newid");
-        if(id.equals("1"))
+        if("1".equals(id))
         {
         	return mapping.findForward("list1");
         }else

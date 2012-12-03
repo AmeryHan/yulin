@@ -32,7 +32,7 @@ public class PolicySelect extends Action {
 		request.setAttribute("arr1", arr);
 
 		String strid=request.getParameter("pyid").toString();
-		if(strid.equals("1"))
+		if("1".equals(strid))
 		{
 			return mapping.findForward("list2");
 		}else 

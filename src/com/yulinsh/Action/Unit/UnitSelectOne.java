@@ -32,7 +32,7 @@ public class UnitSelectOne extends Action {
 		arr = service.getListUnitOne(strid);
 		request.setAttribute("arr", arr);
 		String id=request.getParameter("utid");
-       if(id.equals("1"))
+       if("1".equals(id))
        {
        	return mapping.findForward("listone2");
        }else

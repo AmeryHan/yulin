@@ -33,7 +33,7 @@ public class UnitSelect extends Action {
 		arr = service.getListUnit();
 		request.setAttribute("arr", arr);
 		String id=request.getParameter("utid");
-        if(id.equals("1"))
+        if("1".equals(id))
         {
         	return mapping.findForward("list2");
         }else

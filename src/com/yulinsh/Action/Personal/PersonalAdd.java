@@ -37,7 +37,7 @@ public class PersonalAdd extends Action {
 		PersonalVO vo = userfrom.getPersonalVO();
 		//1是图片上传 2 是信息添加
 		String tupdid=request.getParameter("tupdid");
-		if(tupdid.equals("1"))
+		if("1".equals(tupdid))
 		{
 			//////////////
 			String path = request.getSession().getServletContext().getRealPath("photosc"); 
