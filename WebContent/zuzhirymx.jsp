@@ -60,11 +60,13 @@ System.err.println(path+"="+str);
 										<td colspan="2">&nbsp;商会职务：
 										<c:choose>
 												<c:when test="${map.sshzw eq 1}">名誉会长</c:when>
-												<c:when test="${map.sshzw eq 2}">会长</c:when>
-												<c:when test="${map.sshzw eq 3}">副会长</c:when>
 												<c:when test="${map.sshzw eq 4}">顾问</c:when>
+												<c:when test="${map.sshzw eq 2}">会长</c:when>
 												<c:when test="${map.sshzw eq 5}">执行会长</c:when>
 												<c:when test="${map.sshzw eq 6}">常务副会长</c:when>
+												<c:when test="${map.sshzw eq 3}">副会长</c:when>
+												<c:when test="${map.sshzw eq 8}">监事长</c:when>
+												<c:when test="${map.sshzw eq 9}">监事</c:when>
 												<c:when test="${map.sshzw eq 7}">秘书长</c:when>
 										    	<c:otherwise>副秘书长</c:otherwise>
 										    </c:choose></td>

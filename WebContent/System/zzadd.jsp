@@ -114,13 +114,15 @@
 								<td class="tableFontAlign">商会职务：</td>
 								<td><select name="pHometown">
 										<option value="1" ${"1" eq map.sshzw ? "selected" : "" }>名誉会长</option>
-										<option value="2" ${"2" eq map.sshzw ? "selected" : "" }>会长</option>
-										<option value="3" ${"3" eq map.sshzw ? "selected" : "" }>副会长</option>
 										<option value="4" ${"4" eq map.sshzw ? "selected" : "" }>顾问</option>
+										<option value="2" ${"2" eq map.sshzw ? "selected" : "" }>会长</option>
 										<option value="5" ${"5" eq map.sshzw ? "selected" : "" }>执行会长</option>
 										<option value="6" ${"6" eq map.sshzw ? "selected" : "" }>常务副会长</option> 
+										<option value="3" ${"3" eq map.sshzw ? "selected" : "" }>副会长</option>
+										<option value="8" ${"8" eq map.sshzw ? "selected" : "" }>监事长</option>
+										<option value="9" ${"9" eq map.sshzw ? "selected" : "" }>监事</option> 
 										<option value="7" ${"7" eq map.sshzw ? "selected" : "" }>秘书长</option>
-										<option value="8" ${"8" eq map.sshzw ? "selected" : "" }>副秘书长</option>
+										<option value="10" ${"10" eq map.sshzw ? "selected" : "" }>副秘书长</option>
 								</select></td>
 							</tr>
 							<tr>
