@@ -55,7 +55,7 @@
 										    </c:choose></td>
 											<td align="left">
 											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai&xiugai=1">ÐÞ¸Ä</a>&nbsp;
-											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=houtai&xiugai=1">ÐÞ¸ÄÕÕÆ¬</a>&nbsp;
+											<a href="${pageContext.request.contextPath}/StructureShow.do?id=${map.id}&type=tupian">Ìæ»»Í·Ïñ</a>&nbsp;
 											<a href="#" onclick="confirmation('${map.id}');">É¾³ý</a></td>
 										</tr>
 									</logic:iterate>

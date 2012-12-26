@@ -75,6 +75,7 @@ public class StructureAdd extends Action {
 //		
 		else {
 			String strid=request.getParameter("zuzhiid");
+			String tupianOnly = request.getParameter("tupianOnly");
 			vo.setSname(request.getParameter("pName"));
 			vo.setSsex(request.getParameter("psex"));
 			System.err.println(""+request.getParameter("pHometown"));
@@ -84,7 +85,9 @@ public class StructureAdd extends Action {
 			vo.setStoux(request.getParameter("photname"));
 			if(null == strid || "".equals(strid)){
 				service.getInsertZuZhi(vo);
-			}else{
+			}else if("true".equals(tupianOnly)){
+				service.updateTupian(vo,strid);
+			}else {
 				service.getUpdateZuZhi(vo, strid);
 			}
 		   	

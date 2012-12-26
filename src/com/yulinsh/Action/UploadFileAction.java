@@ -49,7 +49,12 @@ public class UploadFileAction extends Action {
 			e.printStackTrace();
 		}
 		try {
-			response.sendRedirect(request.getContextPath()+"/StructureShow.do?type=houtai&fileName="+photname);
+			//response.sendRedirect(request.getContextPath()+"/StructureShow.do?type=houtai&fileName="+photname);
+			String referer = request.getHeader("Referer");
+			if(!referer.contains("?")){
+				referer += "?";
+			}
+			response.sendRedirect(referer+"&fileName="+photname);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

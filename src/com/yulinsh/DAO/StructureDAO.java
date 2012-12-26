@@ -115,6 +115,23 @@ public class StructureDAO {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	public void updateTupian(StructureVO vo,String id) {
+		try {
+
+			// update 表明 set pname= where pID=
+			sql = "update zuzhitable set stoux=? where id='"+id+"'";// 13
+			Object[] args = new Object[] { 
+					 vo.getStoux()
+					};
+			template.update(sql, args);
+			System.err.println("sql update =" + sql);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
 	/**
 	 * 组织机构 查询数据
 	 * 创建人：Eric 创建时间：2011-12-5

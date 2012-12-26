@@ -46,6 +46,11 @@ public class StructureService {
 	{
 		dao.UpdateZuZhi(vo,id);
 	}
+	
+	public void updateTupian(StructureVO vo,String id)
+	{
+		dao.updateTupian(vo,id);
+	}
 	/**
 	 *组织机构  列表
 	 * @return

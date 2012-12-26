@@ -285,6 +285,7 @@
 			scope="session">
 			<forward name="selone" path="/zuzhirymx.jsp" />
 			<forward name="houtai" path="/System/zzadd.jsp" />
+			<forward name="tupian" path="/System/zzaddtupian.jsp" />
 		</action>
 	 
 		<action path="/StructureList" type="com.yulinsh.Action.Structure.StructureList"

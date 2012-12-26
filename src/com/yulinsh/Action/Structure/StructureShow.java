@@ -30,6 +30,8 @@ public class StructureShow  extends Action {
 		
 		if("houtai".equals(request.getParameter("type"))){
 			return mapping.findForward("houtai");
+		}else if("tupian".equals(request.getParameter("type"))){
+			return mapping.findForward("tupian");
 		}
 
 		return mapping.findForward("selone");
