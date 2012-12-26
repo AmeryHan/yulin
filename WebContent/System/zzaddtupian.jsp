@@ -116,7 +116,7 @@
 							</tr>
 
 							<tr>
-								<td><input type="text" name="photname" value="<%=request.getParameter("fileName")%>" /></td>
+								<td><input type="hidden" name="photname" value="<%=request.getParameter("fileName")%>" /></td>
 								<td align="right"><input class="canselBtn" type="submit"
 									value="х╥хо" /></td>
 							</tr>
