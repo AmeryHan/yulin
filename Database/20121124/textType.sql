@@ -1,2 +1,3 @@
 ALTER TABLE `yulinsh`.`hometowntable` CHANGE COLUMN `HOMECONTENT` `HOMECONTENT` TEXT NULL DEFAULT NULL  ;
 ALTER TABLE `yulinsh`.`shjs` CHANGE COLUMN `neirong` `neirong` TEXT NULL DEFAULT NULL  ;
+ALTER TABLE `ameryhan`.`zuzhitable` CHANGE COLUMN `sjs` `sjs` TEXT NULL DEFAULT NULL  ;
